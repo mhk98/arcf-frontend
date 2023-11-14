@@ -10,6 +10,12 @@ import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
 import News from "./Pages/News";
 import Volunteer from "./Pages/Volunteer";
+// import "./assets/css/oxpins-dark.css";
+// import "./assets/css/oxpins-responsive-rtl.css";
+// import "./assets/css/oxpins-responsive.css";
+// import "./assets/css/oxpins-rtl-custom.css";
+// import "./assets/css/oxpins-rtl.css";
+// import "./assets/css/oxpins.css";
 
 function App() {
   return (

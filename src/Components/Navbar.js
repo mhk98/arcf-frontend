@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
   return (
     <div>
@@ -11,7 +10,7 @@ const Navbar = () => {
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
                 <div className="main-menu__logo">
-                  <Link to="index.html">
+                  <Link to="/">
                     <img src="assets/images/resources/logo-1.png" alt />
                   </Link>
                 </div>
@@ -48,9 +47,7 @@ const Navbar = () => {
                           <div className="content">
                             <p>Helpline</p>
                             <h5>
-                              <Link to="tel:980009630">
-                                + 98 (000) - 9630
-                              </Link>
+                              <Link to="tel:980009630">+ 98 (000) - 9630</Link>
                             </h5>
                           </div>
                         </li>
@@ -108,15 +105,13 @@ const Navbar = () => {
                       </li>
 
                       <li className="dropdown">
-                        <Link to="">Services</Link>
+                        <Link>Services</Link>
                         <ul>
                           <li>
                             <Link to="/volunteer">Volunteer</Link>
                           </li>
                           <li>
-                            <Link to="/become-volunteer">
-                              Become volunteer
-                            </Link>
+                            <Link to="/become-volunteer">Become volunteer</Link>
                           </li>
 
                           <li>
@@ -131,11 +126,11 @@ const Navbar = () => {
                         </ul>
                       </li>
                       <li className="dropdown">
-                        <Link to="/">What we do</Link>
+                        <Link>What we do</Link>
                       </li>
                       <li className="dropdown">
                         <Link to="#">Donations</Link>
-                        <ul>
+                        {/* <ul>
                           <li>
                             <Link to="">Donation</Link>
                           </li>
@@ -153,7 +148,7 @@ const Navbar = () => {
                           <li>
                             <Link to="donate-now.html">Donate Now</Link>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                       <li className="">
                         <Link to="/events">Events</Link>
