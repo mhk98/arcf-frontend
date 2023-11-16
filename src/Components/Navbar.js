@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  };
   return (
     <div>
       <header className="main-header">
@@ -10,9 +14,13 @@ const Navbar = () => {
           <div className="main-menu__wrapper">
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
-                <div className="main-menu__logo">
+                <div className="main-menu__logo ">
                   <Link to="index.html">
-                    <img src="assets/images/resources/logo-1.png" alt />
+                    <img
+                      src="assets/images/resources/logo-1.png"
+                      alt
+                      width={145}
+                    />
                   </Link>
                 </div>
                 <div className="main-menu__shape-1 float-bob-x">
@@ -48,9 +56,7 @@ const Navbar = () => {
                           <div className="content">
                             <p>Helpline</p>
                             <h5>
-                              <Link to="tel:980009630">
-                                + 98 (000) - 9630
-                              </Link>
+                              <Link to="tel:980009630">+880 2224412300</Link>
                             </h5>
                           </div>
                         </li>
@@ -62,7 +68,7 @@ const Navbar = () => {
                             <p>Send email</p>
                             <h5>
                               <Link to="mailto:needhelp@company.com">
-                                needhelp@company.com
+                                arcf.society.bd@gmail.com
                               </Link>
                             </h5>
                           </div>
@@ -72,8 +78,8 @@ const Navbar = () => {
                             <span className="icon-location" />
                           </div>
                           <div className="content">
-                            <p>380 St Kilda Road</p>
-                            <h5>Melbourne, Australia</h5>
+                            <p>321 Eidgah Road, Pagar, BSCIC</p>
+                            <h5>Tongi, Gazipur-1710</h5>
                           </div>
                         </li>
                       </ul>
@@ -101,7 +107,7 @@ const Navbar = () => {
                     </Link>
                     <ul className="main-menu__list">
                       <li className="dropdown current megamenu">
-                        <Link to="/">Home </Link>
+                        <a href="/">Home </a>
                       </li>
                       <li className="dropdown">
                         <Link to="/about-us">About</Link>
@@ -114,11 +120,12 @@ const Navbar = () => {
                             <Link to="/volunteer">Volunteer</Link>
                           </li>
                           <li>
-                            <Link to="/become-volunteer">
-                              Become volunteer
-                            </Link>
+                            <Link to="/become-volunteer">Become volunteer</Link>
                           </li>
 
+                          <li>
+                            <Link to="">Education</Link>
+                          </li>
                           <li>
                             <Link to="">Youth</Link>
                           </li>
@@ -137,21 +144,13 @@ const Navbar = () => {
                         <Link to="#">Donations</Link>
                         <ul>
                           <li>
-                            <Link to="">Donation</Link>
+                            <Link to="/donate-list">Donation Category </Link>
                           </li>
                           <li>
-                            <Link to="">Donation list</Link>
+                            <Link to="/donate-details">Donation details</Link>
                           </li>
                           <li>
-                            <Link to="">Donation carousel</Link>
-                          </li>
-                          <li>
-                            <Link to="donation-details.html">
-                              Donation details
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="donate-now.html">Donate Now</Link>
+                            <Link to="/donate-now">Donation Now</Link>
                           </li>
                         </ul>
                       </li>
@@ -247,6 +246,55 @@ const Navbar = () => {
         {/* /.sticky-header__content */}
       </div>
       {/* /.stricky-header */}
+
+      <div className={`mobile-nav__wrapper ${mobileNavOpen ? "open" : ""}`}>
+        <div
+          className="mobile-nav__overlay mobile-nav__toggler"
+          onClick={toggleMobileNav}
+        ></div>
+        <div className="mobile-nav__content">
+          <span
+            className="mobile-nav__close mobile-nav__toggler"
+            onClick={toggleMobileNav}
+          >
+            <i className="fa fa-times"></i>
+          </span>
+
+          <div className="logo-box">
+            <a href="index.html" aria-label="logo image">
+              <img
+                src="assets/images/resources/logo-2.png"
+                width="143"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div className="mobile-nav__container"></div>
+
+          <ul className="mobile-nav__contact list-unstyled">
+            <li>
+              <i className="fa fa-envelope"></i>
+              <a href="mailto:needhelp@packageName__.com">
+                needhelp@oxpins.com
+              </a>
+            </li>
+            <li>
+              <i className="fa fa-phone-alt"></i>
+              <a href="tel:666-888-0000">666 888 0000</a>
+            </li>
+          </ul>
+
+          <div className="mobile-nav__top">
+            <div className="mobile-nav__social">
+              <a href="#" className="fab fa-twitter"></a>
+              <a href="#" className="fab fa-facebook-square"></a>
+              <a href="#" className="fab fa-pinterest-p"></a>
+              <a href="#" className="fab fa-instagram"></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

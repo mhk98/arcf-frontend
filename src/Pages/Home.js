@@ -2,19 +2,12 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="custom-cursor">
-      <div className="custom-cursor__cursor" />
-      <div className="custom-cursor__cursor-two" />
+    <div>
       <div className="preloader">
         <div className="preloader__image" />
       </div>
       {/* /.preloader */}
       <div className="page-wrapper">
-        <div className="stricky-header stricked-menu main-menu">
-          <div className="sticky-header__content" />
-          {/* /.sticky-header__content */}
-        </div>
-        {/* /.stricky-header */}
         {/*Main Slider Start*/}
         <section className="main-slider clearfix">
           <div
@@ -40,7 +33,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-1.png)",
+                      "url(assets/images/backgrounds/main-slider-1-1.jpg)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -59,10 +52,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Always donate for childrens
+                          Empathy Empowers Change
                         </p>
                         <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
+                          Poverty is not natural
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -83,7 +76,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-2.png)",
+                      "url(assets/images/backgrounds/main-slider-1-2.jpg)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -102,10 +95,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Always donate for childrens
+                          Compassion Ignites Change
                         </p>
                         <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
+                          You can be that great generation
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -126,7 +119,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-3.png)",
+                      "url(assets/images/backgrounds/main-slider-1-3.jpg)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -145,10 +138,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Always donate for childrens
+                          Charity Unleashes Hope
                         </p>
                         <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
+                          Let your greatness blossom
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -249,19 +242,20 @@ const Home = () => {
                 <div className="about-one__right">
                   <div className="section-title text-left">
                     <span className="section-title__tagline">
-                      Welcome to oxpins charity
+                      Welcome to ARC Foundation
                     </span>
                     <h2 className="section-title__title">
                       Helping each other can make world better
                     </h2>
                   </div>
                   <p className="about-one__text">
-                    We help companies develop powerful corporate social
-                    responsibility, grantmaking, and employee engagement
-                    strategies. Our impact is about more than moving money to
-                    where it’s needed most it’s also about helping nonprofits
-                    access information and ideas that will help them listen,
-                    learn, and grow.{" "}
+                    Transforming Lives Through Research, and Changes. Body Text:
+                    We are delighted to have you join our community dedicated to
+                    Advocacy, Research, and Change. Together, let's embark on a
+                    journey of positively impacting, fostering resilience, and
+                    creating a better world. Your presence enriches our mission,
+                    and we look forward to achieving meaningful milestones
+                    together.
                   </p>
                   <div className="about-one__fund">
                     <p className="about-one__fund-text">
@@ -277,7 +271,7 @@ const Home = () => {
                       </div>
                       <div className="text">
                         <h5>
-                          <a href="become-volunteer.html">Join our team</a>
+                          <a href="become-volunteer.html">Join ARCF Team</a>
                         </h5>
                         <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
                       </div>
@@ -288,7 +282,7 @@ const Home = () => {
                       </div>
                       <div className="text">
                         <h5>
-                          <a href="donate-now.html">Start donating</a>
+                          <a href="donate-now.html">Start Donate</a>
                         </h5>
                         <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
                       </div>
@@ -308,10 +302,10 @@ const Home = () => {
           <div className="container">
             <div className="section-title text-center">
               <span className="section-title__tagline">
-                Help &amp; donate us now
+                Help &amp; donate us
               </span>
               <h2 className="section-title__title">
-                Find the popular cause <br /> and donate them
+                Join Us in Making <br /> a Difference Today
               </h2>
             </div>
             <div className="row">
@@ -330,12 +324,12 @@ const Home = () => {
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
                       <a href="donation-details.html">
-                        Let’s education for children get good life
+                        Support Education for Underprivileged Children.
                       </a>
                     </h3>
                     <p className="causes-one__text">
-                      There are many of lorem, but majori have suffered
-                      alteration in some form.
+                      Join us in shaping a better tomorrow for deserving
+                      children.
                     </p>
                     <div className="causes-one__progress">
                       <div
@@ -378,12 +372,12 @@ const Home = () => {
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
                       <a href="donation-details.html">
-                        It is a long established fact that a reader
+                        Support Medical Care for Underprivileged Children.
                       </a>
                     </h3>
                     <p className="causes-one__text">
-                      There are many of lorem, but majori have suffered
-                      alteration in some form.
+                      Your support brings medical care to underprivileged
+                      children. Donate today!
                     </p>
                     <div className="causes-one__progress">
                       <div
@@ -420,18 +414,18 @@ const Home = () => {
                   <div className="causes-one__img">
                     <img src="assets/images/resources/causes-1-3.jpg" alt />
                     <div className="causes-one__cat">
-                      <p>Food</p>
+                      <p>Poverty </p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
                       <a href="donation-details.html">
-                        There are many variations of passages
+                        Help underprivileged children escape poverty.
                       </a>
                     </h3>
                     <p className="causes-one__text">
-                      There are many of lorem, but majori have suffered
-                      alteration in some form.
+                      Global efforts uplift underprivileged children affected by
+                      poverty.
                     </p>
                     <div className="causes-one__progress">
                       <div
@@ -1781,12 +1775,35 @@ const Home = () => {
           </div>
         </section>
         {/*News One End*/}
-        {/*Site Footer Start*/}
-       
-        {/*Site Footer End*/}
       </div>
       {/* /.page-wrapper */}
-      
+
+      {/* /.mobile-nav__wrapper */}
+      <div className="search-popup">
+        <div className="search-popup__overlay search-toggler" />
+        {/* /.search-popup__overlay */}
+        <div className="search-popup__content">
+          <form action="#">
+            <label htmlFor="search" className="sr-only">
+              search here
+            </label>
+            {/* /.sr-only */}
+            <input type="text" id="search" placeholder="Search Here..." />
+            <button
+              type="submit"
+              aria-label="search submit"
+              className="thm-btn"
+            >
+              <i className="icon-magnifying-glass" />
+            </button>
+          </form>
+        </div>
+        {/* /.search-popup__content */}
+      </div>
+      {/* /.search-popup */}
+      <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
+        <i className="icon-up-arrow" />
+      </a>
     </div>
   );
 };

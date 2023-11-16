@@ -21,7 +21,11 @@ const Footer = () => {
                 <div className="footer-widget__column footer-widget__about">
                   <div className="footer-widget__about-logo">
                     <a href="index.html">
-                      <img src="assets/images/resources/footer-logo.png" alt />
+                      <img
+                        src="assets/images/resources/logo-1.png"
+                        alt=""
+                        width={145}
+                      />
                     </a>
                   </div>
                   <div className="footer-widget__about-text-box">
@@ -45,7 +49,7 @@ const Footer = () => {
                 data-wow-delay="200ms"
               >
                 <div className="footer-widget__column footer-widget__links clearfix">
-                  <h3 className="footer-widget__title">Links</h3>
+                  <h3 className="footer-widget__title">Quick Links</h3>
                   <ul className="footer-widget__links-list list-unstyled clearfix">
                     <li>
                       <a href="about.html">About us</a>
@@ -176,12 +180,12 @@ const Footer = () => {
             <li>
               <i className="fa fa-envelope" />
               <a href="mailto:needhelp@packageName__.com">
-                needhelp@oxpins.com
+                arcf.society.bd@gmail.com
               </a>
             </li>
             <li>
               <i className="fa fa-phone-alt" />
-              <a href="tel:666-888-0000">666 888 0000</a>
+              <a href="tel:666-888-0000">+880 2224412300</a>
             </li>
           </ul>
           {/* /.mobile-nav__contact */}
