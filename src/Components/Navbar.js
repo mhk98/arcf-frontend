@@ -125,9 +125,9 @@ const Navbar = () => {
                           </li>
                         </ul>
                       </li>
-                      <li className="dropdown">
+                      {/* <li className="dropdown">
                         <Link>What we do</Link>
-                      </li>
+                      </li> */}
                       <li className="dropdown">
                         <Link to="#">Donations</Link>
                         {/* <ul>
