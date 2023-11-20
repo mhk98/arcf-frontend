@@ -484,7 +484,7 @@ const Home = () => {
                 Become a Volunteers
               </p>
               <h3 className="become-volunteer-one__title">
-                Join your hand with us for a <br /> better life and future
+                Join us for a better life and <br /> future for poor people.
               </h3>
               <div className="become-volunteer-one__btn-box">
                 <a
@@ -512,16 +512,14 @@ const Home = () => {
               <div className="col-xl-4 col-lg-4">
                 <div className="events-one__left">
                   <div className="section-title text-left">
-                    <span className="section-title__tagline">
-                      Upcoming events
-                    </span>
+                    <span className="section-title__tagline">ACTIVITIES</span>
                     <h2 className="section-title__title">
-                      Join our latest upcoming events
+                      Join our latest activities
                     </h2>
                   </div>
                   <p className="events-one__text-1">
-                    There are many variations of passages of lorem ipsum
-                    available but the majority have suffered.
+                    ARC Foundation empowers through education, healthcare, and
+                    community development.
                   </p>
                   <a
                     href="event-details.html"
@@ -766,15 +764,15 @@ const Home = () => {
                       <div className="feature-one__top-title-box">
                         <h3 className="feature-one__top-title">
                           <a href="become-volunteer.html">
-                            Join us &amp; become <br /> a volunteer
+                            Our Vision <br /> Statement
                           </a>
                         </h3>
                       </div>
                     </div>
                   </div>
                   <p className="feature-one__text">
-                    Mauris feugiat at orci ac congue. mauris ut <br /> lacus
-                    quis proin diam.
+                    ARC Foundation envisions a thriving, <br />
+                    supportive society for all.
                   </p>
                   <ul className="list-unstyled feature-one__point">
                     <li>
@@ -782,7 +780,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Sed et nulla a nunc finibus eleifend.</p>
+                        <p>Old age people.</p>
                       </div>
                     </li>
                     <li>
@@ -790,7 +788,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Mauris nulla nisl, pellentesque vetae.</p>
+                        <p>Children & Women.</p>
                       </div>
                     </li>
                     <li>
@@ -798,7 +796,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Proin quis aliquam nisi.</p>
+                        <p>Enlightened lives.</p>
                       </div>
                     </li>
                   </ul>
@@ -831,16 +829,16 @@ const Home = () => {
                       <div className="feature-one__top-title-box">
                         <h3 className="feature-one__top-title">
                           <a href="about.html">
-                            Send a gift for <br />
-                            childrens
+                            Our Mission <br />
+                            Statement
                           </a>
                         </h3>
                       </div>
                     </div>
                   </div>
                   <p className="feature-one__text">
-                    Mauris feugiat at orci ac congue. mauris ut <br /> lacus
-                    quis proin diam.
+                    ARC Foundation empowers through education, healthcare, and
+                    community support.
                   </p>
                   <ul className="list-unstyled feature-one__point">
                     <li>
@@ -848,7 +846,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Sed et nulla a nunc finibus eleifend.</p>
+                        <p>Providing education.</p>
                       </div>
                     </li>
                     <li>
@@ -856,7 +854,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Mauris nulla nisl, pellentesque vetae.</p>
+                        <p>Livelihood skills.</p>
                       </div>
                     </li>
                     <li>
@@ -864,7 +862,7 @@ const Home = () => {
                         <span className="fa fa-check" />
                       </div>
                       <div className="text">
-                        <p>Proin quis aliquam nisi.</p>
+                        <p>Community development services</p>
                       </div>
                     </li>
                   </ul>
@@ -984,16 +982,16 @@ const Home = () => {
                       Our Testimonials
                     </span>
                     <h2 className="section-title__title">
-                      What they are talking about oxpins
+                      What People Say About Us
                     </h2>
                   </div>
                   <p className="testimonial-one__text-1">
-                    Nulla ultricies justo sit amet ante efficitur, eget pharetra
-                    augue efficitur. Vestibulum viverra, dolor sit amet
-                    ultricies ornare, elit justo pretium tellus.
+                    ARC Foundation is a game-changer! Their commitment to
+                    education, healthcare, and community support transforms
+                    lives. Proud to support this impactful non-profit.
                   </p>
                   <a href="#" className="thm-btn testimonial-one__btn">
-                    all testimonials
+                    People Says
                   </a>
                 </div>
               </div>
@@ -1078,10 +1076,8 @@ const Home = () => {
                           <span className="icon-double-quotes" />
                         </div>
                         <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
+                          ARC Foundation transformed my life through education
+                          and community support. Grateful for their impact!
                         </p>
                       </div>
                       {/*Testimonial One Single End*/}
@@ -1114,10 +1110,9 @@ const Home = () => {
                           <span className="icon-double-quotes" />
                         </div>
                         <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
+                          ARC Foundation empowers communities with education and
+                          health initiatives. Proud to be part of their positive
+                          change!
                         </p>
                       </div>
                       {/*Testimonial One Single End*/}
@@ -1150,10 +1145,9 @@ const Home = () => {
                           <span className="icon-double-quotes" />
                         </div>
                         <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
+                          ARC Foundation's commitment to a better future is
+                          inspiring. Their support made a real difference in my
+                          life.
                         </p>
                       </div>
                       {/*Testimonial One Single End*/}
@@ -1295,7 +1289,7 @@ const Home = () => {
                       {/* /.img-popup */}
                       <p className="gallery-one__sub-title">Charity</p>
                       <h5 className="gallery-one__title">
-                        <a href="gallery.html">Education</a>
+                        <a href="gallery.html">Free Friday Clinic</a>
                       </h5>
                     </div>
                   </div>
@@ -1314,7 +1308,7 @@ const Home = () => {
                       {/* /.img-popup */}
                       <p className="gallery-one__sub-title">Charity</p>
                       <h5 className="gallery-one__title">
-                        <a href="gallery.html">Education</a>
+                        <a href="gallery.html">Cancer Treatment</a>
                       </h5>
                     </div>
                   </div>
@@ -1333,7 +1327,7 @@ const Home = () => {
                       {/* /.img-popup */}
                       <p className="gallery-one__sub-title">Charity</p>
                       <h5 className="gallery-one__title">
-                        <a href="gallery.html">Education</a>
+                        <a href="gallery.html">Night School</a>
                       </h5>
                     </div>
                   </div>
@@ -1352,7 +1346,7 @@ const Home = () => {
                       {/* /.img-popup */}
                       <p className="gallery-one__sub-title">Charity</p>
                       <h5 className="gallery-one__title">
-                        <a href="gallery.html">Education</a>
+                        <a href="gallery.html">Free Computer Training</a>
                       </h5>
                     </div>
                   </div>
@@ -1371,7 +1365,7 @@ const Home = () => {
                       {/* /.img-popup */}
                       <p className="gallery-one__sub-title">Charity</p>
                       <h5 className="gallery-one__title">
-                        <a href="gallery.html">Education</a>
+                        <a href="gallery.html">Free Sewing Training</a>
                       </h5>
                     </div>
                   </div>
@@ -1404,14 +1398,13 @@ const Home = () => {
                       Recently asked questions
                     </span>
                     <h2 className="section-title__title">
-                      People are frequently asking some questions from us
+                      People are frequently ask some questions from us.
                     </h2>
                   </div>
                   <p className="faq-one__text-1">
-                    Proactively procrastinate cross-platform results via
-                    extensive ideas distinctively underwhelm enterprise.
-                    Compellingly plagiarize value-added sources with inexpensive
-                    schemas.
+                    ARC Foundation, a non-profit organization, aims to empower
+                    individuals for self-reliance through information, skills
+                    development, and mentorship.
                   </p>
                   <a href="faq.html" className="thm-btn faq-one__btn">
                     Learn how to get help
@@ -1426,14 +1419,14 @@ const Home = () => {
                   >
                     <div className="accrodion active">
                       <div className="accrodion-title">
-                        <h4>Nulla eu purus scelerisque, dignissim diam.</h4>
+                        <h4>What is the mission of ARC Foundation?</h4>
                       </div>
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            The mission of ARC Foundation is to empower
+                            individuals for sustainable self-reliance through
+                            information, skills development, and mentorship.
                           </p>
                         </div>
                         {/* /.inner */}
@@ -1442,15 +1435,15 @@ const Home = () => {
                     <div className="accrodion">
                       <div className="accrodion-title">
                         <h4>
-                          Quisque non diam porta, ullamcorper dolor sit amet.
+                          How does ARC Foundation support education in
+                          communities?
                         </h4>
                       </div>
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            ARC Foundation supports community education with
+                            resources and skill development.
                           </p>
                         </div>
                         {/* /.inner */}
@@ -1458,14 +1451,13 @@ const Home = () => {
                     </div>
                     <div className="accrodion">
                       <div className="accrodion-title">
-                        <h4>How can I make a change to my application?</h4>
+                        <h4>Can I volunteer with ARC Foundation? How?</h4>
                       </div>
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            Yes, visit our website or contact us for
+                            volunteering opportunities.
                           </p>
                         </div>
                         {/* /.inner */}
@@ -1473,14 +1465,17 @@ const Home = () => {
                     </div>
                     <div className="accrodion last-chiled">
                       <div className="accrodion-title">
-                        <h4>Sed mattis neque sed commodo efficitur.</h4>
+                        <h4>
+                          What success stories or impact has ARC Foundation
+                          achieved so far?
+                        </h4>
                       </div>
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            ARC Foundation has achieved impactful success
+                            stories, empowering individuals through education,
+                            skills development, and community support.
                           </p>
                         </div>
                         {/* /.inner */}
@@ -1553,11 +1548,9 @@ const Home = () => {
         <section className="news-one">
           <div className="container">
             <div className="section-title text-center">
-              <span className="section-title__tagline">
-                News &amp; articles
-              </span>
+              <span className="section-title__tagline">News &amp; Blog</span>
               <h2 className="section-title__title">
-                Directly from the <br /> latest news and articles
+                Our Latest <br /> News and Blog
               </h2>
             </div>
             <div className="row">
@@ -1586,9 +1579,7 @@ const Home = () => {
                           </li>
                         </ul>
                         <h3 className="news-one__title">
-                          <a href="news-details.html">
-                            How does the malnutrition affect children?
-                          </a>
+                          <a href="news-details.html">How we Work?</a>
                         </h3>
                       </div>
                       <div className="news-one__bottom">
@@ -1657,7 +1648,7 @@ const Home = () => {
                         </ul>
                         <h3 className="news-one__title">
                           <a href="news-details.html">
-                            Lorem Ipsum has been the industry's standard
+                            Collaboration & Partnership
                           </a>
                         </h3>
                       </div>
@@ -1726,9 +1717,7 @@ const Home = () => {
                           </li>
                         </ul>
                         <h3 className="news-one__title">
-                          <a href="news-details.html">
-                            There are many variations of passages of Lorem
-                          </a>
+                          <a href="news-details.html">Future Plane</a>
                         </h3>
                       </div>
                       <div className="news-one__bottom">

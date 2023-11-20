@@ -8,10 +8,12 @@ import Contact from "./Pages/Contact";
 import DonateDetails from "./Pages/DonateDetails";
 import DonateList from "./Pages/DonateList";
 import DonateNow from "./Pages/DonateNow";
+import EventDetails from "./Pages/EventDetails";
 import Events from "./Pages/Events";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
 import News from "./Pages/News";
+import NewsDetails from "./Pages/NewsDetails";
 import Volunteer from "./Pages/Volunteer";
 // import "./assets/css/oxpins-dark.css";
 // import "./assets/css/oxpins-responsive-rtl.css";
@@ -34,7 +36,9 @@ function App() {
         <Route path="/donate-now" element={<DonateNow />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/event-details" element={<EventDetails />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news-details" element={<NewsDetails />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

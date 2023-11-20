@@ -114,7 +114,7 @@ const Navbar = () => {
                       </li>
 
                       <li className="dropdown">
-                        <Link to="">Services</Link>
+                        <Link>Services</Link>
                         <ul>
                           <li>
                             <Link to="/volunteer">Volunteer</Link>
@@ -137,21 +137,26 @@ const Navbar = () => {
                           </li>
                         </ul>
                       </li>
-                      <li className="dropdown">
-                        <Link to="/">What we do</Link>
-                      </li>
+                      {/* <li className="dropdown">
+                        <Link>What we do</Link>
+                      </li> */}
                       <li className="dropdown">
                         <Link to="#">Donations</Link>
                         <ul>
                           <li>
                             <Link to="/donate-list">Donation Category </Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link to="/donate-details">Donation details</Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="/donate-now">Donation Now</Link>
                           </li>
+                          {/* <li>
+                            <Link to="donation-details.html">
+                              Donation details
+                            </Link>
+                          </li> */}
                         </ul>
                       </li>
                       <li className="">
@@ -188,6 +193,7 @@ const Navbar = () => {
                           </li>
                         </ul> */}
                       </li>
+
                       {/* <li className="dropdown">
                         <Link to="products.html">Shop</Link>
                         <ul>
@@ -204,7 +210,8 @@ const Navbar = () => {
                             <Link to="checkout.html">Checkout</Link>
                           </li>
                         </ul>
-                      </li> */}
+                      </li>  */}
+
                       <li>
                         <Link to="/contact">Contact</Link>
                       </li>
@@ -228,7 +235,7 @@ const Navbar = () => {
                         />
                       </div>
                       <div className="main-menu__btn-box">
-                        <Link to="donate-now.html" className="main-menu__btn">
+                        <Link to="/donate-now" className="main-menu__btn">
                           {" "}
                           <span className="fa fa-heart" /> Donate now
                         </Link>

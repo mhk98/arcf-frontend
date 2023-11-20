@@ -101,7 +101,7 @@ const Footer = () => {
                 <div className="footer-widget__column footer-widget__contact">
                   <h3 className="footer-widget__title">Contact</h3>
                   <p className="footer-widget__contact-text">
-                    380 Street Kilda Broklyn Road <br /> Melbourne Australia
+                    321 Eidgah Road Pagar BSCIC <br /> Gazipur Bangladesh
                   </p>
                   <ul className="list-unstyled footer-widget__contact-list">
                     <li>
@@ -111,7 +111,7 @@ const Footer = () => {
                       <div className="text">
                         <p>
                           <a href="mailto:needhelp@company.com ">
-                            needhelp@company.com
+                            arcf.society.bd@gmail.com
                           </a>
                         </p>
                       </div>
@@ -122,7 +122,7 @@ const Footer = () => {
                       </div>
                       <div className="text">
                         <p>
-                          <a href="tel:980009630">+ 98 (000) - 9630</a>
+                          <a href="tel:980009630">+880 2224412300</a>
                         </p>
                       </div>
                     </li>

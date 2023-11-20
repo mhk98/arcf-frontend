@@ -17,19 +17,19 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">How does the
+                  <h3 className="news-one__title"><a href="/news-details">How does the
                       malnutrition
                       affect children?</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
@@ -61,18 +61,18 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">Lorem Ipsum has been the
+                  <h3 className="news-one__title"><a href="/news-details">Lorem Ipsum has been the
                       industry's standard</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
@@ -104,18 +104,18 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">There are many
+                  <h3 className="news-one__title"><a href="/news-details">There are many
                       variations of passages of Lorem</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
@@ -147,18 +147,18 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">Lorem ipsum dolor sit
+                  <h3 className="news-one__title"><a href="/news-details">Lorem ipsum dolor sit
                       amet, consectetur</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
@@ -190,18 +190,18 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">Aenean sollicitudin leo
+                  <h3 className="news-one__title"><a href="/news-details">Aenean sollicitudin leo
                       nunc, nec ornare enim</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
@@ -233,18 +233,18 @@ const News = () => {
               <div className="news-one__content-inner">
                 <div className="news-one__content">
                   <ul className="list-unstyled news-one__meta">
-                    <li><a href="news-details.html"><i className="far fa-user-circle" /> Admin</a>
+                    <li><a href="/news-details"><i className="far fa-user-circle" /> Admin</a>
                     </li>
-                    <li><a href="news-details.html"><i className="fas fa-comments" /> 2
+                    <li><a href="/news-details"><i className="fas fa-comments" /> 2
                         Comments</a>
                     </li>
                   </ul>
-                  <h3 className="news-one__title"><a href="news-details.html">Donec a scelerisque
+                  <h3 className="news-one__title"><a href="/news-details">Donec a scelerisque
                       nibh. Cras laoreet tellus</a></h3>
                 </div>
                 <div className="news-one__bottom">
                   <div className="news-one__read-more">
-                    <a href="news-details.html"> <span className="icon-right-arrow" /> Read
+                    <a href="/news-details"> <span className="icon-right-arrow" /> Read
                       More</a>
                   </div>
                   <div className="news-one__share">
