@@ -33,7 +33,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-1.jpg)",
+                      "url(assets/images/backgrounds/main-slider-1-3.png)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -76,7 +76,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-2.jpg)",
+                      "url(assets/images/backgrounds/main-slider-1-2.png)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -119,7 +119,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-3.jpg)",
+                      "url(assets/images/backgrounds/main-slider-1-3.png)",
                   }}
                 />
                 {/* /.image-layer */}
