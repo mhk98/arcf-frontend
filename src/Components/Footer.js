@@ -22,7 +22,7 @@ const Footer = () => {
                   <div className="footer-widget__about-logo">
                     <a href="index.html">
                       <img
-                        src="assets/images/resources/logo-1.png"
+                        src="assets/images/resources/logo-2.png"
                         alt=""
                         width={145}
                       />

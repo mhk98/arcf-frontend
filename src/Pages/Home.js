@@ -2,41 +2,6 @@ import React from "react";
 
 const Home = () => {
   return (
-    // <div>
-    //   <div className="preloader">
-    //     <div className="preloader__image" />
-    //   </div>
-    //   {/* /.preloader */}
-
-    //   {/* /.mobile-nav__wrapper */}
-    //   <div className="search-popup">
-    //     <div className="search-popup__overlay search-toggler" />
-    //     {/* /.search-popup__overlay */}
-    //     <div className="search-popup__content">
-    //       <form action="#">
-    //         <label htmlFor="search" className="sr-only">
-    //           search here
-    //         </label>
-    //         {/* /.sr-only */}
-    //         <input type="text" id="search" placeholder="Search Here..." />
-    //         <button
-    //           type="submit"
-    //           aria-label="search submit"
-    //           className="thm-btn"
-    //         >
-    //           <i className="icon-magnifying-glass" />
-    //         </button>
-    //       </form>
-    //     </div>
-    //     {/* /.search-popup__content */}
-    //   </div>
-    //   {/* /.search-popup */}
-    //   <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
-    //     <i className="icon-up-arrow" />
-    //   </a>
-
-    // </div>
-
     <div className="custom-cursor">
       <div className="custom-cursor__cursor" />
       <div className="custom-cursor__cursor-two" />
@@ -46,24 +11,24 @@ const Home = () => {
       {/* /.preloader */}
       <div className="page-wrapper">
         {/* /.stricky-header */}
-        {/*Main Slider Start*/}
+
         <section className="main-slider clearfix">
           <div
             className="swiper-container thm-swiper__slider"
             data-swiper-options='{"slidesPerView": 1, "loop": true,
-        "effect": "fade",
-        "pagination": {
-        "el": "#main-slider-pagination",
-        "type": "bullets",
-        "clickable": true
-        },
-        "navigation": {
-        "nextEl": "#main-slider__swiper-button-next",
-        "prevEl": "#main-slider__swiper-button-prev"
-        },
-        "autoplay": {
-        "delay": 5000
-        }}'
+          "effect": "fade",
+          "pagination": {
+          "el": "#main-slider-pagination",
+          "type": "bullets",
+          "clickable": true
+          },
+          "navigation": {
+          "nextEl": "#main-slider__swiper-button-next",
+          "prevEl": "#main-slider__swiper-button-prev"
+          },
+          "autoplay": {
+          "delay": 5000
+          }}'
           >
             <div className="swiper-wrapper">
               <div className="swiper-slide">
@@ -90,10 +55,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Empathy Empowers Change
+                          Always donate for childrens
                         </p>
                         <h2 className="main-slider__title">
-                          Poverty is not natural
+                          Lend a Helping Hand to Those in Need
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -133,10 +98,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Compassion Ignites Change
+                          Always donate for childrens
                         </p>
                         <h2 className="main-slider__title">
-                          You can be that great generation
+                          Lend a Helping Hand to Those in Need
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -176,10 +141,10 @@ const Home = () => {
                     <div className="col-xl-6 col-lg-8">
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">
-                          Charity Unleashes Hope
+                          Always donate for childrens
                         </p>
                         <h2 className="main-slider__title">
-                          Let your greatness blossom
+                          Lend a Helping Hand to Those in Need
                         </h2>
                         <div className="main-slider__btn-box">
                           <a
@@ -213,7 +178,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/*Main Slider End*/}
 
         {/*About One Start*/}
         <section className="about-one">
