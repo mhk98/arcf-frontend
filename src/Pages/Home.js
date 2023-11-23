@@ -2,30 +2,68 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    // <div>
+    //   <div className="preloader">
+    //     <div className="preloader__image" />
+    //   </div>
+    //   {/* /.preloader */}
+
+    //   {/* /.mobile-nav__wrapper */}
+    //   <div className="search-popup">
+    //     <div className="search-popup__overlay search-toggler" />
+    //     {/* /.search-popup__overlay */}
+    //     <div className="search-popup__content">
+    //       <form action="#">
+    //         <label htmlFor="search" className="sr-only">
+    //           search here
+    //         </label>
+    //         {/* /.sr-only */}
+    //         <input type="text" id="search" placeholder="Search Here..." />
+    //         <button
+    //           type="submit"
+    //           aria-label="search submit"
+    //           className="thm-btn"
+    //         >
+    //           <i className="icon-magnifying-glass" />
+    //         </button>
+    //       </form>
+    //     </div>
+    //     {/* /.search-popup__content */}
+    //   </div>
+    //   {/* /.search-popup */}
+    //   <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
+    //     <i className="icon-up-arrow" />
+    //   </a>
+
+    // </div>
+
+    <div className="custom-cursor">
+      <div className="custom-cursor__cursor" />
+      <div className="custom-cursor__cursor-two" />
       <div className="preloader">
         <div className="preloader__image" />
       </div>
       {/* /.preloader */}
       <div className="page-wrapper">
+        {/* /.stricky-header */}
         {/*Main Slider Start*/}
         <section className="main-slider clearfix">
           <div
             className="swiper-container thm-swiper__slider"
             data-swiper-options='{"slidesPerView": 1, "loop": true,
-          "effect": "fade",
-          "pagination": {
-          "el": "#main-slider-pagination",
-          "type": "bullets",
-          "clickable": true
-          },
-          "navigation": {
-          "nextEl": "#main-slider__swiper-button-next",
-          "prevEl": "#main-slider__swiper-button-prev"
-          },
-          "autoplay": {
-          "delay": 5000
-          }}'
+        "effect": "fade",
+        "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+        },
+        "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+        },
+        "autoplay": {
+        "delay": 5000
+        }}'
           >
             <div className="swiper-wrapper">
               <div className="swiper-slide">
@@ -33,7 +71,7 @@ const Home = () => {
                   className="image-layer"
                   style={{
                     backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-3.png)",
+                      "url(assets/images/backgrounds/main-slider-1-1.png)",
                   }}
                 />
                 {/* /.image-layer */}
@@ -176,6 +214,7 @@ const Home = () => {
           </div>
         </section>
         {/*Main Slider End*/}
+
         {/*About One Start*/}
         <section className="about-one">
           <div className="about-one__shape-box-1">
@@ -1765,30 +1804,7 @@ const Home = () => {
         </section>
         {/*News One End*/}
       </div>
-      {/* /.page-wrapper */}
 
-      {/* /.mobile-nav__wrapper */}
-      <div className="search-popup">
-        <div className="search-popup__overlay search-toggler" />
-        {/* /.search-popup__overlay */}
-        <div className="search-popup__content">
-          <form action="#">
-            <label htmlFor="search" className="sr-only">
-              search here
-            </label>
-            {/* /.sr-only */}
-            <input type="text" id="search" placeholder="Search Here..." />
-            <button
-              type="submit"
-              aria-label="search submit"
-              className="thm-btn"
-            >
-              <i className="icon-magnifying-glass" />
-            </button>
-          </form>
-        </div>
-        {/* /.search-popup__content */}
-      </div>
       {/* /.search-popup */}
       <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
         <i className="icon-up-arrow" />
