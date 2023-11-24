@@ -10,164 +10,163 @@ const Navbar = () => {
         <div className="preloader__image" />
       </div>
       {/* /.preloader */}
-      <div className="page-wrapper">
-        <header className="main-header">
-          <nav className="main-menu">
-            <div className="main-menu__wrapper">
-              <div className="main-menu__wrapper-inner">
-                <div className="main-menu__left">
-                  <div className="main-menu__logo">
-                    <a href="index.html">
-                      <img
-                        src="assets/images/resources/logo-1.png"
-                        alt=""
-                        width={200}
-                      />
-                    </a>
+      {/* <div className="page-wrapper"> */}
+      <header className="main-header">
+        <nav className="main-menu">
+          <div className="main-menu__wrapper">
+            <div className="main-menu__wrapper-inner">
+              <div className="main-menu__left">
+                <div className="main-menu__logo">
+                  <a href="index.html">
+                    <img
+                      src="assets/images/resources/logo-1.png"
+                      alt=""
+                      width={200}
+                    />
+                  </a>
+                </div>
+                <div className="main-menu__shape-1 float-bob-x">
+                  <img src="assets/images/shapes/main-menu-shape-1.png" alt />
+                </div>
+              </div>
+              <div className="main-menu__right">
+                <div className="main-menu__right-top">
+                  <div className="main-menu__right-top-left">
+                    <div className="main-menu__volunteers">
+                      <div className="main-menu__volunteers-icon">
+                        <img
+                          src="assets/images/icon/main-menu-heart-icon.png"
+                          alt
+                        />
+                      </div>
+                      <div className="main-menu__volunteers-text-box">
+                        <p className="main-menu__volunteers-text">
+                          <a href="become-volunteer.html">
+                            Become a<span>volunteers</span>
+                          </a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="main-menu__shape-1 float-bob-x">
-                    <img src="assets/images/shapes/main-menu-shape-1.png" alt />
+                  <div className="main-menu__right-top-right">
+                    <div className="main-menu__right-top-address">
+                      <ul className="list-unstyled main-menu__right-top-address-list">
+                        <li>
+                          <div className="icon">
+                            <span className="icon-phone-call" />
+                          </div>
+                          <div className="content">
+                            <p>Helpline</p>
+                            <h5>
+                              <a href="tel:980009630">+880 2224412300</a>
+                            </h5>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="icon">
+                            <span className="icon-message" />
+                          </div>
+                          <div className="content">
+                            <p>Send email</p>
+                            <h5>
+                              <a href="mailto:needhelp@company.com">
+                                arcf.society.bd@gmail.com
+                              </a>
+                            </h5>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="icon">
+                            <span className="icon-location" />
+                          </div>
+                          <div className="content">
+                            <p>321 Eidgah Road Pagar BSCIC</p>
+                            <h5>Gazipur Bangladesh</h5>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="main-menu__right-top-social">
+                      <a href="#">
+                        <i className="fab fa-twitter" />
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-facebook" />
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-pinterest-p" />
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-instagram" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div className="main-menu__right">
-                  <div className="main-menu__right-top">
-                    <div className="main-menu__right-top-left">
-                      <div className="main-menu__volunteers">
-                        <div className="main-menu__volunteers-icon">
-                          <img
-                            src="assets/images/icon/main-menu-heart-icon.png"
-                            alt
-                          />
-                        </div>
-                        <div className="main-menu__volunteers-text-box">
-                          <p className="main-menu__volunteers-text">
-                            <a href="become-volunteer.html">
-                              Become a<span>volunteers</span>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="main-menu__right-top-right">
-                      <div className="main-menu__right-top-address">
-                        <ul className="list-unstyled main-menu__right-top-address-list">
+                <div className="main-menu__right-bottom">
+                  <div className="main-menu__main-menu-box">
+                    <a href="#" className="mobile-nav__toggler">
+                      <i className="fa fa-bars" />
+                    </a>
+                    <ul className="main-menu__list">
+                      <li className="dropdown current megamenu">
+                        <a href="/">Home </a>
+                      </li>
+                      <li className="dropdown">
+                        <Link to="/about-us">About</Link>
+                      </li>
+                      <li className="dropdown">
+                        <Link to="/about-us">What we do</Link>
+                      </li>
+
+                      <li className="dropdown">
+                        <Link>Services</Link>
+                        <ul>
                           <li>
-                            <div className="icon">
-                              <span className="icon-phone-call" />
-                            </div>
-                            <div className="content">
-                              <p>Helpline</p>
-                              <h5>
-                                <a href="tel:980009630">+880 2224412300</a>
-                              </h5>
-                            </div>
+                            <Link to="/volunteer">Volunteer</Link>
                           </li>
                           <li>
-                            <div className="icon">
-                              <span className="icon-message" />
-                            </div>
-                            <div className="content">
-                              <p>Send email</p>
-                              <h5>
-                                <a href="mailto:needhelp@company.com">
-                                  arcf.society.bd@gmail.com
-                                </a>
-                              </h5>
-                            </div>
+                            <Link to="/become-volunteer">Become volunteer</Link>
+                          </li>
+
+                          <li>
+                            <Link to="">Education</Link>
                           </li>
                           <li>
-                            <div className="icon">
-                              <span className="icon-location" />
-                            </div>
-                            <div className="content">
-                              <p>321 Eidgah Road Pagar BSCIC</p>
-                              <h5>Gazipur Bangladesh</h5>
-                            </div>
+                            <Link to="">Youth</Link>
+                          </li>
+                          <li>
+                            <Link to="">Women</Link>
+                          </li>
+                          <li>
+                            <Link to="">Governance </Link>
                           </li>
                         </ul>
-                      </div>
-                      <div className="main-menu__right-top-social">
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                        <a href="#">
-                          <i className="fab fa-facebook" />
-                        </a>
-                        <a href="#">
-                          <i className="fab fa-pinterest-p" />
-                        </a>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="main-menu__right-bottom">
-                    <div className="main-menu__main-menu-box">
-                      <a href="#" className="mobile-nav__toggler">
-                        <i className="fa fa-bars" />
-                      </a>
-                      <ul className="main-menu__list">
-                        <li className="dropdown current megamenu">
-                          <a href="/">Home </a>
-                        </li>
-                        <li className="dropdown">
-                          <Link to="/about-us">About</Link>
-                        </li>
-
-                        <li className="dropdown">
-                          <Link>Services</Link>
-                          <ul>
-                            <li>
-                              <Link to="/volunteer">Volunteer</Link>
-                            </li>
-                            <li>
-                              <Link to="/become-volunteer">
-                                Become volunteer
-                              </Link>
-                            </li>
-
-                            <li>
-                              <Link to="">Education</Link>
-                            </li>
-                            <li>
-                              <Link to="">Youth</Link>
-                            </li>
-                            <li>
-                              <Link to="">Women</Link>
-                            </li>
-                            <li>
-                              <Link to="">Governance </Link>
-                            </li>
-                          </ul>
-                        </li>
-
-                        <li>
-                          <Link>What we do</Link>
-                        </li>
-                        <li className="dropdown">
-                          <Link to="#">Donations</Link>
-                          <ul>
-                            <li>
-                              <Link to="/donate-list">Donation Category </Link>
-                            </li>
-                            {/* <li>
+                      </li>
+                      {/* <li className="dropdown">
+                        <Link>What we do</Link>
+                      </li> */}
+                      <li className="dropdown">
+                        <Link to="#">Donations</Link>
+                        <ul>
+                          <li>
+                            <Link to="/donate-list">Donation Category </Link>
+                          </li>
+                          {/* <li>
                             <Link to="/donate-details">Donation details</Link>
                           </li> */}
-                            <li>
-                              <Link to="/donate-now">Donation Now</Link>
-                            </li>
-                            {/* <li>
+                          <li>
+                            <Link to="/donate-now">Donation Now</Link>
+                          </li>
+                          {/* <li>
                             <Link to="donation-details.html">
                               Donation details
                             </Link>
                           </li> */}
-                          </ul>
-                        </li>
-
-                        <li className="">
-                          <Link to="/events">Events</Link>
-                          {/* <ul>
+                        </ul>
+                      </li>
+                      <li className="">
+                        <Link to="/events">Events</Link>
+                        {/* <ul>
                           <li>
                             <Link to="events.html">Events</Link>
                           </li>
@@ -176,10 +175,10 @@ const Navbar = () => {
                             <Link to="event-details.html">Event details</Link>
                           </li>
                         </ul> */}
-                        </li>
-                        <li className="dropdown">
-                          <Link to="/news">News</Link>
-                          {/* <ul>
+                      </li>
+                      <li className="dropdown">
+                        <Link to="/news">News</Link>
+                        {/* <ul>
                           <li>
                             <Link to="news.html">News</Link>
                           </li>
@@ -198,9 +197,9 @@ const Navbar = () => {
                             <Link to="news-details.html">News details</Link>
                           </li>
                         </ul> */}
-                        </li>
+                      </li>
 
-                        {/* <li className="dropdown">
+                      {/* <li className="dropdown">
                         <Link to="products.html">Shop</Link>
                         <ul>
                           <li>
@@ -218,48 +217,48 @@ const Navbar = () => {
                         </ul>
                       </li>  */}
 
-                        <li>
-                          <Link to="/contact">Contact</Link>
-                        </li>
-                        <li>
-                          <Link to="/gallery">Gallery</Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="main-menu__main-menu-content-box">
-                      <div className="main-menu__search-cat-btn-box">
-                        <div className="main-menu__search-box">
-                          <a
-                            href="#"
-                            className="main-menu__search search-toggler icon-magnifying-glass"
-                          />
-                        </div>
-                        <div className="main-menu__cat-box">
-                          <a
-                            href="cart.html"
-                            className="main-menu__cart icon-shopping-cart"
-                          />
-                        </div>
-                        <div className="main-menu__btn-box">
-                          <a href="donate-now.html" className="main-menu__btn">
-                            {" "}
-                            <span className="fa fa-heart" /> Donate now
-                          </a>
-                        </div>
+                      <li>
+                        <Link to="/contact">Contact</Link>
+                      </li>
+                      <li>
+                        <Link to="/gallery">Gallery</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="main-menu__main-menu-content-box">
+                    <div className="main-menu__search-cat-btn-box">
+                      <div className="main-menu__search-box">
+                        <a
+                          href="#"
+                          className="main-menu__search search-toggler icon-magnifying-glass"
+                        />
+                      </div>
+                      <div className="main-menu__cat-box">
+                        <a
+                          href="cart.html"
+                          className="main-menu__cart icon-shopping-cart"
+                        />
+                      </div>
+                      <div className="main-menu__btn-box">
+                        <a href="/donate-now" className="main-menu__btn">
+                          {" "}
+                          <span className="fa fa-heart" /> Donate now
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </nav>
-        </header>
-        <div className="stricky-header stricked-menu main-menu">
-          <div className="sticky-header__content" />
-          {/* /.sticky-header__content */}
-        </div>
-        {/* /.stricky-header */}
+          </div>
+        </nav>
+      </header>
+      <div className="stricky-header stricked-menu main-menu">
+        <div className="sticky-header__content" />
+        {/* /.sticky-header__content */}
       </div>
+      {/* /.stricky-header */}
+      {/* </div> */}
       {/* /.page-wrapper */}
       <div className="mobile-nav__wrapper">
         <div className="mobile-nav__overlay mobile-nav__toggler" />
@@ -269,7 +268,7 @@ const Navbar = () => {
             <i className="fa fa-times" />
           </span>
           <div className="logo-box">
-            <a href="index.html" aria-label="logo image">
+            <a href="/" aria-label="logo image">
               <img src="assets/images/resources/logo-2.png" width={143} alt />
             </a>
           </div>

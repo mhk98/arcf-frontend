@@ -830,10 +830,10 @@ ul {
 }
 
 .main-menu__btn-box {
-  position: relative;
+  /* position: relative;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .main-menu__btn {

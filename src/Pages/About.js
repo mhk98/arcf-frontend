@@ -29,17 +29,15 @@ const About = () => {
             <div className="col-xl-6">
               <div className="about-four__right">
                 <div className="section-title text-left">
-                  <span className="section-title__tagline">About oxpins</span>
+                  <span className="section-title__tagline">
+                    About Arc Foundation
+                  </span>
                   <h2 className="section-title__title">
-                    Get to know about our oxpins organization
+                    Get to know about our Arc Foundation
                   </h2>
                 </div>
                 <p className="about-four__text">
-                  Nam ultrices odio a felis lobortis convallis. In ex nunc,
-                  ornare non condimentum et, egestas vel massa. Nullam hendrerit
-                  felis quis pellentesque porttitor. Aenean lobortis bibendum
-                  turpis et auctor. Nam iaculis, lectus vulputate cursus
-                  interdum.
+                The ARC Foundation is a non-government, non-profitable, non-political, voluntary, and charitable organization wishing to impact and change people’s lives towards sustainable self-reliance, influencing people not to lose hope but to step up & claim their place and space in all spheres of life through information, empowerment, skills development and providing the necessary resources and mentorship. Our focus is to mobilize communities toward sustainable and responsible development. At ARC Foundation we believe in transformation from poverty to hope, obstacles to opportunities, and from oppression to triumph. At ARC Foundation we celebrate the rich diversity of our country and praise many individuals and organizations who steadfastly remained committed to breaking the cycle of marginalization and poverty in Bangladesh. 
                 </p>
                 <ul className="list-unstyled about-four__points">
                   <li>
@@ -283,115 +281,119 @@ const About = () => {
       </section>
       {/*Become Volunteer One End*/}
       {/*FAQ One Start*/}
-      <section className="faq-one faq-two">
-        <div
-          className="faq-one-shape-1"
-          style={{
-            backgroundImage: "url(assets/images/shapes/faq-one-shape-1.png)",
-          }}
-        />
-        <div
-          className="faq-one-bg"
-          style={{
-            backgroundImage: "url(assets/images/backgrounds/faq-one-bg.png)",
-          }}
-        />
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-6">
-              <div className="faq-one__left">
-                <div className="section-title text-left">
-                  <span className="section-title__tagline">
-                    Recently asked questions
-                  </span>
-                  <h2 className="section-title__title">
-                    People are frequently asking some questions from us
-                  </h2>
+      {/*FAQ One Start*/}
+      <section className="faq-one">
+          <div
+            className="faq-one-shape-1"
+            style={{
+              backgroundImage: "url(assets/images/shapes/faq-one-shape-1.png)",
+            }}
+          />
+          <div
+            className="faq-one-bg"
+            style={{
+              backgroundImage: "url(assets/images/backgrounds/faq-one-bg.png)",
+            }}
+          />
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-lg-6">
+                <div className="faq-one__left">
+                  <div className="section-title text-left">
+                    <span className="section-title__tagline">
+                      Recently asked questions
+                    </span>
+                    <h2 className="section-title__title">
+                      People are frequently ask some questions from us.
+                    </h2>
+                  </div>
+                  <p className="faq-one__text-1">
+                    ARC Foundation, a non-profit organization, aims to empower
+                    individuals for self-reliance through information, skills
+                    development, and mentorship.
+                  </p>
+                  <a href="faq.html" className="thm-btn faq-one__btn">
+                    Learn how to get help
+                  </a>
                 </div>
-                <p className="faq-one__text-1">
-                  Proactively procrastinate cross-platform results via extensive
-                  ideas distinctively underwhelm enterprise. Compellingly
-                  plagiarize value-added sources with inexpensive schemas.
-                </p>
-                <a href="faq.html" className="thm-btn faq-one__btn">
-                  Learn how to get help
-                </a>
               </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="faq-one__right">
-                <div
-                  className="accrodion-grp"
-                  data-grp-name="faq-one-accrodion"
-                >
-                  <div className="accrodion active">
-                    <div className="accrodion-title">
-                      <h4>Nulla eu purus scelerisque, dignissim diam.</h4>
-                    </div>
-                    <div className="accrodion-content">
-                      <div className="inner">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
+              <div className="col-xl-6 col-lg-6">
+                <div className="faq-one__right">
+                  <div
+                    className="accrodion-grp"
+                    data-grp-name="faq-one-accrodion"
+                  >
+                    <div className="accrodion active">
+                      <div className="accrodion-title">
+                        <h4>What is the mission of ARC Foundation?</h4>
                       </div>
-                      {/* /.inner */}
-                    </div>
-                  </div>
-                  <div className="accrodion">
-                    <div className="accrodion-title">
-                      <h4>
-                        Quisque non diam porta, ullamcorper dolor sit amet.
-                      </h4>
-                    </div>
-                    <div className="accrodion-content">
-                      <div className="inner">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
+                      <div className="accrodion-content">
+                        <div className="inner">
+                          <p>
+                            The mission of ARC Foundation is to empower
+                            individuals for sustainable self-reliance through
+                            information, skills development, and mentorship.
+                          </p>
+                        </div>
+                        {/* /.inner */}
                       </div>
-                      {/* /.inner */}
                     </div>
-                  </div>
-                  <div className="accrodion">
-                    <div className="accrodion-title">
-                      <h4>How can I make a change to my application?</h4>
-                    </div>
-                    <div className="accrodion-content">
-                      <div className="inner">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
+                    <div className="accrodion">
+                      <div className="accrodion-title">
+                        <h4>
+                          How does ARC Foundation support education in
+                          communities?
+                        </h4>
                       </div>
-                      {/* /.inner */}
-                    </div>
-                  </div>
-                  <div className="accrodion last-chiled">
-                    <div className="accrodion-title">
-                      <h4>Sed mattis neque sed commodo efficitur.</h4>
-                    </div>
-                    <div className="accrodion-content">
-                      <div className="inner">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
+                      <div className="accrodion-content">
+                        <div className="inner">
+                          <p>
+                            ARC Foundation supports community education with
+                            resources and skill development.
+                          </p>
+                        </div>
+                        {/* /.inner */}
                       </div>
-                      {/* /.inner */}
+                    </div>
+                    <div className="accrodion">
+                      <div className="accrodion-title">
+                        <h4>Can I volunteer with ARC Foundation? How?</h4>
+                      </div>
+                      <div className="accrodion-content">
+                        <div className="inner">
+                          <p>
+                            Yes, visit our website or contact us for
+                            volunteering opportunities.
+                          </p>
+                        </div>
+                        {/* /.inner */}
+                      </div>
+                    </div>
+                    <div className="accrodion last-chiled">
+                      <div className="accrodion-title">
+                        <h4>
+                          What success stories or impact has ARC Foundation
+                          achieved so far?
+                        </h4>
+                      </div>
+                      <div className="accrodion-content">
+                        <div className="inner">
+                          <p>
+                            ARC Foundation has achieved impactful success
+                            stories, empowering individuals through education,
+                            skills development, and community support.
+                          </p>
+                        </div>
+                        {/* /.inner */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        {/*FAQ One End*/}
       {/*FAQ One End*/}
       {/*Team One Start*/}
       <section className="team-one">
