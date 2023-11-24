@@ -141,9 +141,10 @@ const Navbar = () => {
                             </li>
                           </ul>
                         </li>
-                        {/* <li className="dropdown">
-                        <Link>What we do</Link>
-                      </li> */}
+
+                        <li>
+                          <Link>What we do</Link>
+                        </li>
                         <li className="dropdown">
                           <Link to="#">Donations</Link>
                           <ul>
@@ -163,6 +164,7 @@ const Navbar = () => {
                           </li> */}
                           </ul>
                         </li>
+
                         <li className="">
                           <Link to="/events">Events</Link>
                           {/* <ul>
