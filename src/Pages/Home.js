@@ -3,11 +3,6 @@ import React from "react";
 const Home = () => {
   return (
     <div className="custom-cursor">
-      <div className="custom-cursor__cursor" />
-      <div className="custom-cursor__cursor-two" />
-      <div className="preloader">
-        <div className="preloader__image" />
-      </div>
       {/* /.preloader */}
       <div className="page-wrapper">
         {/* /.stricky-header */}

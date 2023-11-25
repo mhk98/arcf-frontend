@@ -1,14 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="custom-cursor">
-      <div className="custom-cursor__cursor" />
-      <div className="custom-cursor__cursor-two" />
-      <div className="preloader">
-        <div className="preloader__image" />
-      </div>
       {/* /.preloader */}
       {/* <div className="page-wrapper"> */}
       <header className="main-header">
@@ -17,11 +11,11 @@ const Navbar = () => {
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
                 <div className="main-menu__logo">
-                  <a href="index.html">
+                  <a href="/">
                     <img
                       src="assets/images/resources/logo-1.png"
                       alt=""
-                      width={200}
+                      width={143}
                     />
                   </a>
                 </div>
@@ -253,6 +247,7 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
+
       <div className="stricky-header stricked-menu main-menu">
         <div className="sticky-header__content" />
         {/* /.sticky-header__content */}
@@ -268,7 +263,7 @@ const Navbar = () => {
             <i className="fa fa-times" />
           </span>
           <div className="logo-box">
-            <a href="/" aria-label="logo image">
+            <a href="index.html" aria-label="logo image">
               <img src="assets/images/resources/logo-2.png" width={143} alt />
             </a>
           </div>
@@ -301,6 +296,7 @@ const Navbar = () => {
         </div>
         {/* /.mobile-nav__content */}
       </div>
+
       {/* /.mobile-nav__wrapper */}
       <div className="search-popup">
         <div className="search-popup__overlay search-toggler" />

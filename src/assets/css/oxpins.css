@@ -487,7 +487,7 @@ ul {
 
 .main-menu__shape-1 {
   position: absolute;
-  bottom: 100px;
+  bottom: -5px;
   right: -140px;
 }
 
@@ -825,10 +825,10 @@ ul {
 }
 
 .main-menu__btn-box {
-  /* position: relative;
+  position: relative;
   display: flex;
   align-items: center;
-  z-index: 1; */
+  z-index: 1;
 }
 
 .main-menu__btn {
@@ -837,6 +837,7 @@ ul {
   color: var(--oxpins-black);
   background-color: var(--oxpins-primary);
   padding-left: 50px;
+  padding-right: 50px;
   padding-top: 17px;
   padding-bottom: 17px;
   position: relative;
@@ -854,15 +855,15 @@ ul {
 
 .main-menu__btn:before {
   content: "";
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  /* right: -10000000000000px; */
+  right: -50px;
   background-color: var(--oxpins-primary);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  /* z-index: -1; */
+  z-index: -1;
 }
 
 .main-menu__btn:hover:before {
