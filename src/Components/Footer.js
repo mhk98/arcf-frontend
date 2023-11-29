@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,20 +14,20 @@ const Footer = () => {
         ></div>
         <div className="site-footer__top">
           <div className="container">
-            <div className="row">
+            <div className="row justify-content-between align-items-center">
               <div
                 className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay="100ms"
               >
                 <div className="footer-widget__column footer-widget__about">
                   <div className="footer-widget__about-logo">
-                    <a href="index.html">
+                    <Link to="/">
                       <img
                         src="assets/images/resources/logo-2.png"
                         alt=""
                         width={145}
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="footer-widget__about-text-box">
                     <p className="footer-widget__about-text">
@@ -52,19 +53,19 @@ const Footer = () => {
                   <h3 className="footer-widget__title">Quick Links</h3>
                   <ul className="footer-widget__links-list list-unstyled clearfix">
                     <li>
-                      <a href="about.html">About us</a>
+                      <a href="/about-us">About us</a>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                     <li>
-                      <a href="news.html">Latest News</a>
+                      <a href="/news">Latest News</a>
                     </li>
                     <li>
-                      <a href="event-details.html">Recent Events</a>
+                      <a href="//events">Recent Events</a>
                     </li>
                     <li>
-                      <a href="donation.html">Donations</a>
+                      <a href="//donate-now">Donations</a>
                     </li>
                   </ul>
                 </div>
@@ -169,7 +170,7 @@ const Footer = () => {
             <i className="fa fa-times" />
           </span>
           <div className="logo-box">
-            <a href="index.html" aria-label="logo image">
+            <a href="/" aria-label="logo image">
               <img src="assets/images/resources/logo-2.png" width={143} alt />
             </a>
           </div>

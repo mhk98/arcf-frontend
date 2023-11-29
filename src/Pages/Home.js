@@ -1,6 +1,20 @@
-import React from "react";
+import { jarallax } from "jarallax";
+import React, { useEffect } from "react";
+import { WOW } from "wowjs";
 
 const Home = () => {
+  useEffect(() => {
+    // Initialize WOW.js
+    const wow = new WOW();
+    wow.init();
+  }, []);
+
+  useEffect(() => {
+    jarallax(document.querySelectorAll(".jarallax"), {
+      speed: 0.2,
+      imgPosition: "50% 0%",
+    });
+  }, []);
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -464,22 +478,20 @@ const Home = () => {
               data-speed="0.2"
               data-imgposition="50% 0%"
               style={{
-                backgroundImage:
-                  "url(assets/images/backgrounds/become-volunteer-one-bg.jpg)",
+                backgroundImage: `url('https://i.ibb.co/StBpS8m/become-volunteer-one-bg.jpg')`,
               }}
             />
           </div>
           <div
             className="become-volunteer-one__shape-1"
             style={{
-              backgroundImage:
-                "url(assets/images/shapes/become-volunteer-shape-1.png)",
+              backgroundImage: `url('assets/images/shapes/become-volunteer-shape-1.png')`,
             }}
           />
           <div className="container">
             <div className="become-volunteer-one__inner">
               <p className="become-volunteer-one__sub-title">
-                Become a Volunteers
+                Become a Volunteer
               </p>
               <h3 className="become-volunteer-one__title">
                 Join us for a better life and <br /> future for poor people.
@@ -495,6 +507,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+
         {/*Become Volunteer One End*/}
         {/*Events One Start*/}
         <section className="events-one">

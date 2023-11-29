@@ -5,8 +5,8 @@ const Navbar = () => {
     <div className="custom-cursor">
       {/* /.preloader */}
       {/* <div className="page-wrapper"> */}
-      <header className="main-header">
-        <nav className="main-menu">
+      <header className="main-header ">
+        <nav className="main-menu ">
           <div className="main-menu__wrapper">
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
@@ -234,10 +234,10 @@ const Navbar = () => {
                         />
                       </div>
                       <div className="main-menu__btn-box">
-                        <a href="/donate-now" className="main-menu__btn">
+                        <Link href="/donate-now" className="main-menu__btn">
                           {" "}
                           <span className="fa fa-heart" /> Donate now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -263,8 +263,12 @@ const Navbar = () => {
             <i className="fa fa-times" />
           </span>
           <div className="logo-box">
-            <a href="index.html" aria-label="logo image">
-              <img src="assets/images/resources/logo-2.png" width={143} alt />
+            <a href="/" aria-label="logo image">
+              <img
+                src="assets/images/resources/logo-2.png"
+                width={145}
+                alt=""
+              />
             </a>
           </div>
           {/* /.logo-box */}
