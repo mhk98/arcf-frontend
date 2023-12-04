@@ -1,6 +1,8 @@
 import { jarallax } from "jarallax";
 import React, { useEffect } from "react";
 import { WOW } from "wowjs";
+import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
+import banner from "../image/what-we-do.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -188,127 +190,308 @@ const Home = () => {
           </div>
         </section>
 
-        {/*About One Start*/}
-        <section className="about-one">
-          <div className="about-one__shape-box-1">
-            <div
-              className="about-one__shape-1"
-              style={{
-                backgroundImage:
-                  "url(assets/images/shapes/about-one-shape-1.png)",
-              }}
-            />
-          </div>
+        <section className="what-we-do">
           <div className="container">
             <div className="row">
               <div className="col-xl-6">
-                <div className="about-one__left">
-                  <div
-                    className="about-one__img-box wow slideInLeft"
-                    data-wow-delay="100ms"
-                    data-wow-duration="2500ms"
-                  >
-                    <div className="about-one__img">
-                      <img
-                        src="assets/images/resources/about-one-img-1.jpg"
-                        alt
-                      />
-                    </div>
-                    <div className="about-one__img-border" />
-                    <div className="about-one__curved-circle-box">
-                      <div className="curved-circle">
-                        <span className="curved-circle--item">
-                          25 YEARS EXPERIENCE OXPINS CHARITY CENTER
-                        </span>
-                      </div>
-                      {/* /.curved-circle */}
-                      <div className="about-one__curved-circle-icon">
+                <img src={banner} alt="" height={467} width={585} />
+              </div>
+              <div className="col-xl-6">
+                <h2 className="section-title__title">What We Do</h2>
+                <p>
+                  ARC Foundation provides services in entrepreneurship and
+                  development, information technology training and empowerment,
+                  health education and education in HIV & AIDS management and
+                  awareness, malaria and TB awareness and advocacy,
+                  Rehabilitation of street children, supporting orphans and
+                  vulnerable children, deployment of both local and
+                  international volunteers to various community projects,
+                  community entrepreneurship/ community microfinance training
+                  and monitoring (Community Savings and loaning), Capacity
+                  Building sessions to youth groups, vocational schools, primary
+                  and secondary schools, organic farming and agricultural
+                  activities, Eco-Tourism, Environmental Education and
+                  Management.
+                </p>
+                <p>
+                  ARC Foundation harnesses and develops the power of young
+                  people, by effectively involving them in the direct
+                  implementation of the core activities that develop their
+                  skills, enabling them to become self-reliant and sustainable
+                  people in community service and development. We engage young
+                  people in a constructive manner enabling them initiative and
+                  build their ideas, develop prototypes, test and develop
+                  products that meet the people’s needs, and help reduce the
+                  problems and challenges that most face in the development
+                  sector.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*About One Start*/}
+        <section>
+          <h2 className="section-title__title text-center">
+            Welcome to ARC Foundation
+          </h2>
+
+          <div className="about-one">
+            <div className="about-one__shape-box-1">
+              <div
+                className="about-one__shape-1"
+                style={{
+                  backgroundImage:
+                    "url(assets/images/shapes/about-one-shape-1.png)",
+                }}
+              />
+            </div>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-6">
+                  <div className="about-one__left">
+                    <div
+                      className="about-one__img-box wow slideInLeft"
+                      data-wow-delay="100ms"
+                      data-wow-duration="2500ms"
+                    >
+                      <div className="about-one__img">
                         <img
-                          src="assets/images/icon/curved-circle-icon.png"
+                          src="assets/images/resources/about-one-img-1.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div className="about-one__img-border" />
+                      <div className="about-one__curved-circle-box">
+                        <div className="curved-circle">
+                          <span className="curved-circle--item">
+                            25 YEARS EXPERIENCE OXPINS CHARITY CENTER
+                          </span>
+                        </div>
+                        {/* /.curved-circle */}
+                        <div className="about-one__curved-circle-icon">
+                          <img
+                            src="assets/images/icon/curved-circle-icon.png"
+                            alt
+                          />
+                        </div>
+                      </div>
+                      <div className="about-one__shape-2 zoom-fade">
+                        <img
+                          src="assets/images/shapes/about-one-shape-2.png"
+                          alt
+                        />
+                      </div>
+                      <div className="about-one__shape-3 float-bob-y">
+                        <img
+                          src="assets/images/shapes/about-one-shape-3.png"
+                          alt
+                        />
+                      </div>
+                      <div className="about-one__shape-4 zoominout">
+                        <img
+                          src="assets/images/shapes/about-one-shape-4.png"
                           alt
                         />
                       </div>
                     </div>
-                    <div className="about-one__shape-2 zoom-fade">
-                      <img
-                        src="assets/images/shapes/about-one-shape-2.png"
-                        alt
-                      />
-                    </div>
-                    <div className="about-one__shape-3 float-bob-y">
-                      <img
-                        src="assets/images/shapes/about-one-shape-3.png"
-                        alt
-                      />
-                    </div>
-                    <div className="about-one__shape-4 zoominout">
-                      <img
-                        src="assets/images/shapes/about-one-shape-4.png"
-                        alt
-                      />
-                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-xl-6">
-                <div className="about-one__right">
-                  <div className="section-title text-left">
-                    <span className="section-title__tagline">
-                      Welcome to ARC Foundation
-                    </span>
-                    <h2 className="section-title__title">
-                      Helping each other can make world better
-                    </h2>
-                  </div>
-                  <p className="about-one__text">
-                    Transforming Lives Through Research, and Changes. Body Text:
-                    We are delighted to have you join our community dedicated to
-                    Advocacy, Research, and Change. Together, let's embark on a
-                    journey of positively impacting, fostering resilience, and
-                    creating a better world. Your presence enriches our mission,
-                    and we look forward to achieving meaningful milestones
-                    together.
-                  </p>
-                  <div className="about-one__fund">
-                    <p className="about-one__fund-text">
-                      Helped fund <span>24,537</span> Projects in
-                      <span>24</span> Countries, Benefiting over <br />{" "}
-                      <span>8.2</span> Million people.
+                <div className="col-xl-6">
+                  <div className="about-one__right">
+                    <div className="section-title text-left">
+                      <h2 className="section-title__title">
+                        Helping each other can make world better
+                      </h2>
+                    </div>
+                    <p className="about-one__text">
+                      Transforming Lives Through Research, and Changes. Body
+                      Text: We are delighted to have you join our community
+                      dedicated to Advocacy, Research, and Change. Together,
+                      let's embark on a journey of positively impacting,
+                      fostering resilience, and creating a better world. Your
+                      presence enriches our mission, and we look forward to
+                      achieving meaningful milestones together.
                     </p>
+                    {/* <div className="about-one__fund">
+                      <p className="about-one__fund-text">
+                        Helped fund <span>24,537</span> Projects in
+                        <span>24</span> Countries, Benefiting over <br />{" "}
+                        <span>8.2</span> Million people.
+                      </p>
+                    </div> */}
+                    {/* <ul className="list-unstyled about-one__points">
+                      <li>
+                        <div className="icon">
+                          <span className="icon-volunteer" />
+                        </div>
+                        <div className="text">
+                          <h5>
+                            <a href="become-volunteer.html">Join ARCF Team</a>
+                          </h5>
+                          <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="icon">
+                          <span className="icon-solidarity" />
+                        </div>
+                        <div className="text">
+                          <h5>
+                            <a href="donate-now.html">Start Donate</a>
+                          </h5>
+                          <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
+                        </div>
+                      </li>
+                    </ul> */}
+                    <a href="about.html" className="thm-btn about-one__btn">
+                      Discover More
+                    </a>
                   </div>
-                  <ul className="list-unstyled about-one__points">
-                    <li>
-                      <div className="icon">
-                        <span className="icon-volunteer" />
-                      </div>
-                      <div className="text">
-                        <h5>
-                          <a href="become-volunteer.html">Join ARCF Team</a>
-                        </h5>
-                        <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="icon">
-                        <span className="icon-solidarity" />
-                      </div>
-                      <div className="text">
-                        <h5>
-                          <a href="donate-now.html">Start Donate</a>
-                        </h5>
-                        <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <a href="about.html" className="thm-btn about-one__btn">
-                    Discover More
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
         {/*About One End*/}
+
+        {/*Feature One Start*/}
+        <section className="feature-one">
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-xl-6 col-lg-6  wow slideInLeft"
+                data-wow-delay="100ms"
+                data-wow-duration="2500ms"
+              >
+                <div className="feature-one__single">
+                  <div
+                    className="feature-one__single-bg"
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/shapes/feature-one-shape-1.png)",
+                    }}
+                  />
+                  <div className="feature-one__top">
+                    <div className="feature-one__top-inner">
+                      <div className="feature-one__top-icon">
+                        <span className="icon-help" />
+                      </div>
+                      <div className="feature-one__top-title-box">
+                        <h3 className="feature-one__top-title">
+                          <a href="become-volunteer.html">Our Mission</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="feature-one__text">
+                    ARC Foundation endeavors to unleash the potential of
+                    disadvantaged youth, men, women, people with disabilities,
+                    and children to succeed in life through providing education,
+                    specialized creche, health care, livelihood skills, and
+                    community development services.
+                  </p>
+
+                  {/* <ul className="list-unstyled feature-one__point">
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Old age people.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Children & Women.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Enlightened lives.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <a
+                    href="become-volunteer.html"
+                    className="thm-btn feature-one__btn"
+                  >
+                    View details
+                  </a> */}
+                </div>
+              </div>
+              <div
+                className="col-xl-6 col-lg-6  wow slideInRight"
+                data-wow-delay="100ms"
+                data-wow-duration="2500ms"
+              >
+                <div className="feature-one__single feature-one__single--two">
+                  <div
+                    className="feature-one__single-bg"
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/shapes/feature-one-shape-1.png)",
+                    }}
+                  />
+                  <div className="feature-one__top">
+                    <div className="feature-one__top-inner">
+                      <div className="feature-one__top-icon feature-one__top-icon--two">
+                        <span className="icon-gift-box" />
+                      </div>
+                      <div className="feature-one__top-title-box">
+                        <h3 className="feature-one__top-title">
+                          <a href="about.html">Our Vision</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="feature-one__text">
+                    ARC Foundation envisions a society where old age people,
+                    children, women & deprived people enjoy secure, healthy,
+                    enlightened lives and a responsive environment that promotes
+                    their social, economic, cultural, and moral development.
+                  </p>
+                  {/* <ul className="list-unstyled feature-one__point">
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Providing education.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Livelihood skills.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="icon">
+                        <span className="fa fa-check" />
+                      </div>
+                      <div className="text">
+                        <p>Community development services</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <a href="about.html" className="thm-btn feature-one__btn">
+                    View details
+                  </a> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*Feature One End*/}
+
         {/*Causes One Start*/}
         <section className="causes-one">
           <div className="container">
@@ -469,6 +652,7 @@ const Home = () => {
           </div>
         </section>
         {/*Causes One End*/}
+
         {/*Become Volunteer One Start*/}
         <section className="become-volunteer-one">
           <div className="become-volunteer-one__bg-box">
@@ -478,7 +662,7 @@ const Home = () => {
               data-speed="0.2"
               data-imgposition="50% 0%"
               style={{
-                backgroundImage: `url('https://i.ibb.co/StBpS8m/become-volunteer-one-bg.jpg')`,
+                backgroundImage: `url(${bg})`,
               }}
             />
           </div>
@@ -509,383 +693,7 @@ const Home = () => {
         </section>
 
         {/*Become Volunteer One End*/}
-        {/*Events One Start*/}
-        <section className="events-one">
-          <div
-            className="events-one-shape-1"
-            style={{
-              backgroundImage:
-                "url(assets/images/shapes/events-one-shape-1.png)",
-            }}
-          ></div>
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-4 col-lg-4">
-                <div className="events-one__left">
-                  <div className="section-title text-left">
-                    <span className="section-title__tagline">ACTIVITIES</span>
-                    <h2 className="section-title__title">
-                      Join our latest activities
-                    </h2>
-                  </div>
-                  <p className="events-one__text-1">
-                    ARC Foundation empowers through education, healthcare, and
-                    community development.
-                  </p>
-                  <a
-                    href="event-details.html"
-                    className="thm-btn events-one__btn"
-                  >
-                    Discover More
-                  </a>
-                </div>
-              </div>
-              <div className="col-xl-8 col-lg-8">
-                <div className="events-one__right">
-                  <div
-                    className="events-one__carousel owl-carousel owl-theme thm-owl__carousel"
-                    data-owl-options='{
-                          "loop": true,
-                          "autoplay": true,
-                          "margin": 20,
-                          "nav": true,
-                          "dots": false,
-                          "smartSpeed": 500,
-                          "autoplayTimeout": 10000,
-                          "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
-                          "responsive": {
-                              "0": {
-                                  "items": 1
-                              },
-                              "768": {
-                                  "items": 2
-                              },
-                              "992": {
-                                  "items": 2
-                              },
-                              "1200": {
-                                  "items": 3
-                              }
-                          }
-                      }'
-                  >
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-1.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                Play for the world with us
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-2.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                Contrary to popular belief
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-3.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                There are many variations of
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-1.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                Play for the world with us
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-2.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                Contrary to popular belief
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Events One Single Start*/}
-                      <div className="events-one__single">
-                        <div className="events-one__img">
-                          <img src="assets/images/events/events-1-3.jpg" alt />
-                          <div className="events-one__date">
-                            <p>23 May, 2022</p>
-                          </div>
-                          <div className="events-one__content">
-                            <ul className="list-unstyled events-one__meta">
-                              <li>
-                                <i className="fas fa-clock" />
-                                8:00pm
-                              </li>
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                New York
-                              </li>
-                            </ul>
-                            <h3 className="events-one__title">
-                              <a href="event-details.html">
-                                There are many variations of
-                              </a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                      {/*Events One Single End*/}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/*Events One End*/}
-        {/*Feature One Start*/}
-        <section className="feature-one">
-          <div className="container">
-            <div className="row">
-              <div
-                className="col-xl-6 col-lg-6  wow slideInLeft"
-                data-wow-delay="100ms"
-                data-wow-duration="2500ms"
-              >
-                <div className="feature-one__single">
-                  <div
-                    className="feature-one__single-bg"
-                    style={{
-                      backgroundImage:
-                        "url(assets/images/shapes/feature-one-shape-1.png)",
-                    }}
-                  />
-                  <div className="feature-one__top">
-                    <div className="feature-one__top-inner">
-                      <div className="feature-one__top-icon">
-                        <span className="icon-help" />
-                      </div>
-                      <div className="feature-one__top-title-box">
-                        <h3 className="feature-one__top-title">
-                          <a href="become-volunteer.html">
-                            Our Vision <br /> Statement
-                          </a>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="feature-one__text">
-                    ARC Foundation envisions a thriving, <br />
-                    supportive society for all.
-                  </p>
-                  <ul className="list-unstyled feature-one__point">
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Old age people.</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Children & Women.</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Enlightened lives.</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <a
-                    href="become-volunteer.html"
-                    className="thm-btn feature-one__btn"
-                  >
-                    View details
-                  </a>
-                </div>
-              </div>
-              <div
-                className="col-xl-6 col-lg-6  wow slideInRight"
-                data-wow-delay="100ms"
-                data-wow-duration="2500ms"
-              >
-                <div className="feature-one__single feature-one__single--two">
-                  <div
-                    className="feature-one__single-bg"
-                    style={{
-                      backgroundImage:
-                        "url(assets/images/shapes/feature-one-shape-1.png)",
-                    }}
-                  />
-                  <div className="feature-one__top">
-                    <div className="feature-one__top-inner">
-                      <div className="feature-one__top-icon feature-one__top-icon--two">
-                        <span className="icon-gift-box" />
-                      </div>
-                      <div className="feature-one__top-title-box">
-                        <h3 className="feature-one__top-title">
-                          <a href="about.html">
-                            Our Mission <br />
-                            Statement
-                          </a>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="feature-one__text">
-                    ARC Foundation empowers through education, healthcare, and
-                    community support.
-                  </p>
-                  <ul className="list-unstyled feature-one__point">
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Providing education.</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Livelihood skills.</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="icon">
-                        <span className="fa fa-check" />
-                      </div>
-                      <div className="text">
-                        <p>Community development services</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <a href="about.html" className="thm-btn feature-one__btn">
-                    View details
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/*Feature One End*/}
+
         {/*Brand One Start*/}
         <section className="brand-one">
           <div className="container">

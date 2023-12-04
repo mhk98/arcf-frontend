@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -26,7 +32,7 @@ const Navbar = () => {
               <div className="main-menu__right">
                 <div className="main-menu__right-top">
                   <div className="main-menu__right-top-left">
-                    <div className="main-menu__volunteers">
+                    {/* <div className="main-menu__volunteers">
                       <div className="main-menu__volunteers-icon">
                         <img
                           src="assets/images/icon/main-menu-heart-icon.png"
@@ -40,7 +46,7 @@ const Navbar = () => {
                           </a>
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="main-menu__right-top-right">
                     <div className="main-menu__right-top-address">
@@ -50,7 +56,7 @@ const Navbar = () => {
                             <span className="icon-phone-call" />
                           </div>
                           <div className="content">
-                            <p>Helpline</p>
+                            {/* <p>Helpline</p> */}
                             <h5>
                               <a href="tel:980009630">+880 2224412300</a>
                             </h5>
@@ -61,7 +67,7 @@ const Navbar = () => {
                             <span className="icon-message" />
                           </div>
                           <div className="content">
-                            <p>Send email</p>
+                            {/* <p>Send email</p> */}
                             <h5>
                               <a href="mailto:needhelp@company.com">
                                 arcf.society.bd@gmail.com
@@ -69,7 +75,7 @@ const Navbar = () => {
                             </h5>
                           </div>
                         </li>
-                        <li>
+                        {/* <li>
                           <div className="icon">
                             <span className="icon-location" />
                           </div>
@@ -77,7 +83,7 @@ const Navbar = () => {
                             <p>321 Eidgah Road Pagar BSCIC</p>
                             <h5>Gazipur Bangladesh</h5>
                           </div>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                     <div className="main-menu__right-top-social">
@@ -98,9 +104,14 @@ const Navbar = () => {
                 </div>
                 <div className="main-menu__right-bottom">
                   <div className="main-menu__main-menu-box">
-                    <a href="#" className="mobile-nav__toggler">
+                    <a
+                      href="#"
+                      className="mobile-nav__toggler"
+                      onClick={toggleMobileNav}
+                    >
                       <i className="fa fa-bars" />
                     </a>
+
                     <ul className="main-menu__list">
                       <li className="dropdown current megamenu">
                         <a href="/">Home </a>
@@ -108,56 +119,35 @@ const Navbar = () => {
                       <li className="dropdown">
                         <Link to="/about-us">About</Link>
                       </li>
-                      <li className="dropdown">
+                      {/* <li className="dropdown">
                         <Link to="/about-us">What we do</Link>
-                      </li>
+                      </li> */}
 
                       <li className="dropdown">
-                        <Link>Services</Link>
+                        <Link>Project</Link>
                         <ul>
                           <li>
-                            <Link to="/volunteer">Volunteer</Link>
+                            <Link to="/volunteer">Health </Link>
                           </li>
                           <li>
-                            <Link to="/become-volunteer">Become volunteer</Link>
+                            <Link to="/become-volunteer">Education</Link>
                           </li>
 
                           <li>
-                            <Link to="">Education</Link>
+                            <Link to="/education">Microcredit Program</Link>
                           </li>
                           <li>
-                            <Link to="">Youth</Link>
+                            <Link to=""> Men & Women </Link>
                           </li>
                           <li>
-                            <Link to="">Women</Link>
+                            <Link to="">Orphanage </Link>
                           </li>
                           <li>
                             <Link to="">Governance </Link>
                           </li>
                         </ul>
                       </li>
-                      {/* <li className="dropdown">
-                        <Link>What we do</Link>
-                      </li> */}
-                      <li className="dropdown">
-                        <Link to="#">Donations</Link>
-                        <ul>
-                          <li>
-                            <Link to="/donate-list">Donation Category </Link>
-                          </li>
-                          {/* <li>
-                            <Link to="/donate-details">Donation details</Link>
-                          </li> */}
-                          <li>
-                            <Link to="/donate-now">Donation Now</Link>
-                          </li>
-                          {/* <li>
-                            <Link to="donation-details.html">
-                              Donation details
-                            </Link>
-                          </li> */}
-                        </ul>
-                      </li>
+
                       <li className="">
                         <Link to="/events">Events</Link>
                         {/* <ul>
@@ -212,7 +202,7 @@ const Navbar = () => {
                       </li>  */}
 
                       <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact">Contact Us</Link>
                       </li>
                       <li>
                         <Link to="/gallery">Gallery</Link>
@@ -221,18 +211,18 @@ const Navbar = () => {
                   </div>
                   <div className="main-menu__main-menu-content-box">
                     <div className="main-menu__search-cat-btn-box">
-                      <div className="main-menu__search-box">
+                      {/* <div className="main-menu__search-box">
                         <a
                           href="#"
                           className="main-menu__search search-toggler icon-magnifying-glass"
                         />
-                      </div>
-                      <div className="main-menu__cat-box">
+                      </div> */}
+                      {/* <div className="main-menu__cat-box">
                         <a
                           href="cart.html"
                           className="main-menu__cart icon-shopping-cart"
                         />
-                      </div>
+                      </div> */}
                       <div className="main-menu__btn-box">
                         <Link href="/donate-now" className="main-menu__btn">
                           {" "}
@@ -256,7 +246,8 @@ const Navbar = () => {
       {/* </div> */}
       {/* /.page-wrapper */}
       <div className="mobile-nav__wrapper">
-        <div className="mobile-nav__overlay mobile-nav__toggler" />
+        <div className={`mobile-nav__overlay`} />
+
         {/* /.mobile-nav__overlay */}
         <div className="mobile-nav__content">
           <span className="mobile-nav__close mobile-nav__toggler">
@@ -289,10 +280,13 @@ const Navbar = () => {
           {/* /.mobile-nav__contact */}
           <div className="mobile-nav__top">
             <div className="mobile-nav__social">
-              <a href="#" className="fab fa-twitter" />
-              <a href="#" className="fab fa-facebook-square" />
-              <a href="#" className="fab fa-pinterest-p" />
+              <a
+                href="https://www.facebook.com/arcf.society.bd.org"
+                className="fab fa-facebook-square"
+              />
               <a href="#" className="fab fa-instagram" />
+              <a href="#" className="fab fa-twitter" />
+              <a href="#" className="fab fa-pinterest-p" />
             </div>
             {/* /.mobile-nav__social */}
           </div>

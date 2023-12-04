@@ -3,41 +3,42 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
-import BecomeVolunteer from "./Pages/BecomeVolunteer";
 import Contact from "./Pages/Contact";
-import DonateDetails from "./Pages/DonateDetails";
-import DonateList from "./Pages/DonateList";
-import DonateNow from "./Pages/DonateNow";
-import EventDetails from "./Pages/EventDetails";
-import Events from "./Pages/Events";
+import DonateDetails from "./Pages/Donations.js/DonateDetails";
+import DonateList from "./Pages/Donations.js/DonateList";
+import DonateNow from "./Pages/Donations.js/DonateNow";
+import EventDetails from "./Pages/Events/EventDetails";
+import Events from "./Pages/Events/Events";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
-import News from "./Pages/News";
-import NewsDetails from "./Pages/NewsDetails";
-import Volunteer from "./Pages/Volunteer";
+import News from "./Pages/News/News";
+import NewsDetails from "./Pages/News/NewsDetails";
+import BecomeVolunteer from "./Pages/Services/BecomeVolunteer";
+import Education from "./Pages/Services/Education";
+import Volunteer from "./Pages/Services/Volunteer";
 
 // import "./assets/css/oxpins-responsive.css";
 // import "./assets/css/oxpins.css";
-// import "./assets/vendors/animate/animate.min.css";
-// import "./assets/vendors/animate/custom-animate.css";
-// import "./assets/vendors/bootstrap-select/css/bootstrap-select.min.css";
-// import "./assets/vendors/bootstrap/css/bootstrap.min.css";
-// import "./assets/vendors/bxslider/jquery.bxslider.css";
-// import "./assets/vendors/fontawesome/css/all.min.css";
-// import "./assets/vendors/jarallax/jarallax.css";
-// import "./assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css";
-// import "./assets/vendors/jquery-ui/jquery-ui.css";
-// import "./assets/vendors/nouislider/nouislider.min.css";
-// import "./assets/vendors/nouislider/nouislider.pips.css";
-// import "./assets/vendors/odometer/odometer.min.css";
-// import "./assets/vendors/owl-carousel/owl.carousel.min.css";
-// import "./assets/vendors/owl-carousel/owl.theme.default.min.css";
-// import "./assets/vendors/oxpins-icons/style.css";
-// import "./assets/vendors/reey-font/stylesheet.css";
-// import "./assets/vendors/swiper/swiper.min.css";
-// import "./assets/vendors/timepicker/timePicker.css";
-// import "./assets/vendors/tiny-slider/tiny-slider.min.css";
-// import "./assets/vendors/vegas/vegas.min.css";
+import "./assets/vendors/animate/animate.min.css";
+import "./assets/vendors/animate/custom-animate.css";
+import "./assets/vendors/bootstrap-select/css/bootstrap-select.min.css";
+import "./assets/vendors/bootstrap/css/bootstrap.min.css";
+import "./assets/vendors/bxslider/jquery.bxslider.css";
+import "./assets/vendors/fontawesome/css/all.min.css";
+import "./assets/vendors/jarallax/jarallax.css";
+import "./assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css";
+import "./assets/vendors/jquery-ui/jquery-ui.css";
+import "./assets/vendors/nouislider/nouislider.min.css";
+import "./assets/vendors/nouislider/nouislider.pips.css";
+import "./assets/vendors/odometer/odometer.min.css";
+import "./assets/vendors/owl-carousel/owl.carousel.min.css";
+import "./assets/vendors/owl-carousel/owl.theme.default.min.css";
+import "./assets/vendors/oxpins-icons/style.css";
+import "./assets/vendors/reey-font/stylesheet.css";
+import "./assets/vendors/swiper/swiper.min.css";
+import "./assets/vendors/timepicker/timePicker.css";
+import "./assets/vendors/tiny-slider/tiny-slider.min.css";
+import "./assets/vendors/vegas/vegas.min.css";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/become-volunteer" element={<BecomeVolunteer />} />
+        <Route path="/education" element={<Education />} />
         <Route path="/donate-list" element={<DonateList />} />
         <Route path="/donate-details" element={<DonateDetails />} />
 
