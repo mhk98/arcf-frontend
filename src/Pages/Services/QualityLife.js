@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Education = () => {
+const QualityLife = () => {
   return (
     <div>
       {/*Page Header Start*/}
@@ -24,15 +24,15 @@ const Education = () => {
               </li>
               <li className="active">Pages</li>
             </ul>
-            <h2>Education</h2>
+            <h2>Men & Women </h2>
           </div>
         </div>
       </section>
       {/*Page Header End*/}
 
       <div className="text-center" style={{ marginTop: "80px" }}>
-        <h6 style={{ fontWeight: "bold" }}>Education</h6>
-        <p>Education and Child Development Program</p>
+        <h6 style={{ fontWeight: "bold" }}>Men & Women</h6>
+        <p>Improving Quality Of Life</p>
       </div>
 
       {/*Team One Start*/}
@@ -46,22 +46,21 @@ const Education = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/donate-details">
-                    <img src="assets/images/resources/p-2.jpg" alt />
+                    <img src="assets/images/resources/p-3.jpg" alt />
                   </Link>
                   <div className="causes-one__cat">
-                    <p className="mt-2">Night School</p>
+                    <p className="mt-2">Human Aid</p>
                   </div>
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
-                    <Link to="/donate-details">
-                      Night School for Working and Street Children
-                    </Link>
+                    <Link to="/donate-details">Human Aid</Link>
                   </h3>
                   <p className="causes-one__text">
-                    A Free Friday Clinic for poor families to be aware or
-                    provide doctor’s advice or prescription free of cost and
-                    providing free medicine.
+                    Regular food, and winter clothing among the helpless,
+                    destitute, and orphaned children, and always standing by the
+                    side by supporting relief in areas affected by natural
+                    disasters.
                     <span className="ms-2">
                       <Link to="/donate-details">see more...</Link>
                     </span>
@@ -84,49 +83,6 @@ const Education = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
-              data-wow-delay="100ms"
-            >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/donate-details">
-                    <img src="assets/images/resources/p-1.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Education Scholarship</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
-                    <Link to="/donate-details">Education Scholarship</Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    One-time and multi-term scholarships are provided to poor
-                    and meritorious students to continue their studies.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
@@ -137,18 +93,62 @@ const Education = () => {
                     <img src="assets/images/resources/p-3.jpg" alt />
                   </Link>
                   <div className="causes-one__cat">
-                    <p className="mt-2">Free Books and Other Educational</p>
+                    <p className="mt-2">Provide support</p>
                   </div>
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
                     <Link to="/donate-details">
-                      Free Books and Other Educational Goods Distribution
+                      Provide support to the permanently disabled
                     </Link>
                   </h3>
                   <p className="causes-one__text">
-                    Books, all kinds of educational materials, computers, etc.
-                    are distributed free of cost to poor students.
+                    Financial support initiative for old age people or
+                    permanently disabled persons to survive and meet their basic
+                    needs.
+                    <span className="ms-2">
+                      <Link to="/donate-details">see more...</Link>
+                    </span>
+                  </p>
+                  <div
+                    className="donate-now__payment-info-btn-box"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <button
+                      type="submit"
+                      className="thm-btn donate-now__payment-info-btn"
+                    >
+                      Donate now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-xl-4 col-lg-4 wow fadeInUp"
+              data-wow-delay="100ms"
+            >
+              <div className="causes-one__single">
+                <div className="causes-one__img">
+                  <Link to="/donate-details">
+                    <img src="assets/images/resources/p-3.jpg" alt />
+                  </Link>
+                  <div className="causes-one__cat">
+                    <p className="mt-2">Making House</p>
+                  </div>
+                </div>
+                <div className="causes-one__content">
+                  <h3 className="causes-one__title">
+                    <Link to="/donate-details">Support for Making House</Link>
+                  </h3>
+                  <p className="causes-one__text">
+                    Helped with manpower and money to build houses for the poor,
+                    helpless people, and the homeless affected by natural
+                    calamities.
                     <span className="ms-2">
                       <Link to="/donate-details">see more...</Link>
                     </span>
@@ -179,4 +179,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default QualityLife;

@@ -21,7 +21,7 @@ const Navbar = () => {
                     <img
                       src="assets/images/resources/logo-1.png"
                       alt=""
-                      width={143}
+                      width={200}
                     />
                   </a>
                 </div>
@@ -124,10 +124,10 @@ const Navbar = () => {
                       </li> */}
 
                       <li className="dropdown">
-                        <Link>Project</Link>
-                        <ul>
+                        <Link to="/projects">Project</Link>
+                        {/* <ul>
                           <li>
-                            <Link to="/volunteer">Health </Link>
+                            <Link to="/health">Health </Link>
                           </li>
                           <li>
                             <Link to="/become-volunteer">Education</Link>
@@ -145,7 +145,7 @@ const Navbar = () => {
                           <li>
                             <Link to="">Governance </Link>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
 
                       <li className="">
@@ -257,7 +257,7 @@ const Navbar = () => {
             <a href="/" aria-label="logo image">
               <img
                 src="assets/images/resources/logo-2.png"
-                width={145}
+                width={200}
                 alt=""
               />
             </a>

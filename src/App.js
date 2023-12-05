@@ -4,9 +4,9 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import DonateDetails from "./Pages/Donations.js/DonateDetails";
-import DonateList from "./Pages/Donations.js/DonateList";
-import DonateNow from "./Pages/Donations.js/DonateNow";
+import DonateDetails from "./Pages/Donations/DonateDetails";
+import DonateList from "./Pages/Donations/DonateList";
+import DonateNow from "./Pages/Donations/DonateNow";
 import EventDetails from "./Pages/Events/EventDetails";
 import Events from "./Pages/Events/Events";
 import Gallery from "./Pages/Gallery";
@@ -15,10 +15,16 @@ import News from "./Pages/News/News";
 import NewsDetails from "./Pages/News/NewsDetails";
 import BecomeVolunteer from "./Pages/Services/BecomeVolunteer";
 import Education from "./Pages/Services/Education";
-import Volunteer from "./Pages/Services/Volunteer";
 
 // import "./assets/css/oxpins-responsive.css";
 // import "./assets/css/oxpins.css";
+import AllProject from "./Pages/AllProject";
+import Environment from "./Pages/Services/Environment";
+import Health from "./Pages/Services/Health";
+import MicroCredit from "./Pages/Services/MicroCredit";
+import Oldhome from "./Pages/Services/Oldhome";
+import Orphanage from "./Pages/Services/Orphanage";
+import QualityLife from "./Pages/Services/QualityLife";
 import "./assets/vendors/animate/animate.min.css";
 import "./assets/vendors/animate/custom-animate.css";
 import "./assets/vendors/bootstrap-select/css/bootstrap-select.min.css";
@@ -47,7 +53,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/projects" element={<AllProject />} />
+        <Route path="/health" element={<Health />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/microcredit" element={<MicroCredit />} />
+        <Route path="/quality-life" element={<QualityLife />} />
+        <Route path="/environment" element={<Environment />} />
+        <Route path="/orphanage" element={<Orphanage />} />
+        <Route path="/oldhome" element={<Oldhome />} />
         <Route path="/become-volunteer" element={<BecomeVolunteer />} />
         <Route path="/education" element={<Education />} />
         <Route path="/donate-list" element={<DonateList />} />
