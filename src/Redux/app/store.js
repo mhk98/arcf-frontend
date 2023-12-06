@@ -8,8 +8,6 @@ const store = configureStore({
     [sliderApi.reducerPath]: sliderApi.reducer,
   },
 
-  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
-
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(sliderApi.middleware),
 });
