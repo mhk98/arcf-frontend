@@ -1,8 +1,9 @@
 import { jarallax } from "jarallax";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
 import banner from "../image/what-we-do.jpg";
+import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 
 const Home = () => {
   useEffect(() => {
@@ -17,6 +18,21 @@ const Home = () => {
       imgPosition: "50% 0%",
     });
   }, []);
+
+  const [slides, setSlides] = useState([]);
+  const { data, isLoading, isError, error } = useGetAllSliderQuery();
+
+  useEffect(() => {
+    if (isError) {
+      // Handle error, you can log it or display an error message.
+      console.error("Error fetching cart data:", error);
+    } else if (!isLoading) {
+      // Only set the cart if there is data and it's not already set to avoid infinite re-renders.
+      if (data && data.data) {
+        setSlides(data.data);
+      }
+    }
+  }, [data, isLoading, isError, error]);
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -42,135 +58,55 @@ const Home = () => {
           }}'
           >
             <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div
-                  className="image-layer"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-1.png)",
-                  }}
-                />
-                {/* /.image-layer */}
-                <div
-                  className="main-slider-shape-1"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/shapes/main-slider-shape-1.jpg)",
-                  }}
-                />
-                <div className="main-slider-shape-2 float-bob-x">
-                  <img src="assets/images/shapes/main-slider-shape-2.png" alt />
-                </div>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xl-6 col-lg-8">
-                      <div className="main-slider__content">
-                        <p className="main-slider__sub-title">
-                          Always donate for childrens
-                        </p>
-                        <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
-                        </h2>
-                        <div className="main-slider__btn-box">
-                          <a
-                            href="about.html"
-                            className="thm-btn main-slider__btn"
-                          >
-                            {" "}
-                            Discover more
-                          </a>
+              {slides.length
+                ? slides.map((slide) => (
+                    <div key={slide.Id} className="swiper-slide">
+                      <div
+                        className="image-layer"
+                        style={{
+                          backgroundImage: `url(http://localhost:5000/${slide.image})`,
+                        }}
+                      />
+                      {/* /.image-layer */}
+                      <div
+                        className="main-slider-shape-1"
+                        style={{
+                          backgroundImage:
+                            "url(assets/images/shapes/main-slider-shape-1.jpg)",
+                        }}
+                      />
+                      <div className="main-slider-shape-2 float-bob-x">
+                        <img
+                          src="assets/images/shapes/main-slider-shape-2.png"
+                          alt
+                        />
+                      </div>
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-xl-6 col-lg-8">
+                            <div className="main-slider__content">
+                              <p className="main-slider__sub-title">
+                                {slide.title}
+                              </p>
+                              <h2 className="main-slider__title">
+                                {slide.text}
+                              </h2>
+                              <div className="main-slider__btn-box">
+                                <a
+                                  href="about.html"
+                                  className="thm-btn main-slider__btn"
+                                >
+                                  {" "}
+                                  Discover more
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div
-                  className="image-layer"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-2.png)",
-                  }}
-                />
-                {/* /.image-layer */}
-                <div
-                  className="main-slider-shape-1"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/shapes/main-slider-shape-1.jpg)",
-                  }}
-                />
-                <div className="main-slider-shape-2 float-bob-x">
-                  <img src="assets/images/shapes/main-slider-shape-2.png" alt />
-                </div>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xl-6 col-lg-8">
-                      <div className="main-slider__content">
-                        <p className="main-slider__sub-title">
-                          Always donate for childrens
-                        </p>
-                        <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
-                        </h2>
-                        <div className="main-slider__btn-box">
-                          <a
-                            href="about.html"
-                            className="thm-btn main-slider__btn"
-                          >
-                            {" "}
-                            Discover more
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div
-                  className="image-layer"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/backgrounds/main-slider-1-3.png)",
-                  }}
-                />
-                {/* /.image-layer */}
-                <div
-                  className="main-slider-shape-1"
-                  style={{
-                    backgroundImage:
-                      "url(assets/images/shapes/main-slider-shape-1.jpg)",
-                  }}
-                />
-                <div className="main-slider-shape-2 float-bob-x">
-                  <img src="assets/images/shapes/main-slider-shape-2.png" alt />
-                </div>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xl-6 col-lg-8">
-                      <div className="main-slider__content">
-                        <p className="main-slider__sub-title">
-                          Always donate for childrens
-                        </p>
-                        <h2 className="main-slider__title">
-                          Lend a Helping Hand to Those in Need
-                        </h2>
-                        <div className="main-slider__btn-box">
-                          <a
-                            href="about.html"
-                            className="thm-btn main-slider__btn"
-                          >
-                            {" "}
-                            Discover more
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  ))
+                : null}
             </div>
             {/* If we need navigation buttons */}
             <div className="main-slider__nav">

@@ -45,11 +45,14 @@ import "./assets/vendors/swiper/swiper.min.css";
 import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
 import "./assets/vendors/vegas/vegas.min.css";
+import { Provider } from "react-redux";
+import store from "./Redux/app/store";
 
 function App() {
   return (
     <div className="">
       <Navbar />
+      <Provider store={store}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
@@ -74,6 +77,7 @@ function App() {
         <Route path="/news-details" element={<NewsDetails />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </Provider>
 
       <Footer />
     </div>

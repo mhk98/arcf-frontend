@@ -4,24 +4,31 @@ import { Link } from "react-router-dom";
 const Events = () => {
   return (
     <div>
-
-{/*Page Header Start*/}
-<section className="page-header">
-  <div className="page-header-bg" style={{backgroundImage: 'url(assets/images/backgrounds/page-header-bg.jpg)'}}>
-  </div>
-  <div className="container">
-    <div className="page-header__inner">
-      <ul className="thm-breadcrumb list-unstyled">
-        <li><Link to="index.html">Home</Link></li>
-        <li><span>/</span></li>
-        <li className="active">Events</li>
-      </ul>
-      <h2>Events</h2>
-    </div>
-  </div>
-</section>
-{/*Page Header End*/}
-
+      {/*Page Header Start*/}
+      <section className="page-header">
+        <div
+          className="page-header-bg"
+          style={{
+            backgroundImage:
+              "url(assets/images/backgrounds/page-header-bg.jpg)",
+          }}
+        ></div>
+        <div className="container">
+          <div className="page-header__inner">
+            <ul className="thm-breadcrumb list-unstyled">
+              <li>
+                <Link to="index.html">Home</Link>
+              </li>
+              <li>
+                <span>/</span>
+              </li>
+              <li className="active">Events</li>
+            </ul>
+            <h2>Events</h2>
+          </div>
+        </div>
+      </section>
+      {/*Page Header End*/}
 
       {/*Events Page Start*/}
       <section className="events-page">
@@ -47,7 +54,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">Play for the world with us</Link>
+                      <Link to="/event-details">
+                        Play for the world with us
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -74,7 +83,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">Contrary to popular belief</Link>
+                      <Link to="/event-details">
+                        Contrary to popular belief
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -101,7 +112,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">There are many variations of</Link>
+                      <Link to="/event-details">
+                        There are many variations of
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -128,7 +141,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">Play for the world with us</Link>
+                      <Link to="/event-details">
+                        Play for the world with us
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -155,7 +170,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">Contrary to popular belief</Link>
+                      <Link to="/event-details">
+                        Contrary to popular belief
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -182,7 +199,9 @@ const Events = () => {
                       </li>
                     </ul>
                     <h3 className="events-one__title">
-                      <Link to="/event-details">There are many variations of</Link>
+                      <Link to="/event-details">
+                        There are many variations of
+                      </Link>
                     </h3>
                   </div>
                 </div>
