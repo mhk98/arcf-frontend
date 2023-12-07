@@ -1,9 +1,9 @@
 import { jarallax } from "jarallax";
 import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
+import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
 import banner from "../image/what-we-do.jpg";
-import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 
 const Home = () => {
   useEffect(() => {

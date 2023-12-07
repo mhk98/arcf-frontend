@@ -25,26 +25,26 @@ import MicroCredit from "./Pages/Services/MicroCredit";
 import Oldhome from "./Pages/Services/Oldhome";
 import Orphanage from "./Pages/Services/Orphanage";
 import QualityLife from "./Pages/Services/QualityLife";
-import "./assets/vendors/animate/animate.min.css";
-import "./assets/vendors/animate/custom-animate.css";
-import "./assets/vendors/bootstrap-select/css/bootstrap-select.min.css";
-import "./assets/vendors/bootstrap/css/bootstrap.min.css";
-import "./assets/vendors/bxslider/jquery.bxslider.css";
-import "./assets/vendors/fontawesome/css/all.min.css";
-import "./assets/vendors/jarallax/jarallax.css";
-import "./assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css";
-import "./assets/vendors/jquery-ui/jquery-ui.css";
-import "./assets/vendors/nouislider/nouislider.min.css";
-import "./assets/vendors/nouislider/nouislider.pips.css";
-import "./assets/vendors/odometer/odometer.min.css";
-import "./assets/vendors/owl-carousel/owl.carousel.min.css";
-import "./assets/vendors/owl-carousel/owl.theme.default.min.css";
-import "./assets/vendors/oxpins-icons/style.css";
-import "./assets/vendors/reey-font/stylesheet.css";
-import "./assets/vendors/swiper/swiper.min.css";
-import "./assets/vendors/timepicker/timePicker.css";
-import "./assets/vendors/tiny-slider/tiny-slider.min.css";
-import "./assets/vendors/vegas/vegas.min.css";
+// import "./assets/vendors/animate/animate.min.css";
+// import "./assets/vendors/animate/custom-animate.css";
+// import "./assets/vendors/bootstrap-select/css/bootstrap-select.min.css";
+// import "./assets/vendors/bootstrap/css/bootstrap.min.css";
+// import "./assets/vendors/bxslider/jquery.bxslider.css";
+// import "./assets/vendors/fontawesome/css/all.min.css";
+// import "./assets/vendors/jarallax/jarallax.css";
+// import "./assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css";
+// import "./assets/vendors/jquery-ui/jquery-ui.css";
+// import "./assets/vendors/nouislider/nouislider.min.css";
+// import "./assets/vendors/nouislider/nouislider.pips.css";
+// import "./assets/vendors/odometer/odometer.min.css";
+// import "./assets/vendors/owl-carousel/owl.carousel.min.css";
+// import "./assets/vendors/owl-carousel/owl.theme.default.min.css";
+// import "./assets/vendors/oxpins-icons/style.css";
+// import "./assets/vendors/reey-font/stylesheet.css";
+// import "./assets/vendors/swiper/swiper.min.css";
+// import "./assets/vendors/timepicker/timePicker.css";
+// import "./assets/vendors/tiny-slider/tiny-slider.min.css";
+// import "./assets/vendors/vegas/vegas.min.css";
 import { Provider } from "react-redux";
 import store from "./Redux/app/store";
 
@@ -53,30 +53,30 @@ function App() {
     <div className="">
       <Navbar />
       <Provider store={store}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/projects" element={<AllProject />} />
-        <Route path="/health" element={<Health />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/microcredit" element={<MicroCredit />} />
-        <Route path="/quality-life" element={<QualityLife />} />
-        <Route path="/environment" element={<Environment />} />
-        <Route path="/orphanage" element={<Orphanage />} />
-        <Route path="/oldhome" element={<Oldhome />} />
-        <Route path="/become-volunteer" element={<BecomeVolunteer />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/donate-list" element={<DonateList />} />
-        <Route path="/donate-details" element={<DonateDetails />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/projects" element={<AllProject />} />
+          <Route path="/health" element={<Health />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/microcredit" element={<MicroCredit />} />
+          <Route path="/quality-life" element={<QualityLife />} />
+          <Route path="/environment" element={<Environment />} />
+          <Route path="/orphanage" element={<Orphanage />} />
+          <Route path="/oldhome" element={<Oldhome />} />
+          <Route path="/become-volunteer" element={<BecomeVolunteer />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/donate-list" element={<DonateList />} />
+          <Route path="/donate-details" element={<DonateDetails />} />
 
-        <Route path="/donate-now" element={<DonateNow />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/event-details" element={<EventDetails />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/news-details" element={<NewsDetails />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+          <Route path="/donate-now" element={<DonateNow />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news-details" element={<NewsDetails />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Provider>
 
       <Footer />

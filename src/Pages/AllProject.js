@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Donate from "../Components/Donate";
 
 const AllProject = () => {
   return (
@@ -336,7 +337,7 @@ const AllProject = () => {
                       <Link to="/oldhome">see more...</Link>
                     </span>
                   </p>
-                  <div
+                  {/* <div
                     className="donate-now__payment-info-btn-box"
                     style={{
                       display: "flex",
@@ -350,7 +351,8 @@ const AllProject = () => {
                     >
                       Donate now
                     </button>
-                  </div>
+                  </div> */}
+                  <Donate />
                 </div>
               </div>
             </div>

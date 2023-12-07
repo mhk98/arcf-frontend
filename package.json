@@ -19,6 +19,7 @@
     "jquery-validate": "^2.0.0",
     "jquery.appear": "^1.0.1",
     "letteringjs": "^0.7.0",
+    "mutationobserver-shim": "^0.3.7",
     "next": "^14.0.3",
     "nouislider": "^15.7.1",
     "odometer": "^0.4.8",
@@ -61,5 +62,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }

@@ -5073,7 +5073,7 @@ body.locked .page-wrapper {
 .footer-widget__about-text-box {
   position: relative;
   display: block;
-  padding-top: 16px;
+  /* padding-top: 16px; */
   padding-bottom: 20px;
 }
 
@@ -10045,7 +10045,7 @@ body.locked .page-wrapper {
 
 .donate-now__personal-info-input input[type="text"],
 .donate-now__personal-info-input input[type="email"] {
-  height: 60px;
+  height: 40px;
   width: 100%;
   border: none;
   outline: none;
@@ -12894,4 +12894,23 @@ body.boxed-wrapper {
 
 .what-we-do {
   padding: 120px 0px;
+}
+
+.modal-footer {
+  margin-top: -100px;
+}
+
+
+.donate-now__left {
+
+  display: block;
+  margin-top: -100px;
+}
+
+.donate-now__enter-donation-input input[type="text"]{
+  height: 70px;
+}
+
+.donate-now__personal-info-input textarea{
+  height:100px;
 }

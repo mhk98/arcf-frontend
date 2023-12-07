@@ -25,7 +25,7 @@ const Footer = () => {
                       <img
                         src="assets/images/resources/logo-2.png"
                         alt=""
-                        width={145}
+                        width={200}
                       />
                     </Link>
                   </div>
@@ -33,7 +33,8 @@ const Footer = () => {
                     <p className="footer-widget__about-text">
                       Nulla ultricies justo sit amet ante efficitur, eget
                       pharetra augue efficitur. Vestibulum viverra, dolor sit
-                      amet ultricies.
+                      amet ultricies. Vestibulum viverra, dolor sit amet
+                      ultricies.
                     </p>
                   </div>
                   <div className="footer-widget__btn">
