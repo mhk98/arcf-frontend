@@ -25,11 +25,14 @@ const Footer = () => {
                       <img
                         src="assets/images/resources/logo-2.png"
                         alt=""
-                        width={145}
+                        width={200}
                       />
                     </Link>
                   </div>
-                  <div className="footer-widget__about-text-box">
+                  <div
+                    className="footer-widget__about-text-box"
+                    style={{ marginTop: "-50px" }}
+                  >
                     <p className="footer-widget__about-text">
                       Nulla ultricies justo sit amet ante efficitur, eget
                       pharetra augue efficitur. Vestibulum viverra, dolor sit
@@ -37,7 +40,7 @@ const Footer = () => {
                     </p>
                   </div>
                   <div className="footer-widget__btn">
-                    <a href="donate-now.html">
+                    <a href="donate-now">
                       {" "}
                       <span className="fa fa-heart" />
                       Donate now
@@ -61,9 +64,7 @@ const Footer = () => {
                     <li>
                       <a href="/news">Latest News</a>
                     </li>
-                    <li>
-                      <a href="//events">Recent Events</a>
-                    </li>
+
                     <li>
                       <a href="//donate-now">Donations</a>
                     </li>
@@ -77,9 +78,6 @@ const Footer = () => {
                 <div className="footer-widget__column footer-widget__non-profit clearfix">
                   <h3 className="footer-widget__title">Non profit</h3>
                   <ul className="footer-widget__non-profit-list list-unstyled clearfix">
-                    <li>
-                      <a href="donation-details.html">Differently Abled Kids</a>
-                    </li>
                     <li>
                       <a href="donation-details.html">Help Child Cancer</a>
                     </li>
@@ -101,9 +99,9 @@ const Footer = () => {
               >
                 <div className="footer-widget__column footer-widget__contact">
                   <h3 className="footer-widget__title">Contact</h3>
-                  <p className="footer-widget__contact-text">
+                  {/* <p className="footer-widget__contact-text">
                     321 Eidgah Road Pagar BSCIC <br /> Gazipur Bangladesh
-                  </p>
+                  </p> */}
                   <ul className="list-unstyled footer-widget__contact-list">
                     <li>
                       <div className="icon">
@@ -171,7 +169,7 @@ const Footer = () => {
           </span>
           <div className="logo-box">
             <a href="/" aria-label="logo image">
-              <img src="assets/images/resources/logo-2.png" width={143} alt />
+              <img src="assets/images/resources/logo-2.png" width={200} alt />
             </a>
           </div>
           {/* /.logo-box */}

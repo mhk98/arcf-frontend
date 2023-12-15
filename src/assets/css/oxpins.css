@@ -3384,6 +3384,7 @@ body.locked .page-wrapper {
 .causes-one__text {
   padding-top: 11px;
   padding-bottom: 21px;
+ 
 }
 
 .causes-one__progress {
@@ -5056,7 +5057,7 @@ body.locked .page-wrapper {
 .site-footer__top {
   position: relative;
   display: block;
-  padding: 100px 0 98px;
+  padding: 40px 0 98px;
 }
 
 .footer-widget__about {

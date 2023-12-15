@@ -29,10 +29,43 @@ const Education = () => {
         </div>
       </section>
       {/*Page Header End*/}
+      <div
+        className="container"
+        style={{
+          position: "relative",
+        }}
+      >
+        <div style={{ position: "absolute", right: "50px", top: "50px" }}>
+          <Link to="/projects">
+            <i
+              style={{
+                fontSize: "35px",
+                padding: "5px",
+                backgroundColor: "#FBD45A",
+                borderRadius: "100%",
+                color: "black",
+              }}
+              className="icon-left-arrow"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="container">
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <h3 className="causes-one__title" style={{ fontWeight: "bold" }}>
+            Education
+          </h3>
 
-      <div className="text-center" style={{ marginTop: "80px" }}>
-        <h6 style={{ fontWeight: "bold" }}>Education</h6>
-        <p>Education and Child Development Program</p>
+          <p
+            className="causes-one__text"
+            style={{ textAlign: "left", fontSize: "18px" }}
+          >
+            ARC Foundation's Education and Child Development Program is shaping
+            futures. We provide quality education, support holistic child
+            development, and empower young minds. Join us in building a
+            foundation for success and transforming lives.
+          </p>
+        </div>
       </div>
 
       {/*Team One Start*/}
@@ -66,21 +99,6 @@ const Education = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -108,21 +126,6 @@ const Education = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -153,21 +156,6 @@ const Education = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import DonateDetails from "./Pages/Donations/DonateDetails";
 import DonateList from "./Pages/Donations/DonateList";
@@ -44,39 +43,43 @@ import "./assets/vendors/reey-font/stylesheet.css";
 import "./assets/vendors/swiper/swiper.min.css";
 import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
-import "./assets/vendors/vegas/vegas.min.css";
+// import "./assets/vendors/vegas/vegas.min.css";
 import { Provider } from "react-redux";
 import store from "./Redux/app/store";
+import About from "./Pages/About/About";
+import DonateEvents from "./Components/DonateEvents";
+import BackToTopButton from "./Components/BackToTopButton";
 
 function App() {
   return (
     <div className="">
       <Navbar />
       <Provider store={store}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/projects" element={<AllProject />} />
-        <Route path="/health" element={<Health />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/microcredit" element={<MicroCredit />} />
-        <Route path="/quality-life" element={<QualityLife />} />
-        <Route path="/environment" element={<Environment />} />
-        <Route path="/orphanage" element={<Orphanage />} />
-        <Route path="/oldhome" element={<Oldhome />} />
-        <Route path="/become-volunteer" element={<BecomeVolunteer />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/donate-list" element={<DonateList />} />
-        <Route path="/donate-details" element={<DonateDetails />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/projects" element={<AllProject />} />
+          <Route path="/health" element={<Health />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/microcredit" element={<MicroCredit />} />
+          <Route path="/quality-life" element={<QualityLife />} />
+          <Route path="/environment" element={<Environment />} />
+          <Route path="/orphanage" element={<Orphanage />} />
+          <Route path="/oldhome" element={<Oldhome />} />
+          <Route path="/become-volunteer" element={<BecomeVolunteer />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/donate-list" element={<DonateList />} />
+          <Route path="/donate-details" element={<DonateDetails />} />
 
-        <Route path="/donate-now" element={<DonateNow />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/event-details" element={<EventDetails />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/news-details" element={<NewsDetails />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+          <Route path="/donate-now" element={<DonateNow />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/donate-events" element={<DonateEvents />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news-details" element={<NewsDetails />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Provider>
 
       <Footer />
