@@ -151,7 +151,7 @@ const Footer = () => {
               <div className="col-xl-12">
                 <div className="site-footer__bottom-inner">
                   <p className="site-footer__bottom-text">
-                    © All Copyright 2023 by <a href="#">Oxpins.com</a>
+                    © All Copyright 2023 by <a href="#">Arcfbd.org</a>
                   </p>
                 </div>
               </div>
