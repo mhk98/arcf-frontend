@@ -496,7 +496,7 @@ ul {
 }
 
 .main-menu__right {
-  display: block;
+  /* display: block; */
   width: 91%;
 }
 
@@ -2433,6 +2433,10 @@ body.locked .page-wrapper {
 /*--------------------------------------------------------------
 # Main Slider
 --------------------------------------------------------------*/
+
+.swiper-container {
+  height: 100%;
+}
 .main-slider {
   position: relative;
   display: block;
@@ -2638,6 +2642,7 @@ body.locked .page-wrapper {
 /*--------------------------------------------------------------
 # Main Slider Two
 --------------------------------------------------------------*/
+
 .main-slider-two {
   position: relative;
   display: block;
@@ -12923,5 +12928,18 @@ body.boxed-wrapper {
   .main-menu .main-menu__list > li + li,
   .stricky-header .main-menu__list > li + li {
     margin-left: 30px;
+  }
+}
+
+@media (min-width: 821px) {
+  .nav-container {
+    display: none;
+  }
+
+ 
+}
+@media (max-width: 820px) {
+  .main-header {
+    display: none;
   }
 }

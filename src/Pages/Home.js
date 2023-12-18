@@ -103,7 +103,7 @@ const Home = () => {
       <div className="page-wrapper">
         {/* /.stricky-header */}
 
-        <section className="main-slider clearfix">
+        <section className="main-slider clearfix" style={{ height: "100%" }}>
           <div className="swiper-container thm-swiper__slider">
             {isLoading ? (
               <p style={{ height: "100vh" }}>Loading...</p>
@@ -129,7 +129,10 @@ const Home = () => {
                 {slides.length
                   ? slides.map((slide) => (
                       <SwiperSlide key={slide.Id}>
-                        <div className="swiper-slide">
+                        <div
+                          className="swiper-slide"
+                          style={{ marginTop: "70px" }}
+                        >
                           <div
                             className="image-layer"
                             // style={{

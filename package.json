@@ -12,6 +12,7 @@
     "bootstrap-select": "^1.13.18",
     "bxslider": "^4.2.14",
     "countdown": "^2.6.0",
+    "framer-motion": "^10.16.16",
     "isotope-layout": "^3.0.6",
     "jarallax": "^2.1.4",
     "jquery": "^3.7.1",
