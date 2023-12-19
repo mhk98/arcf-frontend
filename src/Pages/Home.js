@@ -1,9 +1,23 @@
 import { jarallax } from "jarallax";
 import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
+import { useGetAllFaqQuery } from "../Redux/features/faq/faq";
 import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
-import banner from "../image/what-we-do.jpg";
+
+// import Swiper core and required modules
+import {
+  A11y,
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
+
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Register from "../Components/Register";
+import { useGetAllaboutQuery } from "../Redux/features/about/about";
 
 const Home = () => {
   useEffect(() => {
@@ -33,143 +47,252 @@ const Home = () => {
       }
     }
   }, [data, isLoading, isError, error]);
+
+  const [activeAccordion, setActiveAccordion] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveAccordion(activeAccordion === index ? null : index);
+  };
+
+  const [faqes, setFaqes] = useState([]);
+  const {
+    data: faqData,
+    isLoading: faqLoading,
+    isError: faqError,
+    error: error1,
+  } = useGetAllFaqQuery();
+
+  useEffect(() => {
+    if (faqError) {
+      // Handle error, you can log it or display an error message.
+      console.error("Error fetching cart data:", error1);
+    } else if (!faqLoading) {
+      // Only set the cart if there is data and it's not already set to avoid infinite re-renders.
+      if (faqData && faqData.data) {
+        setFaqes(faqData.data);
+      }
+    }
+  }, [faqData, faqLoading, faqError, error1]);
+
+  const [abouts, setAbouts] = useState([]);
+  const {
+    data: aboutData,
+    isLoading: aboutLoading,
+    isError: aboutError,
+    error: error2,
+  } = useGetAllaboutQuery();
+
+  useEffect(() => {
+    if (aboutError) {
+      // Handle error, you can log it or display an error message.
+      console.error("Error fetching cart data:", error2);
+    } else if (!aboutLoading) {
+      // Only set the cart if there is data and it's not already set to avoid infinite re-renders.
+      if (aboutData && aboutData.data) {
+        setAbouts(aboutData.data);
+      }
+    }
+  }, [aboutData, aboutLoading, aboutError, error2]);
+
+  console.log("aboutData", aboutData);
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
       <div className="page-wrapper">
         {/* /.stricky-header */}
 
-        <section className="main-slider clearfix">
-          <div
-            className="swiper-container thm-swiper__slider"
-            data-swiper-options='{"slidesPerView": 1, "loop": true,
-          "effect": "fade",
-          "pagination": {
-          "el": "#main-slider-pagination",
-          "type": "bullets",
-          "clickable": true
-          },
-          "navigation": {
-          "nextEl": "#main-slider__swiper-button-next",
-          "prevEl": "#main-slider__swiper-button-prev"
-          },
-          "autoplay": {
-          "delay": 5000
-          }}'
-          >
-            <div className="swiper-wrapper">
-              {slides.length
-                ? slides.map((slide) => (
-                    <div key={slide.Id} className="swiper-slide">
-                      <div
-                        className="image-layer"
-                        style={{
-                          backgroundImage: `url(http://localhost:5000/${slide.image})`,
-                        }}
-                      />
-                      {/* /.image-layer */}
-                      <div
-                        className="main-slider-shape-1"
-                        style={{
-                          backgroundImage:
-                            "url(assets/images/shapes/main-slider-shape-1.jpg)",
-                        }}
-                      />
-                      <div className="main-slider-shape-2 float-bob-x">
-                        <img
-                          src="assets/images/shapes/main-slider-shape-2.png"
-                          alt
-                        />
-                      </div>
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-xl-6 col-lg-8">
-                            <div className="main-slider__content">
-                              <p className="main-slider__sub-title">
-                                {slide.title}
-                              </p>
-                              <h2 className="main-slider__title">
-                                {slide.text}
-                              </h2>
-                              <div className="main-slider__btn-box">
-                                <a
-                                  href="about.html"
-                                  className="thm-btn main-slider__btn"
-                                >
-                                  {" "}
-                                  Discover more
-                                </a>
+        <section className="main-slider clearfix" style={{ height: "100%" }}>
+          <div className="swiper-container thm-swiper__slider">
+            {isLoading ? (
+              <p style={{ height: "100vh" }}>Loading...</p>
+            ) : (
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay, EffectFade]}
+                slidesPerView={1}
+                loop={true}
+                effect="fade"
+                direction="horizontal"
+                pagination={{
+                  clickable: true,
+                  el: "#main-slider-pagination",
+                }}
+                navigation={{
+                  nextEl: ".swiper-button-next", // Use class selector
+                  prevEl: ".swiper-button-prev", // Use class selector
+                }}
+                autoplay={{
+                  delay: 5000,
+                }}
+              >
+                {slides.length
+                  ? slides.map((slide) => (
+                      <SwiperSlide key={slide.Id}>
+                        <div className="swiper-slide">
+                          <div
+                            className="image-layer"
+                            // style={{
+                            //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide.image})`,
+                            // }}
+
+                            // style={{
+                            //   backgroundImage:
+                            //     "url(assets/images/backgrounds/main-slider-1-1.png)",
+                            // }}
+                          >
+                            <img
+                              src={`https://arcf-backend.onrender.com/${slide.image}`}
+                              alt=""
+                            />
+                          </div>
+
+                          <div className="main-slider-shape-2 float-bob-x">
+                            <img
+                              src="assets/images/shapes/main-slider-shape-2.png"
+                              alt
+                            />
+                          </div>
+                          <div className="container">
+                            <div className="row">
+                              <div className="col-xl-6 col-lg-8">
+                                <div className="main-slider__content">
+                                  <p className="main-slider__sub-title">
+                                    {slide.title}
+                                  </p>
+                                  <h2 className="main-slider__title">
+                                    {slide.text}
+                                  </h2>
+                                  <div className="main-slider__btn-box">
+                                    <a
+                                      href="about.html"
+                                      className="thm-btn main-slider__btn"
+                                    >
+                                      {" "}
+                                      Discover more
+                                    </a>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  ))
-                : null}
-            </div>
+                      </SwiperSlide>
+                    ))
+                  : null}
+              </Swiper>
+            )}
+
             {/* If we need navigation buttons */}
             <div className="main-slider__nav">
-              <div
-                className="swiper-button-prev"
-                id="main-slider__swiper-button-next"
-              >
+              <div className="swiper-button-prev">
                 <i className="icon-left-arrow" />
               </div>
-              <div
-                className="swiper-button-next"
-                id="main-slider__swiper-button-prev"
-              >
+              <div className="swiper-button-next">
                 <i className="icon-right-arrow" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="what-we-do">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-6">
-                <img src={banner} alt="" height={467} width={585} />
+        <section>
+          {/* <h2 className="section-title__title text-center">
+            Welcome to ARC Foundation
+          </h2> */}
+
+          <div className="about-one">
+            <div className="container">
+              {/* {abouts.length > 0
+                ? abouts.map((about) => ( */}
+              <div className="row" style={{ alignItems: "center" }}>
+                <div className="col-xl-6">
+                  <div className="about-one__left">
+                    <div
+                      className="about-one__img-box wow fadeInUp"
+                      data-wow-delay="100ms"
+                      // data-wow-duration="2500ms"
+                    >
+                      <div className="gallery-page__img">
+                        <img
+                          // src={`https://arcf-backend.onrender.com/${about.image}`}
+
+                          src="assets/images/resources/about-four-img-2.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-xl-6 wow fadeInUp"
+                  data-wow-delay="100ms"
+                  // data-wow-duration="2500ms"
+                  style={{ marginTop: "-20px" }}
+                >
+                  <div className="about-one__right">
+                    <div className="section-title text-left">
+                      <h2 className="section-title__title">
+                        {/* {about.title} */}
+                        What We Do
+                      </h2>
+                    </div>
+                    <p className="about-one__text">
+                      {/* {about.text1} */}
+                      ARC Foundation provides services in entrepreneurship and
+                      development, information technology training and
+                      empowerment, health education and education in HIV & AIDS
+                      management and awareness, malaria and TB awareness and
+                      advocacy, Rehabilitation of street children, supporting
+                      orphans and vulnerable children, deployment of both local
+                      and international volunteers to various community
+                      projects, community entrepreneurship/ community
+                      microfinance training and monitoring (Community Savings
+                      and loaning), Capacity Building sessions to youth groups,
+                      vocational schools, primary and secondary schools, organic
+                      farming and agricultural activities, Eco-Tourism,
+                      Environmental Education and Management.
+                    </p>
+                    {/* <div className="about-one__fund">
+                      <p className="about-one__fund-text">
+                        Helped fund <span>24,537</span> Projects in
+                        <span>24</span> Countries, Benefiting over <br />{" "}
+                        <span>8.2</span> Million people.
+                      </p>
+                    </div> */}
+                    {/* <ul className="list-unstyled about-one__points">
+                      <li>
+                        <div className="icon">
+                          <span className="icon-volunteer" />
+                        </div>
+                        <div className="text">
+                          <h5>
+                            <a href="become-volunteer.html">Join ARCF Team</a>
+                          </h5>
+                          <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="icon">
+                          <span className="icon-solidarity" />
+                        </div>
+                        <div className="text">
+                          <h5>
+                            <a href="donate-now.html">Start Donate</a>
+                          </h5>
+                          <p>Lorem ipsum dolor sit amet not quis mis notted.</p>
+                        </div>
+                      </li>
+                    </ul> */}
+                  </div>
+                </div>
               </div>
-              <div className="col-xl-6">
-                <h2 className="section-title__title">What We Do</h2>
-                <p>
-                  ARC Foundation provides services in entrepreneurship and
-                  development, information technology training and empowerment,
-                  health education and education in HIV & AIDS management and
-                  awareness, malaria and TB awareness and advocacy,
-                  Rehabilitation of street children, supporting orphans and
-                  vulnerable children, deployment of both local and
-                  international volunteers to various community projects,
-                  community entrepreneurship/ community microfinance training
-                  and monitoring (Community Savings and loaning), Capacity
-                  Building sessions to youth groups, vocational schools, primary
-                  and secondary schools, organic farming and agricultural
-                  activities, Eco-Tourism, Environmental Education and
-                  Management.
-                </p>
-                <p>
-                  ARC Foundation harnesses and develops the power of young
-                  people, by effectively involving them in the direct
-                  implementation of the core activities that develop their
-                  skills, enabling them to become self-reliant and sustainable
-                  people in community service and development. We engage young
-                  people in a constructive manner enabling them initiative and
-                  build their ideas, develop prototypes, test and develop
-                  products that meet the people’s needs, and help reduce the
-                  problems and challenges that most face in the development
-                  sector.
-                </p>
-              </div>
+              {/* ))
+                : null} */}
             </div>
           </div>
         </section>
-        {/*About One Start*/}
         <section>
-          <h2 className="section-title__title text-center">
+          {/* <h2 className="section-title__title text-center">
             Welcome to ARC Foundation
-          </h2>
+          </h2> */}
 
           <div className="about-one">
             <div className="about-one__shape-box-1">
@@ -182,7 +305,7 @@ const Home = () => {
               />
             </div>
             <div className="container">
-              <div className="row">
+              <div className="row" style={{ alignItems: "center" }}>
                 <div className="col-xl-6">
                   <div className="about-one__left">
                     <div
@@ -198,11 +321,11 @@ const Home = () => {
                       </div>
                       <div className="about-one__img-border" />
                       <div className="about-one__curved-circle-box">
-                        <div className="curved-circle">
+                        {/* <div className="curved-circle">
                           <span className="curved-circle--item">
                             25 YEARS EXPERIENCE OXPINS CHARITY CENTER
                           </span>
-                        </div>
+                        </div> */}
                         {/* /.curved-circle */}
                         <div className="about-one__curved-circle-icon">
                           <img
@@ -223,16 +346,10 @@ const Home = () => {
                           alt
                         />
                       </div>
-                      <div className="about-one__shape-4 zoominout">
-                        <img
-                          src="assets/images/shapes/about-one-shape-4.png"
-                          alt
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-6">
+                <div className="col-xl-6" style={{ marginTop: "-20px" }}>
                   <div className="about-one__right">
                     <div className="section-title text-left">
                       <h2 className="section-title__title">
@@ -279,8 +396,8 @@ const Home = () => {
                         </div>
                       </li>
                     </ul> */}
-                    <a href="about.html" className="thm-btn about-one__btn">
-                      Discover More
+                    <a href="/donate-now" className="thm-btn about-one__btn">
+                      Donate Now
                     </a>
                   </div>
                 </div>
@@ -432,158 +549,258 @@ const Home = () => {
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <span className="section-title__tagline">
-                Help &amp; donate us
-              </span>
-              <h2 className="section-title__title">
-                Join Us in Making <br /> a Difference Today
-              </h2>
+              <h2 className="section-title__title">Our Project Features</h2>
             </div>
             <div className="row">
-              {/*Causes One Single Start*/}
               <div
                 className="col-xl-4 col-lg-4 wow fadeInUp"
                 data-wow-delay="100ms"
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <img src="assets/images/resources/causes-1-1.jpg" alt />
+                    <Link to="/health">
+                      <img src="assets/images/resources/p-2.jpg" alt />
+                    </Link>
                     <div className="causes-one__cat">
-                      <p>Education</p>
+                      <p className="mt-2">Health</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <a href="donation-details.html">
-                        Support Education for Underprivileged Children.
-                      </a>
-                    </h3>
+                    <h3 className="causes-one__title">Health Care Program</h3>
                     <p className="causes-one__text">
-                      Join us in shaping a better tomorrow for deserving
-                      children.
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
                     </p>
-                    <div className="causes-one__progress">
-                      <div
-                        className="causes-one__progress-shape"
-                        style={{
-                          backgroundImage:
-                            "url(assets/images/shapes/causes-one-progress-shape-1.png)",
-                        }}
-                      ></div>
-                      <div className="bar">
-                        <div className="bar-inner count-bar" data-percent="36%">
-                          <div className="count-text">36%</div>
-                        </div>
-                      </div>
-                      <div className="causes-one__goals">
-                        <p>
-                          <span>$25,270</span> Raised
-                        </p>
-                        <p>
-                          <span>$30,000</span> Goal
-                        </p>
-                      </div>
-                    </div>
+
+                    <Link to="/health" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
                   </div>
                 </div>
               </div>
-              {/*Causes One Single End*/}
-              {/*Causes One Single Start*/}
               <div
                 className="col-xl-4 col-lg-4 wow fadeInUp"
-                data-wow-delay="200ms"
+                data-wow-delay="100ms"
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <img src="assets/images/resources/causes-1-2.jpg" alt />
+                    <Link to="/health">
+                      <img src="assets/images/resources/p-1.jpg" alt />
+                    </Link>
                     <div className="causes-one__cat">
-                      <p>Medical</p>
+                      <p className="mt-2">Education</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <a href="donation-details.html">
-                        Support Medical Care for Underprivileged Children.
-                      </a>
-                    </h3>
+                    <h3 className="causes-one__title">Education Program</h3>
                     <p className="causes-one__text">
-                      Your support brings medical care to underprivileged
-                      children. Donate today!
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
                     </p>
-                    <div className="causes-one__progress">
-                      <div
-                        className="causes-one__progress-shape"
-                        style={{
-                          backgroundImage:
-                            "url(assets/images/shapes/causes-one-progress-shape-1.png)",
-                        }}
-                      ></div>
-                      <div className="bar">
-                        <div className="bar-inner count-bar" data-percent="36%">
-                          <div className="count-text">36%</div>
-                        </div>
-                      </div>
-                      <div className="causes-one__goals">
-                        <p>
-                          <span>$25,270</span> Raised
-                        </p>
-                        <p>
-                          <span>$30,000</span> Goal
-                        </p>
-                      </div>
-                    </div>
+                    <Link to="/education" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
                   </div>
                 </div>
               </div>
-              {/*Causes One Single End*/}
-              {/*Causes One Single Start*/}
               <div
                 className="col-xl-4 col-lg-4 wow fadeInUp"
-                data-wow-delay="300ms"
+                data-wow-delay="100ms"
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <img src="assets/images/resources/causes-1-3.jpg" alt />
+                    <Link to="/microcredit">
+                      <img src="assets/images/resources/p-3.jpg" alt />
+                    </Link>
                     <div className="causes-one__cat">
-                      <p>Poverty </p>
+                      <p className="mt-2">Microcredit Program</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">Microcredit Program</h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+                    <Link to="/microcredit" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/quality-life">
+                      <img src="assets/images/resources/p-2.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Improving Quality Of Life</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <a href="donation-details.html">
-                        Help underprivileged children escape poverty.
-                      </a>
+                      Improving Quality Of Life
                     </h3>
                     <p className="causes-one__text">
-                      Global efforts uplift underprivileged children affected by
-                      poverty.
+                      ARC Foundation Elevating Lives, Enhancing Futures. Through
+                      diverse programs, we focus on improving quality of life,
+                      fostering positive change, and creating lasting impact in
+                      communities
                     </p>
-                    <div className="causes-one__progress">
-                      <div
-                        className="causes-one__progress-shape"
-                        style={{
-                          backgroundImage:
-                            "url(assets/images/shapes/causes-one-progress-shape-1.png)",
-                        }}
-                      ></div>
-                      <div className="bar">
-                        <div className="bar-inner count-bar" data-percent="36%">
-                          <div className="count-text">36%</div>
-                        </div>
-                      </div>
-                      <div className="causes-one__goals">
-                        <p>
-                          <span>$25,270</span> Raised
-                        </p>
-                        <p>
-                          <span>$30,000</span> Goal
-                        </p>
-                      </div>
-                    </div>
+
+                    <Link to="/quality-life" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
                   </div>
                 </div>
               </div>
-              {/*Causes One Single End*/}
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/environment">
+                      <img src="assets/images/resources/p-1.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Environment</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">Environment</h3>
+                    <p className="causes-one__text">
+                      ARC Foundation Nurturing Nature, Building Sustainability.
+                      Join us in our commitment to environmental stewardship and
+                      creating a greener, healthier future for all
+                    </p>
+                    <Link to="/environment" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/orphanage">
+                      <img src="assets/images/resources/p-3.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Orphanage</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">Orphanage</h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Orphanage Program is a haven of care and
+                      opportunity. We provide love, education, and support for
+                      orphaned children. Join us in creating a nurturing home
+                      for every child.
+                    </p>
+                    <Link to="/orphanage" className="thm-btn about-one__btn">
+                      See More
+                    </Link>
+                    {/* <div
+                      className="donate-now__payment-info-btn-box"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        className="thm-btn donate-now__payment-info-btn"
+                      >
+                        Donate now
+                      </button>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -616,14 +833,7 @@ const Home = () => {
               <h3 className="become-volunteer-one__title">
                 Join us for a better life and <br /> future for poor people.
               </h3>
-              <div className="become-volunteer-one__btn-box">
-                <a
-                  href="become-volunteer.html"
-                  className="thm-btn become-volunteer-one__btn"
-                >
-                  Discover More
-                </a>
-              </div>
+              <Register />
             </div>
           </div>
         </section>
@@ -633,394 +843,46 @@ const Home = () => {
         {/*Brand One Start*/}
         <section className="brand-one">
           <div className="container">
-            <div
-              className="thm-swiper__slider swiper-container"
-              data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
-                      "0": {
-                          "spaceBetween": 30,
-                          "slidesPerView": 2
-                      },
-                      "375": {
-                          "spaceBetween": 30,
-                          "slidesPerView": 2
-                      },
-                      "575": {
-                          "spaceBetween": 30,
-                          "slidesPerView": 3
-                      },
-                      "767": {
-                          "spaceBetween": 50,
-                          "slidesPerView": 4
-                      },
-                      "991": {
-                          "spaceBetween": 50,
-                          "slidesPerView": 5
-                      },
-                      "1199": {
-                          "spaceBetween": 100,
-                          "slidesPerView": 6
-                      }
-                  }}'
-            >
-              <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-1.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-2.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-3.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-4.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-5.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-6.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-1.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-2.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-3.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-4.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-5.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-                <div className="swiper-slide">
-                  <img src="assets/images/brand/brand-1-6.png" alt />
-                </div>
-                {/* /.swiper-slide */}
-              </div>
+            <div className="thm-swiper__slider swiper-container">
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, A11y, Autoplay]}
+                spaceBetween={50}
+                slidesPerView={6}
+                loop={true}
+                autoplay={{
+                  delay: 2000,
+                }}
+              >
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-1.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-2.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-3.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-4.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-1.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-2.png" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="assets/images/brand/brand-1-3.png" alt="" />
+                </SwiperSlide>
+                ...
+              </Swiper>
             </div>
           </div>
         </section>
         {/*Brand One End*/}
         {/*Testimonial One Start*/}
-        <section className="testimonial-one">
-          <div
-            className="testimonial-one-bg jarallax"
-            data-jarallax
-            data-speed="0.2"
-            data-imgposition="50% 0%"
-            style={{
-              backgroundImage:
-                "url(assets/images/backgrounds/testimonial-one-bg.jpg)",
-            }}
-          />
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-6 col-lg-6">
-                <div className="testimonial-one__left">
-                  <div className="section-title text-left">
-                    <span className="section-title__tagline">
-                      Our Testimonials
-                    </span>
-                    <h2 className="section-title__title">
-                      What People Say About Us
-                    </h2>
-                  </div>
-                  <p className="testimonial-one__text-1">
-                    ARC Foundation is a game-changer! Their commitment to
-                    education, healthcare, and community support transforms
-                    lives. Proud to support this impactful non-profit.
-                  </p>
-                  <a href="#" className="thm-btn testimonial-one__btn">
-                    People Says
-                  </a>
-                </div>
-              </div>
-              <div className="col-xl-6 col-lg-6">
-                <div className="testimonial-one__right">
-                  <div className="testimonial-one__img-1 zoom-fade">
-                    <img
-                      src="assets/images/testimonial/testimonial-img-1.jpg"
-                      alt
-                    />
-                  </div>
-                  <div className="testimonial-one__img-1 testimonial-one__img-2 zoom-fade">
-                    <img
-                      src="assets/images/testimonial/testimonial-img-2.jpg"
-                      alt
-                    />
-                  </div>
-                  <div className="testimonial-one__img-1 testimonial-one__img-3 zoom-fade">
-                    <img
-                      src="assets/images/testimonial/testimonial-img-3.jpg"
-                      alt
-                    />
-                  </div>
-                  <div className="testimonial-one__img-1 testimonial-one__img-4 zoom-fade">
-                    <img
-                      src="assets/images/testimonial/testimonial-img-4.jpg"
-                      alt
-                    />
-                  </div>
-                  <div
-                    className="testimonial-one__carousel owl-carousel owl-theme thm-owl__carousel"
-                    data-owl-options='{
-                          "loop": true,
-                          "autoplay": true,
-                          "margin": 50,
-                          "nav": true,
-                          "dots": false,
-                          "smartSpeed": 500,
-                          "autoplayTimeout": 10000,
-                          "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
-                          "responsive": {
-                              "0": {
-                                  "items": 1
-                              },
-                              "768": {
-                                  "items": 1
-                              },
-                              "992": {
-                                  "items": 1
-                              },
-                              "1200": {
-                                  "items": 1
-                              }
-                          }
-                      }'
-                  >
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-1.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Kevin martin
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          ARC Foundation transformed my life through education
-                          and community support. Grateful for their impact!
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-2.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Jessica brown
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          ARC Foundation empowers communities with education and
-                          health initiatives. Proud to be part of their positive
-                          change!
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-3.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Mike hardson
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          ARC Foundation's commitment to a better future is
-                          inspiring. Their support made a real difference in my
-                          life.
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-1.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Kevin martin
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-2.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Jessica brown
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                    <div className="item">
-                      {/*Testimonial One Single Start*/}
-                      <div className="testimonial-one__single">
-                        <div
-                          className="testimonial-one__shape-1"
-                          style={{
-                            backgroundImage:
-                              "url(assets/images/shapes/testimonial-one-shape-1.png)",
-                          }}
-                        ></div>
-                        <div className="testimonial-one__client-img">
-                          <img
-                            src="assets/images/testimonial/testimonial-1-3.jpg"
-                            alt
-                          />
-                        </div>
-                        <div className="testimonial-one__client-info">
-                          <h3 className="testimonial-one__client-name">
-                            Mike hardson
-                          </h3>
-                          <p className="testimonial-one__client-sub-title">
-                            Volunteer
-                          </p>
-                        </div>
-                        <div className="testimonial-one__quote">
-                          <span className="icon-double-quotes" />
-                        </div>
-                        <p className="testimonial-one__text-2">
-                          Nulla ultricies justo sit amet ante efficitur, eget
-                          pharetra augue efficitur. Vestibulum viverra, dolor
-                          sit amet ultricies simply free text ornare, elit justo
-                          pretium tellus.
-                        </p>
-                      </div>
-                      {/*Testimonial One Single End*/}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
         {/*Testimonial One End*/}
         {/*Gallery One Start*/}
         <section className="gallery-one">
@@ -1035,7 +897,7 @@ const Home = () => {
                   data-wow-delay="100ms"
                 >
                   <div className="gallery-one__img">
-                    <img src="assets/images/gallery/gallery-1-1.jpg" alt />
+                    <img src="assets/images/resources/p-1.jpg" alt />
                     <a
                       href="assets/images/gallery/gallery-1-1.jpg"
                       className="img-popup"
@@ -1054,7 +916,7 @@ const Home = () => {
                   data-wow-delay="200ms"
                 >
                   <div className="gallery-one__img">
-                    <img src="assets/images/gallery/gallery-1-2.jpg" alt />
+                    <img src="assets/images/resources/p-2.jpg" alt />
                     <a
                       href="assets/images/gallery/gallery-1-2.jpg"
                       className="img-popup"
@@ -1073,7 +935,7 @@ const Home = () => {
                   data-wow-delay="300ms"
                 >
                   <div className="gallery-one__img">
-                    <img src="assets/images/gallery/gallery-1-3.jpg" alt />
+                    <img src="assets/images/resources/p-3.jpg" alt />
                     <a
                       href="assets/images/gallery/gallery-1-3.jpg"
                       className="img-popup"
@@ -1092,7 +954,7 @@ const Home = () => {
                   data-wow-delay="400ms"
                 >
                   <div className="gallery-one__img">
-                    <img src="assets/images/gallery/gallery-1-4.jpg" alt />
+                    <img src="assets/images/resources/p-4.jpg" alt />
                     <a
                       href="assets/images/gallery/gallery-1-4.jpg"
                       className="img-popup"
@@ -1111,7 +973,7 @@ const Home = () => {
                   data-wow-delay="500ms"
                 >
                   <div className="gallery-one__img">
-                    <img src="assets/images/gallery/gallery-1-5.jpg" alt />
+                    <img src="assets/images/resources/p-5.jpg" alt />
                     <a
                       href="assets/images/gallery/gallery-1-5.jpg"
                       className="img-popup"
@@ -1161,7 +1023,7 @@ const Home = () => {
                     individuals for self-reliance through information, skills
                     development, and mentorship.
                   </p>
-                  <a href="faq.html" className="thm-btn faq-one__btn">
+                  <a href="/contact" className="thm-btn faq-one__btn">
                     Learn how to get help
                   </a>
                 </div>
@@ -1172,76 +1034,67 @@ const Home = () => {
                     className="accrodion-grp"
                     data-grp-name="faq-one-accrodion"
                   >
-                    <div className="accrodion active">
-                      <div className="accrodion-title">
-                        <h4>What is the mission of ARC Foundation?</h4>
-                      </div>
-                      <div className="accrodion-content">
-                        <div className="inner">
-                          <p>
-                            The mission of ARC Foundation is to empower
-                            individuals for sustainable self-reliance through
-                            information, skills development, and mentorship.
-                          </p>
+                    {faqes.map((item, index) => (
+                      <div
+                        key={item.Id}
+                        className={`accrodion ${
+                          activeAccordion === index ? "active" : ""
+                        }`}
+                      >
+                        <div
+                          className="accrodion-title"
+                          onClick={() => toggleAccordion(index)}
+                        >
+                          <h4>{item.question}</h4>
+                          <div className="question-icon">
+                            {activeAccordion === index ? (
+                              // Minus icon when the accordion is open
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <line x1="18" y1="12" x2="6" y2="12"></line>
+                              </svg>
+                            ) : (
+                              // Plus icon when the accordion is closed
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                              </svg>
+                            )}
+                          </div>
                         </div>
-                        {/* /.inner */}
-                      </div>
-                    </div>
-                    <div className="accrodion">
-                      <div className="accrodion-title">
-                        <h4>
-                          How does ARC Foundation support education in
-                          communities?
-                        </h4>
-                      </div>
-                      <div className="accrodion-content">
-                        <div className="inner">
-                          <p>
-                            ARC Foundation supports community education with
-                            resources and skill development.
-                          </p>
+                        <div className="accrodion-content">
+                          <div className="inner">
+                            <p>{item.answer}</p>
+                          </div>
                         </div>
-                        {/* /.inner */}
                       </div>
-                    </div>
-                    <div className="accrodion">
-                      <div className="accrodion-title">
-                        <h4>Can I volunteer with ARC Foundation? How?</h4>
-                      </div>
-                      <div className="accrodion-content">
-                        <div className="inner">
-                          <p>
-                            Yes, visit our website or contact us for
-                            volunteering opportunities.
-                          </p>
-                        </div>
-                        {/* /.inner */}
-                      </div>
-                    </div>
-                    <div className="accrodion last-chiled">
-                      <div className="accrodion-title">
-                        <h4>
-                          What success stories or impact has ARC Foundation
-                          achieved so far?
-                        </h4>
-                      </div>
-                      <div className="accrodion-content">
-                        <div className="inner">
-                          <p>
-                            ARC Foundation has achieved impactful success
-                            stories, empowering individuals through education,
-                            skills development, and community support.
-                          </p>
-                        </div>
-                        {/* /.inner */}
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         {/*FAQ One End*/}
         {/*Counter One Start*/}
         <section className="counter-one">
@@ -1252,9 +1105,14 @@ const Home = () => {
                 data-jarallax
                 data-speed="0.2"
                 data-imgposition="50% 0%"
+                // style={{
+                //   backgroundImage:
+                //     "url(assets/images/backgrounds/counter-one-bg.jpg)",
+                // }}
+
                 style={{
                   backgroundImage:
-                    "url(assets/images/backgrounds/counter-one-bg.jpg)",
+                    "url(assets/images/backgrounds/site-footer-bg_1920x1200.jpg)",
                 }}
               />
               <ul className="list-unstyled counter-one__list">
@@ -1316,7 +1174,7 @@ const Home = () => {
               >
                 <div className="news-one__single">
                   <div className="news-one__img">
-                    <img src="assets/images/blog/news-1-1.jpg" alt />
+                    <img src="assets/images/resources/p-1.jpg" alt />
                   </div>
                   <div className="news-one__content-box">
                     <div className="news-one__content-inner">
@@ -1339,10 +1197,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                          <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">
@@ -1384,7 +1241,7 @@ const Home = () => {
               >
                 <div className="news-one__single">
                   <div className="news-one__img">
-                    <img src="assets/images/blog/news-1-2.jpg" alt />
+                    <img src="assets/images/resources/p-2.jpg" alt />
                   </div>
                   <div className="news-one__content-box">
                     <div className="news-one__content-inner">
@@ -1409,10 +1266,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                        <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">
@@ -1454,7 +1310,7 @@ const Home = () => {
               >
                 <div className="news-one__single">
                   <div className="news-one__img">
-                    <img src="assets/images/blog/news-1-3.jpg" alt />
+                    <img src="assets/images/resources/p-3.jpg" alt />
                   </div>
                   <div className="news-one__content-box">
                     <div className="news-one__content-inner">
@@ -1477,10 +1333,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                        <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">
@@ -1522,9 +1377,9 @@ const Home = () => {
       </div>
 
       {/* /.search-popup */}
-      <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
+      {/* <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
         <i className="icon-up-arrow" />
-      </a>
+      </a> */}
     </div>
   );
 };

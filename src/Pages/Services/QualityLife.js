@@ -29,10 +29,42 @@ const QualityLife = () => {
         </div>
       </section>
       {/*Page Header End*/}
+      <div
+        className="container"
+        style={{
+          position: "relative",
+        }}
+      >
+        <div style={{ position: "absolute", right: "50px", top: "50px" }}>
+          <Link to="/projects">
+            <i
+              style={{
+                fontSize: "35px",
+                padding: "5px",
+                backgroundColor: "#FBD45A",
+                borderRadius: "100%",
+                color: "black",
+              }}
+              className="icon-left-arrow"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="container">
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <h3 className="section-title__title" style={{ fontWeight: "bold" }}>
+            Men & Women
+          </h3>
 
-      <div className="text-center" style={{ marginTop: "80px" }}>
-        <h6 style={{ fontWeight: "bold" }}>Men & Women</h6>
-        <p>Improving Quality Of Life</p>
+          <p
+            className="causes-one__text"
+            style={{ textAlign: "left", fontSize: "18px" }}
+          >
+            ARC Foundation Elevating Lives, Enhancing Futures. Through diverse
+            programs, we focus on improving quality of life, fostering positive
+            change, and creating lasting impact in communities.
+          </p>
+        </div>
       </div>
 
       {/*Team One Start*/}
@@ -65,21 +97,6 @@ const QualityLife = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -110,21 +127,6 @@ const QualityLife = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -153,21 +155,6 @@ const QualityLife = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

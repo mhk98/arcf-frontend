@@ -29,10 +29,44 @@ const Health = () => {
         </div>
       </section>
       {/*Page Header End*/}
+      <div
+        className="container"
+        style={{
+          position: "relative",
+        }}
+      >
+        <div style={{ position: "absolute", right: "50px", top: "50px" }}>
+          <Link to="/projects">
+            <i
+              style={{
+                fontSize: "35px",
+                padding: "5px",
+                backgroundColor: "#FBD45A",
+                borderRadius: "100%",
+                color: "black",
+              }}
+              className="icon-left-arrow"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="container">
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <h3 className="section-title__title" style={{ fontWeight: "bold" }}>
+            Health
+          </h3>
 
-      <div className="text-center" style={{ marginTop: "80px" }}>
-        <h6 style={{ fontWeight: "bold" }}>Health</h6>
-        <p>Health Care Program</p>
+          <p
+            className="causes-one__text"
+            style={{ textAlign: "left", fontSize: "18px" }}
+          >
+            ARC Foundation's Health Care Program is a lifeline for those in
+            need. We provide vital medical assistance, support for treatments,
+            and ensure access to essential healthcare services. Join us in
+            promoting well-being and creating a healthier, more resilient
+            community.
+          </p>
+        </div>
       </div>
 
       {/*Team One Start*/}
@@ -43,220 +77,156 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/">
-                    <img src="assets/images/resources/p-2.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Free Clinic</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
-                    <Link to="/donate-details">Free Friday Clinic</Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    A Free Friday Clinic for poor families to be aware or
-                    provide doctor’s advice or prescription free of cost and
-                    providing free medicine.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
-              data-wow-delay="100ms"
-            >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/donate-details">
-                    <img src="assets/images/resources/p-2.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Medical Support</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
-                    <Link to="/donate-details">
-                      Medical Treatment Support Initiative with a reduced cost
+              <Link to="/donate-details" style={{ color: "black" }}>
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/">
+                      <img src="assets/images/resources/p-2.jpg" alt />
                     </Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    Medical support initiative to the poor community by ensuring
-                    reduced cost medical treatment & medicine facilities from
-                    our partner Nostrum Hospital & Diagnostic Centre.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Free Clinic</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/donate-details">Free Friday Clinic</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      A Free Friday Clinic for poor families to be aware or
+                      provide doctor’s advice or prescription free of cost and
+                      providing free medicine.
+                      <span className="ms-2">
+                        <Link to="/donate-details">see more...</Link>
+                      </span>
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/donate-details">
-                    <img src="assets/images/resources/p-2.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Cancer Treatment</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
-                    <Link to="/donate-details">Cancer Treatment</Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    Financial assistance is provided for the treatment of poor
-                    and indigent patients suffering from Blood Cancer, Women's
-                    Breast Cancer, Uterine Cancer, and all other cancer
-                    patients.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
-              data-wow-delay="100ms"
-            >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/donate-details">
-                    <img src="assets/images/resources/p-2.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Child Program</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
+              <Link to="donate-details" style={{ color: "black" }}>
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
                     <Link to="/donate-details">
-                      Maternal and Child Immunization Program
+                      <img src="assets/images/resources/p-2.jpg" alt />
                     </Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    Mothers and Children are vaccinated every week.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Medical Support</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/donate-details">
+                        Medical Treatment Support Initiative with a reduced cost
+                      </Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      Medical support initiative to the poor community by
+                      ensuring reduced cost medical treatment & medicine
+                      facilities from our partner Nostrum Hospital & Diagnostic
+                      Centre.
+                      <span className="ms-2">
+                        <Link to="/donate-details">see more...</Link>
+                      </span>
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <div className="causes-one__single">
-                <div className="causes-one__img">
-                  <Link to="/donate-details">
-                    <img src="assets/images/resources/p-2.jpg" alt />
-                  </Link>
-                  <div className="causes-one__cat">
-                    <p className="mt-2">Medical Camp</p>
-                  </div>
-                </div>
-                <div className="causes-one__content">
-                  <h3 className="causes-one__title">
+              <Link to="/donate-details">
+                <div className="causes-one__single" style={{ color: "black" }}>
+                  <div className="causes-one__img">
                     <Link to="/donate-details">
-                      Health Awareness & Medical Camp
+                      <img src="assets/images/resources/p-2.jpg" alt />
                     </Link>
-                  </h3>
-                  <p className="causes-one__text">
-                    Health awareness training and Free medical camps are
-                    conducted in rural and remote areas.
-                    <span className="ms-2">
-                      <Link to="/donate-details">see more...</Link>
-                    </span>
-                  </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Cancer Treatment</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/donate-details">Cancer Treatment</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      Financial assistance is provided for the treatment of poor
+                      and indigent patients suffering from Blood Cancer, Women's
+                      Breast Cancer, Uterine Cancer, and all other cancer
+                      patients.
+                      <span className="ms-2">
+                        <Link to="/donate-details">see more...</Link>
+                      </span>
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Link>
+            </div>
+            <div
+              className="col-xl-4 col-lg-4 wow fadeInUp"
+              data-wow-delay="100ms"
+            >
+              <Link to="/donate-details">
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/donate-details">
+                      <img src="assets/images/resources/p-2.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Child Program</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/donate-details">
+                        Maternal and Child Immunization Program
+                      </Link>
+                    </h3>
+                    <p className="causes-one__text" style={{ color: "black" }}>
+                      Mothers and Children are vaccinated every week.
+                      <span className="ms-2">
+                        <Link to="/donate-details">see more...</Link>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              className="col-xl-4 col-lg-4 wow fadeInUp"
+              data-wow-delay="100ms"
+            >
+              <Link to="/donate-details">
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/donate-details">
+                      <img src="assets/images/resources/p-2.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Medical Camp</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/donate-details">
+                        Health Awareness & Medical Camp
+                      </Link>
+                    </h3>
+                    <p className="causes-one__text" style={{ color: "black" }}>
+                      Health awareness training and Free medical camps are
+                      conducted in rural and remote areas.
+                      <span className="ms-2">
+                        <Link to="/donate-details">see more...</Link>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

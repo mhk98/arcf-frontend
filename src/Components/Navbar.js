@@ -1,38 +1,141 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import BackToTopButton from "./BackToTopButton";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
 
-  const toggleMobileNav = () => {
-    setMobileNavOpen(!isMobileNavOpen);
+  // Function to handle click on menu item
+  const handleItemClick = (index) => {
+    setActiveItem(index);
   };
+
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const hideNavItemsVariant = {
+    opened: {
+      opacity: 0,
+      x: "-100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    closed: {
+      opacity: 1,
+      x: "0%",
+      transition: {
+        delay: 1.1,
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const mobileMenuVariant = {
+    opened: {
+      x: "0%",
+      transition: {
+        delay: 0.5,
+        duration: 1.1,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+    closed: {
+      x: "-100%",
+      transition: {
+        delay: 0.35,
+        duration: 0.63,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+  };
+
+  const fadeInVariant = {
+    opened: {
+      opacity: 1,
+      transition: {
+        delay: 1.2,
+      },
+    },
+    closed: { opacity: 0 },
+  };
+
+  const ulVariant = {
+    opened: {
+      transition: {
+        delayChildren: 1,
+        staggerChildren: 0.18,
+      },
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.06,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const liVariant = {
+    opened: {
+      opacity: 1,
+      y: "0%",
+      transition: {
+        duration: 0.65,
+        ease: "easeOut",
+      },
+    },
+    closed: {
+      opacity: 0,
+      y: "100%",
+      transition: {
+        duration: 0.25,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const fadeInStart = { opacity: 0 };
+  const fadeInEnd = { opacity: 1 };
+  const fadeInTransition = { duration: 1 };
+  const menuItems = [
+    { text: "Home", link: "/" },
+    { text: "About", link: "/about-us" },
+    { text: "Project", link: "/projects" },
+    { text: "Events", link: "/events" },
+    { text: "News", link: "/news" },
+    { text: "Donation", link: "/donate-events" },
+    { text: "Gallery", link: "/gallery" },
+    { text: "Contact", link: "/contact" },
+    // ... other menu items
+  ];
   return (
     <div className="custom-cursor">
-      {/* /.preloader */}
-      {/* <div className="page-wrapper"> */}
-      <header className="main-header ">
-        <nav className="main-menu ">
-          <div className="main-menu__wrapper">
-            <div className="main-menu__wrapper-inner">
-              <div className="main-menu__left">
-                <div className="main-menu__logo">
-                  <a href="/">
-                    <img
-                      src="assets/images/resources/logo-1.png"
-                      alt=""
-                      width={200}
-                    />
-                  </a>
+      <div className="header-container">
+        <header className="main-header ">
+          <nav className="main-menu ">
+            <div className="main-menu__wrapper">
+              <div className="main-menu__wrapper-inner">
+                <div className="main-menu__left">
+                  <div className="main-menu__logo">
+                    <Link to="/">
+                      <img
+                        src="assets/images/resources/logo-1.png"
+                        alt=""
+                        width={200}
+                      />
+                    </Link>
+                  </div>
+                  <div className="main-menu__shape-1 float-bob-x">
+                    <img src="assets/images/shapes/main-menu-shape-1.png" alt />
+                  </div>
                 </div>
-                <div className="main-menu__shape-1 float-bob-x">
-                  <img src="assets/images/shapes/main-menu-shape-1.png" alt />
-                </div>
-              </div>
-              <div className="main-menu__right">
-                <div className="main-menu__right-top">
-                  <div className="main-menu__right-top-left">
-                    {/* <div className="main-menu__volunteers">
+                <div className="main-menu__right">
+                  <div className="main-menu__right-top">
+                    <div className="main-menu__right-top-left">
+                      {/* <div className="main-menu__volunteers">
                       <div className="main-menu__volunteers-icon">
                         <img
                           src="assets/images/icon/main-menu-heart-icon.png"
@@ -41,41 +144,44 @@ const Navbar = () => {
                       </div>
                       <div className="main-menu__volunteers-text-box">
                         <p className="main-menu__volunteers-text">
-                          <a href="become-volunteer.html">
+                          "become-volunteer.html">
                             Become a<span>volunteers</span>
                           </a>
                         </p>
                       </div>
                     </div> */}
-                  </div>
-                  <div className="main-menu__right-top-right">
-                    <div className="main-menu__right-top-address">
-                      <ul className="list-unstyled main-menu__right-top-address-list">
-                        <li>
-                          <div className="icon">
-                            <span className="icon-phone-call" />
-                          </div>
-                          <div className="content">
-                            {/* <p>Helpline</p> */}
-                            <h5>
-                              <a href="tel:980009630">+880 2224412300</a>
-                            </h5>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="icon">
-                            <span className="icon-message" />
-                          </div>
-                          <div className="content">
-                            {/* <p>Send email</p> */}
-                            <h5>
-                              <a href="mailto:needhelp@company.com">
-                                arcf.society.bd@gmail.com
-                              </a>
-                            </h5>
-                          </div>
-                        </li>
-                        {/* <li>
+                    </div>
+                    <div className="main-menu__right-top-right">
+                      <div className="main-menu__right-top-address">
+                        <ul className="list-unstyled main-menu__right-top-address-list">
+                          <li>
+                            <div className="icon">
+                              <span className="icon-phone-call" />
+                            </div>
+                            <div className="content">
+                              {/* <p>Helpline</p> */}
+                              <h5 className="">
+                                <a href="tel:980009630">+880 2224412300</a>
+                              </h5>
+                            </div>
+                          </li>
+                          <li>
+                            <div className="icon">
+                              <span className="icon-message" />
+                            </div>
+                            <div className="content">
+                              {/* <p>Send email</p> */}
+                              <h5>
+                                <a
+                                  className="mt-4"
+                                  href="mailto:needhelp@company.com"
+                                >
+                                  arcf.society.bd@gmail.com
+                                </a>
+                              </h5>
+                            </div>
+                          </li>
+                          {/* <li>
                           <div className="icon">
                             <span className="icon-location" />
                           </div>
@@ -84,243 +190,193 @@ const Navbar = () => {
                             <h5>Gazipur Bangladesh</h5>
                           </div>
                         </li> */}
+                        </ul>
+                      </div>
+                      <div className="main-menu__right-top-social">
+                        <a href="https://twitter.com/ARCF2009">
+                          <i className="fab fa-twitter" />
+                        </a>
+                        <a href="#">
+                          <i className="fab fa-facebook" />
+                        </a>
+                        <a href="#">
+                          <i className="fab fa-pinterest-p" />
+                        </a>
+                        <a href="#">
+                          <i className="fab fa-instagram" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="main-menu__right-bottom">
+                    <div className="main-menu__main-menu-box">
+                      {/* <a
+                        href="#"
+                        className="mobile-nav__toggler"
+                        onClick={toggleMobileNav}
+                      >
+                        <i className="fa fa-bars" />
+                      </a> */}
+
+                      <ul className="main-menu__list">
+                        {menuItems.map((item, index) => (
+                          <li
+                            key={index}
+                            className={activeItem === index ? "active" : ""}
+                            onClick={() => handleItemClick(index)}
+                          >
+                            <Link to={item.link}>{item.text}</Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
-                    <div className="main-menu__right-top-social">
-                      <a href="#">
-                        <i className="fab fa-twitter" />
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-facebook" />
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-pinterest-p" />
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="main-menu__right-bottom">
-                  <div className="main-menu__main-menu-box">
-                    <a
-                      href="#"
-                      className="mobile-nav__toggler"
-                      onClick={toggleMobileNav}
-                    >
-                      <i className="fa fa-bars" />
-                    </a>
-
-                    <ul className="main-menu__list">
-                      <li className="dropdown current megamenu">
-                        <a href="/">Home </a>
-                      </li>
-                      <li className="dropdown">
-                        <Link to="/about-us">About</Link>
-                      </li>
-                      {/* <li className="dropdown">
-                        <Link to="/about-us">What we do</Link>
-                      </li> */}
-
-                      <li className="dropdown">
-                        <Link to="/projects">Project</Link>
-                        {/* <ul>
-                          <li>
-                            <Link to="/health">Health </Link>
-                          </li>
-                          <li>
-                            <Link to="/become-volunteer">Education</Link>
-                          </li>
-
-                          <li>
-                            <Link to="/education">Microcredit Program</Link>
-                          </li>
-                          <li>
-                            <Link to=""> Men & Women </Link>
-                          </li>
-                          <li>
-                            <Link to="">Orphanage </Link>
-                          </li>
-                          <li>
-                            <Link to="">Governance </Link>
-                          </li>
-                        </ul> */}
-                      </li>
-
-                      <li className="">
-                        <Link to="/events">Events</Link>
-                        {/* <ul>
-                          <li>
-                            <Link to="events.html">Events</Link>
-                          </li>
-
-                          <li>
-                            <Link to="event-details.html">Event details</Link>
-                          </li>
-                        </ul> */}
-                      </li>
-                      <li className="dropdown">
-                        <Link to="/news">News</Link>
-                        {/* <ul>
-                          <li>
-                            <Link to="news.html">News</Link>
-                          </li>
-                          <li>
-                            <Link to="news-carousel.html">News carousel</Link>
-                          </li>
-                          <li>
-                            <Link to="news-sidebar.html">News right sidebar</Link>
-                          </li>
-                          <li>
-                            <Link to="news-sidebar-left.html">
-                              News left sidebar
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="news-details.html">News details</Link>
-                          </li>
-                        </ul> */}
-                      </li>
-
-                      {/* <li className="dropdown">
-                        <Link to="products.html">Shop</Link>
-                        <ul>
-                          <li>
-                            <Link to="products.html">Shop</Link>
-                          </li>
-                          <li>
-                            <Link to="product-details.html">Product details</Link>
-                          </li>
-                          <li>
-                            <Link to="cart.html">Cart</Link>
-                          </li>
-                          <li>
-                            <Link to="checkout.html">Checkout</Link>
-                          </li>
-                        </ul>
-                      </li>  */}
-
-                      <li>
-                        <Link to="/contact">Contact Us</Link>
-                      </li>
-                      <li>
-                        <Link to="/gallery">Gallery</Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="main-menu__main-menu-content-box">
-                    <div className="main-menu__search-cat-btn-box">
-                      {/* <div className="main-menu__search-box">
+                    <div className="main-menu__main-menu-content-box">
+                      <div className="main-menu__search-cat-btn-box">
+                        {/* <div className="main-menu__search-box">
                         <a
                           href="#"
                           className="main-menu__search search-toggler icon-magnifying-glass"
                         />
                       </div> */}
-                      {/* <div className="main-menu__cat-box">
+                        {/* <div className="main-menu__cat-box">
                         <a
                           href="cart.html"
                           className="main-menu__cart icon-shopping-cart"
                         />
                       </div> */}
-                      <div className="main-menu__btn-box">
-                        <Link href="/donate-now" className="main-menu__btn">
-                          {" "}
-                          <span className="fa fa-heart" /> Donate now
-                        </Link>
+                        <div className="main-menu__btn-box">
+                          <Link to="/donate-now" className="main-menu__btn">
+                            <span className="fa fa-heart" /> Donate now
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </nav>
-      </header>
+          </nav>
+        </header>
 
-      <div className="stricky-header stricked-menu main-menu">
-        <div className="sticky-header__content" />
-        {/* /.sticky-header__content */}
+        <div className="stricky-header stricked-menu main-menu">
+          <div className="sticky-header__content" />
+          {/* /.sticky-header__content */}
+        </div>
       </div>
-      {/* /.stricky-header */}
-      {/* </div> */}
-      {/* /.page-wrapper */}
-      <div className="mobile-nav__wrapper">
-        <div className={`mobile-nav__overlay`} />
-
-        {/* /.mobile-nav__overlay */}
-        <div className="mobile-nav__content">
-          <span className="mobile-nav__close mobile-nav__toggler">
-            <i className="fa fa-times" />
-          </span>
-          <div className="logo-box">
-            <a href="/" aria-label="logo image">
-              <img
-                src="assets/images/resources/logo-2.png"
-                width={200}
-                alt=""
-              />
-            </a>
-          </div>
-          {/* /.logo-box */}
-          <div className="mobile-nav__container" />
-          {/* /.mobile-nav__container */}
-          <ul className="mobile-nav__contact list-unstyled">
-            <li>
-              <i className="fa fa-envelope" />
-              <a href="mailto:needhelp@packageName__.com">
-                needhelp@oxpins.com
-              </a>
-            </li>
-            <li>
-              <i className="fa fa-phone-alt" />
-              <a href="tel:666-888-0000">666 888 0000</a>
-            </li>
-          </ul>
-          {/* /.mobile-nav__contact */}
-          <div className="mobile-nav__top">
-            <div className="mobile-nav__social">
-              <a
-                href="https://www.facebook.com/arcf.society.bd.org"
-                className="fab fa-facebook-square"
-              />
-              <a href="#" className="fab fa-instagram" />
-              <a href="#" className="fab fa-twitter" />
-              <a href="#" className="fab fa-pinterest-p" />
+      <main className="nav-container">
+        <motion.nav
+          initial="closed"
+          animate={mobileNavOpen ? "opened" : "closed"}
+        >
+          <div className="mobile-navbar">
+            <div className="">
+              <Link to="/">
+                <img
+                  src="assets/images/resources/logo-1.png"
+                  alt=""
+                  width={145}
+                />
+              </Link>
             </div>
-            {/* /.mobile-nav__social */}
-          </div>
-          {/* /.mobile-nav__top */}
-        </div>
-        {/* /.mobile-nav__content */}
-      </div>
-
-      {/* /.mobile-nav__wrapper */}
-      <div className="search-popup">
-        <div className="search-popup__overlay search-toggler" />
-        {/* /.search-popup__overlay */}
-        <div className="search-popup__content">
-          <form action="#">
-            <label htmlFor="search" className="sr-only">
-              search here
-            </label>
-            {/* /.sr-only */}
-            <input type="text" id="search" placeholder="Search Here..." />
-            <button
-              type="submit"
-              aria-label="search submit"
-              className="thm-btn"
+            <motion.div
+              variants={hideNavItemsVariant}
+              onClick={() => setMobileNavOpen(true)}
             >
-              <i className="icon-magnifying-glass" />
-            </button>
-          </form>
-        </div>
-        {/* /.search-popup__content */}
-      </div>
-      {/* /.search-popup */}
-      <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
-        <i className="icon-up-arrow" />
-      </a>
+              <svg
+                className="open-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                height="28"
+                width="24"
+                viewBox="0 0 448 512"
+                fill="#00715D"
+              >
+                <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+              </svg>
+            </motion.div>
+          </div>
+          <motion.div variants={mobileMenuVariant} className="mobile-menu">
+            <div className="top-nav">
+              <div className="logo">
+                <Link to="/">
+                  <img
+                    src="assets/images/resources/logo-1.png"
+                    alt=""
+                    width={200}
+                  />
+                </Link>
+              </div>
+              <motion.button
+                variants={fadeInVariant}
+                onClick={() => setMobileNavOpen(false)}
+                style={{ fontSize: "30px", backgroundColor: "#283734" }}
+              >
+                <svg
+                  className="close-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  width="24"
+                  viewBox="0 0 384 512"
+                  fill="white"
+                >
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+              </motion.button>
+            </div>
+
+            <motion.ul
+              variants={ulVariant}
+              style={{ marginTop: "-20px", marginRight: "160px" }}
+            >
+              {menuItems.map((item, index) => (
+                <motion.li
+                  whileTap={{ scale: 0.95 }}
+                  key={index}
+                  className={activeItem === index ? "active" : ""}
+                  onClick={() => handleItemClick(index)}
+                  variants={liVariant}
+                >
+                  <Link to={item.link} style={{ color: "white" }}>
+                    <motion.div style={{ textAlign: "left" }}>
+                      {item.text}
+                    </motion.div>
+                  </Link>
+                </motion.li>
+              ))}
+              <li className="text-white" style={{ display: "flex" }}>
+                <div className="icon">
+                  <span className="icon-phone-call" />
+                </div>
+                <span style={{ marginLeft: "10px" }}>+852 5650 2233</span>
+              </li>
+              <li className="text-white" style={{ display: "flex" }}>
+                <div className="icon">
+                  <span className="icon-message" />
+                </div>
+                <span style={{ marginLeft: "10px" }}>
+                  {" "}
+                  arcf.society.bd@gmail.com
+                </span>
+              </li>
+              <li className="main-menu__right-top-social">
+                <a href="https://twitter.com/ARCF2009">
+                  <i className="fab fa-twitter" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-facebook" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-pinterest-p" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-instagram" />
+                </a>
+              </li>
+            </motion.ul>
+          </motion.div>
+        </motion.nav>
+      </main>
+
+      <BackToTopButton />
     </div>
   );
 };

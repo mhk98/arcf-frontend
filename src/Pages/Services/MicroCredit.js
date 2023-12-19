@@ -29,10 +29,43 @@ const MicroCredit = () => {
         </div>
       </section>
       {/*Page Header End*/}
+      <div
+        className="container"
+        style={{
+          position: "relative",
+        }}
+      >
+        <div style={{ position: "absolute", right: "50px", top: "50px" }}>
+          <Link to="/projects">
+            <i
+              style={{
+                fontSize: "35px",
+                padding: "5px",
+                backgroundColor: "#FBD45A",
+                borderRadius: "100%",
+                color: "black",
+              }}
+              className="icon-left-arrow"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="container">
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <h3 className="section-title__title" style={{ fontWeight: "bold" }}>
+            Microcredit Program
+          </h3>
 
-      <div className="text-center" style={{ marginTop: "80px" }}>
-        <h6 style={{ fontWeight: "bold" }}>Microcredit</h6>
-        <p>Microcredit Program</p>
+          <p
+            className="causes-one__text"
+            style={{ textAlign: "left", fontSize: "18px" }}
+          >
+            ARC Foundation's Micro Entrepreneurship Development Program sparks
+            success. We empower individuals with skills, financial support, and
+            mentorship to foster thriving local businesses. Join us in
+            cultivating entrepreneurship and building resilient communities.
+          </p>
+        </div>
       </div>
 
       {/*Team One Start*/}
@@ -64,21 +97,6 @@ const MicroCredit = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -108,21 +126,6 @@ const MicroCredit = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -141,7 +144,9 @@ const MicroCredit = () => {
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
-                    <Link to="/donate-details">Entrepreneurship Development Program</Link>
+                    <Link to="/donate-details">
+                      Entrepreneurship Development Program
+                    </Link>
                   </h3>
                   <p className="causes-one__text">
                     A small entrepreneurship program for disadvantaged working
@@ -152,21 +157,6 @@ const MicroCredit = () => {
                       <Link to="/donate-details">see more...</Link>
                     </span>
                   </p>
-                  <div
-                    className="donate-now__payment-info-btn-box"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="thm-btn donate-now__payment-info-btn"
-                    >
-                      Donate now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
