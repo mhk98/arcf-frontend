@@ -268,15 +268,7 @@ const Navbar = () => {
           initial="closed"
           animate={mobileNavOpen ? "opened" : "closed"}
         >
-          <div
-            style={{
-              display: "flex",
-
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: "200px",
-            }}
-          >
+          <div className="mobile-navbar">
             <div className="">
               <Link to="/">
                 <img
@@ -291,6 +283,7 @@ const Navbar = () => {
               onClick={() => setMobileNavOpen(true)}
             >
               <svg
+                className="open-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 height="28"
                 width="24"

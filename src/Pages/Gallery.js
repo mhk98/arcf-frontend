@@ -1,8 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   return (
     <div>
+      {/*Page Header Start*/}
+      <section className="page-header">
+        <div
+          className="page-header-bg"
+          style={{
+            backgroundImage:
+              "url(assets/images/backgrounds/page-header-bg.jpg)",
+          }}
+        ></div>
+        <div className="container">
+          <div className="page-header__inner">
+            <ul className="thm-breadcrumb list-unstyled">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <span>/</span>
+              </li>
+              <li className="active">Pages</li>
+            </ul>
+            <h2>Gallery</h2>
+          </div>
+        </div>
+      </section>
+      {/*Page Header End*/}
       {/*Gallery Page Start*/}
       <section className="gallery-page">
         <div className="container">
