@@ -40,11 +40,18 @@ const AllProject = () => {
             className="causes-one__text"
             style={{ textAlign: "left", fontSize: "18px", color: "black" }}
           >
-            ARC Foundation empowers lives through education, health, and
-            community initiatives. From scholarships to healthcare access, we're
-            committed to fostering equality, supporting education, and driving
-            sustainable development. Join us in creating positive change and
-            transforming communities.
+            Dive into the heart of impactful change with ARC Foundation Events.
+            Our events serve as powerful platforms for bringing communities
+            together in the spirit of empowerment, education, and sustainable
+            development. From engaging workshops to thought-provoking
+            symposiums, each event is a catalyst for positive transformation.
+            Discover a space where like-minded individuals, partners, and
+            supporters unite to amplify our mission. Whether it's a fundraiser,
+            awareness campaign, or collaborative initiative, ARC Foundation
+            Events offer a dynamic showcase of our commitment to creating
+            lasting impact. Join us at these inspiring gatherings as we
+            collectively strive to build a brighter, more inclusive future for
+            all.
           </p>
         </div>
       </div>
@@ -74,9 +81,7 @@ const AllProject = () => {
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Health Care Program is a lifeline for
                       those in need. We provide vital medical assistance,
-                      support for treatments, and ensure access to essential
-                      healthcare services. Join us in promoting well-being and
-                      creating a healthier, more resilient community.
+                      support for treatments,
                       <span className="ms-2">
                         <Link to="/health">see more...</Link>
                       </span>
@@ -101,16 +106,11 @@ const AllProject = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/education">
-                        Education and Child Development Program
-                      </Link>
+                      <Link to="/education">Education and Child Program</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Education and Child Development Program
-                      is shaping futures. We provide quality education, support
-                      holistic child development, and empower young minds. Join
-                      us in building a foundation for success and transforming
-                      lives.
+                      is shaping futures. We provide quality education support
                       <span className="ms-2">
                         <Link to="/education">see more...</Link>
                       </span>
@@ -135,16 +135,11 @@ const AllProject = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/microcredit">
-                        Micro Entrepreneurship Development Program
-                      </Link>
+                      <Link to="/microcredit">Micro Entrepreneur Program</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Micro Entrepreneurship Development
-                      Program sparks success. We empower individuals with
-                      skills, financial support, and mentorship to foster
-                      thriving local businesses. Join us in cultivating
-                      entrepreneurship and building resilient communities.
+                      Program sparks success. We empower individuals with skills
                       <span className="ms-2">
                         <Link to="/microcredit">see more...</Link>
                       </span>
@@ -175,8 +170,6 @@ const AllProject = () => {
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
                       diverse programs, we focus on improving quality of life,
-                      fostering positive change, and creating lasting impact in
-                      communities.
                       <span className="ms-2">
                         <Link to="/quality-life">see more...</Link>
                       </span>
@@ -205,8 +198,7 @@ const AllProject = () => {
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation Nurturing Nature, Building Sustainability.
-                      Join us in our commitment to environmental stewardship and
-                      creating a greener, healthier future for all.
+                      Join us in our commitment to environmental stewardship
                       <span className="ms-2">
                         <Link to="/environment">see more...</Link>
                       </span>
@@ -236,8 +228,7 @@ const AllProject = () => {
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Orphanage Program is a haven of care and
                       opportunity. We provide love, education, and support for
-                      orphaned children. Join us in creating a nurturing home
-                      for every child.
+                      orphaned
                       <span className="ms-2">
                         <Link to="/orphanage">see more...</Link>
                       </span>
@@ -266,9 +257,7 @@ const AllProject = () => {
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Old Home Program ensures dignity for
-                      seniors. We provide compassionate care, companionship, and
-                      a fulfilling environment for elderly residents. Join us in
-                      honoring and supporting our seniors.
+                      seniors. We provide compassionate care, companionship
                       <span className="ms-2">
                         <Link to="/oldhome">see more...</Link>
                       </span>

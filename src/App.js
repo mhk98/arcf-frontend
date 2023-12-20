@@ -45,10 +45,9 @@ import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
 // import "./assets/vendors/vegas/vegas.min.css";
 import { Provider } from "react-redux";
-import store from "./Redux/app/store";
-import About from "./Pages/About/About";
 import DonateEvents from "./Components/DonateEvents";
-import BackToTopButton from "./Components/BackToTopButton";
+import About from "./Pages/About/About";
+import store from "./Redux/app/store";
 
 function App() {
   return (

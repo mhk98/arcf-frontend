@@ -81,7 +81,7 @@ const Health = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Free Clinic</p>
@@ -111,7 +111,7 @@ const Health = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Medical Support</p>
@@ -120,14 +120,13 @@ const Health = () => {
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
                       <Link to="/donate-details">
-                        Medical Treatment Support Initiative with a reduced cost
+                        Medical Treatment Support
                       </Link>
                     </h3>
                     <p className="causes-one__text">
                       Medical support initiative to the poor community by
                       ensuring reduced cost medical treatment & medicine
-                      facilities from our partner Nostrum Hospital & Diagnostic
-                      Centre.
+                      facilities from our partner
                       <span className="ms-2">
                         <Link to="/donate-details">see more...</Link>
                       </span>
@@ -144,7 +143,7 @@ const Health = () => {
                 <div className="causes-one__single" style={{ color: "black" }}>
                   <div className="causes-one__img">
                     <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Cancer Treatment</p>
@@ -157,8 +156,7 @@ const Health = () => {
                     <p className="causes-one__text">
                       Financial assistance is provided for the treatment of poor
                       and indigent patients suffering from Blood Cancer, Women's
-                      Breast Cancer, Uterine Cancer, and all other cancer
-                      patients.
+                      Breast Cancer
                       <span className="ms-2">
                         <Link to="/donate-details">see more...</Link>
                       </span>
@@ -175,7 +173,7 @@ const Health = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Child Program</p>
@@ -184,7 +182,7 @@ const Health = () => {
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
                       <Link to="/donate-details">
-                        Maternal and Child Immunization Program
+                        Maternal and Child Program
                       </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
@@ -205,7 +203,7 @@ const Health = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Medical Camp</p>
@@ -213,9 +211,7 @@ const Health = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
-                        Health Awareness & Medical Camp
-                      </Link>
+                      <Link to="/donate-details">Health & Medical Camp</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       Health awareness training and Free medical camps are

@@ -1,9 +1,9 @@
 // import cartSlice from "@/Redux-Thunk/reducers/cartSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
-import { sliderApi } from "../features/slider/slider";
-import { faqApi } from "../features/faq/faq";
 import { aboutApi } from "../features/about/about";
+import { faqApi } from "../features/faq/faq";
+import { sliderApi } from "../features/slider/slider";
 
 const store = configureStore({
   reducer: {

@@ -4,7 +4,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
 
-    font-family: var(--oxpins-font-three);
+  /* font-family: var(--oxpins-font-three); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -253,12 +253,9 @@ label {
   color: white;
 }
 
-
-.main-header{
+.main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-
-

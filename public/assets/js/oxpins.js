@@ -1,8 +1,6 @@
-import Swiper from "swiper";
+import Swiper from "/swiper";
 
 (function ($) {
-  "use strict";
-
   function thmSwiperInit() {
     // swiper slider
     if ($(".thm-swiper__slider").length) {
