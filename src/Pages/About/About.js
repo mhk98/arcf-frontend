@@ -41,7 +41,7 @@ const About = () => {
           className="page-header-bg"
           style={{
             backgroundImage:
-              "url(assets/images/backgrounds/page-header-bg.jpg)",
+              "url(assets/images/backgrounds/About-Us-top-banner.jpg)",
           }}
         />
         <div className="container">
@@ -69,14 +69,14 @@ const About = () => {
                 <div className="about-four__img-box">
                   <div className="about-four__img">
                     <img
-                      src="assets/images/resources/about-four-img-1.jpg"
-                      alt
+                      src="assets/images/resources/about-one-img-1.jpg"
+                      alt=""
                     />
                   </div>
                   <div className="about-four__img-two">
                     <img
                       src="assets/images/resources/about-four-img-2.jpg"
-                      alt
+                      alt=""
                     />
                   </div>
                   <div className="about-four__border" />
@@ -174,15 +174,19 @@ const About = () => {
                   hope and positive change. As the Chairman and Founder, it is
                   my privilege to lead an organization dedicated to transforming
                   lives through education, empowerment, and community support.
+                </p>
+                <p class="product-details__content-text1">
                   Our journey began with a simple yet profound belief – that
                   every individual, regardless of their circumstances, deserves
                   the opportunity to thrive. At the ARC Foundation, we are
                   committed to breaking barriers, providing a helping hand to
-                  the vulnerable, and fostering sustainable solutions. Together,
-                  we can inspire change, empower the underserved, and build a
-                  future where everyone has the chance to claim their space in
-                  the world. Join us in our mission to make a lasting impact and
-                  create a brighter, more equitable tomorrow.
+                  the vulnerable, and fostering sustainable solutions.
+                </p>
+                <p class="product-details__content-text1">
+                  Together, we can inspire change, empower the underserved, and
+                  build a future where everyone has the chance to claim their
+                  space in the world. Join us in our mission to make a lasting
+                  impact and create a brighter, more equitable tomorrow.
                 </p>
               </div>
             </div>

@@ -37,6 +37,7 @@ const Home = () => {
 
   const [slides, setSlides] = useState([]);
   const { data, isLoading, isError, error } = useGetAllSliderQuery();
+  console.log("slides", slides);
 
   useEffect(() => {
     if (isError) {
@@ -97,6 +98,15 @@ const Home = () => {
   }, [aboutData, aboutLoading, aboutError, error2]);
 
   console.log("aboutData", aboutData);
+
+  const imagePaths = [
+    "assets/images/gallery/gallery-1-1.jpg",
+    "assets/images/gallery/gallery-1-2.jpg",
+    "assets/images/gallery/gallery-1-3.jpg",
+    "assets/images/gallery/gallery-1-4.jpg",
+    "assets/images/gallery/gallery-1-5.jpg",
+    // Add more image paths as needed
+  ];
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -105,86 +115,189 @@ const Home = () => {
 
         <section className="main-slider clearfix" style={{ height: "100%" }}>
           <div className="swiper-container thm-swiper__slider">
-            {isLoading ? (
+            {/* {isLoading ? (
               <p style={{ height: "100vh" }}>Loading...</p>
-            ) : (
-              <Swiper
-                modules={[Navigation, Pagination, Autoplay, EffectFade]}
-                slidesPerView={1}
-                loop={true}
-                effect="fade"
-                direction="horizontal"
-                pagination={{
-                  clickable: true,
-                  el: "#main-slider-pagination",
-                }}
-                navigation={{
-                  nextEl: ".swiper-button-next", // Use class selector
-                  prevEl: ".swiper-button-prev", // Use class selector
-                }}
-                autoplay={{
-                  delay: 5000,
-                }}
-              >
-                {slides.length
-                  ? slides.map((slide) => (
-                      <SwiperSlide key={slide.Id}>
-                        <div
-                          className="swiper-slide"
-                          style={{ marginTop: "70px" }}
-                        >
-                          <div
-                            className="image-layer"
-                            // style={{
-                            //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide.image})`,
-                            // }}
+            ) : ( */}
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay, EffectFade]}
+              slidesPerView={1}
+              loop={true}
+              effect="fade"
+              direction="horizontal"
+              pagination={{
+                clickable: true,
+                el: "#main-slider-pagination",
+              }}
+              navigation={{
+                nextEl: ".swiper-button-next", // Use class selector
+                prevEl: ".swiper-button-prev", // Use class selector
+              }}
+              autoplay={{
+                delay: 5000,
+              }}
+            >
+              {/* {slides.length
+                  ? slides.map((slide) => ( */}
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
 
-                            // style={{
-                            //   backgroundImage:
-                            //     "url(assets/images/backgrounds/main-slider-1-1.png)",
-                            // }}
-                          >
-                            <img
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-1.png)",
+                    }}
+                  >
+                    {/* <img
                               src={`https://arcf-backend.onrender.com/${slide.image}`}
                               alt=""
-                            />
-                          </div>
+                            /> */}
+                  </div>
 
-                          <div className="main-slider-shape-2 float-bob-x">
-                            <img
-                              src="assets/images/shapes/main-slider-shape-2.png"
-                              alt
-                            />
-                          </div>
-                          <div className="container">
-                            <div className="row">
-                              <div className="col-xl-6 col-lg-8">
-                                <div className="main-slider__content">
-                                  <p className="main-slider__sub-title">
-                                    {slide.title}
-                                  </p>
-                                  <h2 className="main-slider__title">
-                                    {slide.text}
-                                  </h2>
-                                  <div className="main-slider__btn-box">
-                                    <a
-                                      href="about.html"
-                                      className="thm-btn main-slider__btn"
-                                    >
-                                      {" "}
-                                      Discover more
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Empowering Lives, Transforming Futures.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))
-                  : null}
-              </Swiper>
-            )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
+
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-2.png)",
+                    }}
+                  >
+                    {/* <img
+                              src={`https://arcf-backend.onrender.com/${slide.image}`}
+                              alt=""
+                            /> */}
+                  </div>
+
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Creating Impact, One Community at a Time.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
+
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-3.png)",
+                    }}
+                  >
+                    {/* <img
+                              src={`https://arcf-backend.onrender.com/${slide.image}`}
+                              alt=""
+                            /> */}
+                  </div>
+
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Rise for Equality, Education, and Development.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              {/* ))
+                  : null} */}
+            </Swiper>
+            {/* )} */}
 
             {/* If we need navigation buttons */}
             <div className="main-slider__nav">
@@ -320,7 +433,7 @@ const Home = () => {
                     >
                       <div className="about-one__img">
                         <img
-                          src="assets/images/resources/about-one-img-1.jpg"
+                          src="assets/images/resources/about-one-img-1.png"
                           alt=""
                         />
                       </div>
@@ -704,8 +817,7 @@ const Home = () => {
                     <p className="causes-one__text">
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
                       diverse programs, we focus on improving quality of life,
-                      fostering positive change, and creating lasting impact in
-                      communities
+                      fostering positive.
                     </p>
 
                     <a href="about.html" className="thm-btn about-one__btn">
@@ -748,8 +860,7 @@ const Home = () => {
                     </h3>
                     <p className="causes-one__text">
                       ARC Foundation Nurturing Nature, Building Sustainability.
-                      Join us in our commitment to environmental stewardship and
-                      creating a greener, healthier future for all
+                      Join us in our commitment to environmental stewardship
                     </p>
                     <a href="about.html" className="thm-btn about-one__btn">
                       See More
@@ -792,8 +903,7 @@ const Home = () => {
                     <p className="causes-one__text">
                       ARC Foundation's Orphanage Program is a haven of care and
                       opportunity. We provide love, education, and support for
-                      orphaned children. Join us in creating a nurturing home
-                      for every child.
+                      orphaned children.
                     </p>
                     <a href="about.html" className="thm-btn about-one__btn">
                       See More
@@ -852,21 +962,907 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         {/*Become Volunteer One End*/}
 
+        <section className="causes-one">
+          <div className="container">
+            <div className="section-title text-center">
+              <h2 className="section-title__title">Microcredit Program</h2>
+            </div>
+            <div className="row">
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src="assets/images/resources/p-2.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Health</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Health Care Program</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Health Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="First name"
+                                                      name="name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Last name"
+                                                      name="last-name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Phone"
+                                                      name="phone"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Address"
+                                                      name="Address"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+                                            <form className="donate-now__payment-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card number"
+                                                      name="number"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="MM / YY"
+                                                      name="date"
+                                                      id="datepicker"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card code ( CVC )"
+                                                      name="code"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Billing address"
+                                                      name="Billing"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="City"
+                                                      name="City"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="donate-now__payment-info-btn-box">
+                                                <button
+                                                  type="submit"
+                                                  className="thm-btn donate-now__payment-info-btn"
+                                                >
+                                                  Donate now
+                                                </button>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src="assets/images/resources/p-1.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Education</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Education Program</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Education Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="First name"
+                                                      name="name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Last name"
+                                                      name="last-name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Phone"
+                                                      name="phone"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Address"
+                                                      name="Address"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+                                            <form className="donate-now__payment-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card number"
+                                                      name="number"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="MM / YY"
+                                                      name="date"
+                                                      id="datepicker"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card code ( CVC )"
+                                                      name="code"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Billing address"
+                                                      name="Billing"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="City"
+                                                      name="City"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="donate-now__payment-info-btn-box">
+                                                <button
+                                                  type="submit"
+                                                  className="thm-btn donate-now__payment-info-btn"
+                                                >
+                                                  Donate now
+                                                </button>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src="assets/images/resources/p-3.jpg" alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Microcredit Program</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Microcredit Program</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Microcredit Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="First name"
+                                                      name="name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Last name"
+                                                      name="last-name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Phone"
+                                                      name="phone"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Address"
+                                                      name="Address"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+                                            <form className="donate-now__payment-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card number"
+                                                      name="number"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="MM / YY"
+                                                      name="date"
+                                                      id="datepicker"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Card code ( CVC )"
+                                                      name="code"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Billing address"
+                                                      name="Billing"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="City"
+                                                      name="City"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__payment-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="donate-now__payment-info-btn-box">
+                                                <button
+                                                  type="submit"
+                                                  className="thm-btn donate-now__payment-info-btn"
+                                                >
+                                                  Donate now
+                                                </button>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/*Brand One Start*/}
+
         <section className="brand-one">
           <div className="container">
             <div className="thm-swiper__slider swiper-container">
               <Swiper
-                // install Swiper modules
                 modules={[Navigation, Pagination, A11y, Autoplay]}
-                spaceBetween={50}
+                spaceBetween={20} // Adjust spacing between slides for different devices
                 slidesPerView={6}
                 loop={true}
                 autoplay={{
                   delay: 2000,
+                }}
+                breakpoints={{
+                  // Define breakpoints for different screen sizes
+                  0: {
+                    slidesPerView: 2, // Show 2 slides on smaller screens like mobile devices
+                    spaceBetween: 10, // Adjust spacing for smaller screens
+                  },
+                  768: {
+                    slidesPerView: 4, // Show 4 slides on tablets
+                    spaceBetween: 15,
+                  },
+                  1024: {
+                    slidesPerView: 6, // Show 6 slides on larger screens like desktops
+                    spaceBetween: 20,
+                  },
                 }}
               >
                 <SwiperSlide>
@@ -890,7 +1886,6 @@ const Home = () => {
                 <SwiperSlide>
                   <img src="assets/images/brand/brand-1-3.png" alt="" />
                 </SwiperSlide>
-                ...
               </Swiper>
             </div>
           </div>
@@ -1178,7 +2173,7 @@ const Home = () => {
             <div className="section-title text-center">
               <span className="section-title__tagline">News &amp; Blog</span>
               <h2 className="section-title__title">
-                Our Latest <br /> News and Blog
+                Our Latest & News and Blog
               </h2>
             </div>
             <div className="row">

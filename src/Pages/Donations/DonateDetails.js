@@ -3,6 +3,29 @@ import React from "react";
 const DonateDetails = () => {
   return (
     <div>
+      <section className="page-header">
+        <div
+          className="page-header-bg"
+          style={{
+            backgroundImage:
+              "url(assets/images/backgrounds/page-header-bg.jpg)",
+          }}
+        ></div>
+        <div className="container">
+          <div className="page-header__inner">
+            <ul className="thm-breadcrumb list-unstyled">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <span>/</span>
+              </li>
+              <li className="active">Pages</li>
+            </ul>
+            <h2>Projects</h2>
+          </div>
+        </div>
+      </section>
       {/*Donation Details Start*/}
       <section className="donation-details">
         <div className="container">
@@ -13,10 +36,10 @@ const DonateDetails = () => {
                   <div className="donation-details__img">
                     <img
                       src="assets/images/resources/donation-details-img-1.jpg"
-                      alt
+                      alt=""
                     />
                     <div className="donation-details__date">
-                      <p>Medical</p>
+                      <p>Health</p>
                     </div>
                   </div>
                   <div className="donation-details__content">
@@ -88,7 +111,7 @@ const DonateDetails = () => {
                         "url(assets/images/shapes/sidebar-shape-1.png)",
                     }}
                   />
-                  <h3 className="sidebar__title">Latest posts</h3>
+                  <h3 className="sidebar__title">Latest Health Project</h3>
                   <ul className="sidebar__post-list list-unstyled">
                     <li>
                       <div className="sidebar__post-image">
@@ -99,9 +122,7 @@ const DonateDetails = () => {
                           <span className="sidebar__post-content-meta">
                             <i className="fas fa-user-circle" /> By admin
                           </span>
-                          <a href="news-details.html">
-                            Promoting the rights of children
-                          </a>
+                          <a href="news-details.html">Free Friday Clinic</a>
                         </h3>
                       </div>
                     </li>
@@ -115,7 +136,36 @@ const DonateDetails = () => {
                             <i className="fas fa-user-circle" /> By admin
                           </span>
                           <a href="news-details.html">
-                            There are many variations of
+                            Medical Treatment Support Initiative with a reduced
+                            cost
+                          </a>
+                        </h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="sidebar__post-image">
+                        <img src="assets/images/blog/lp-1-3.jpg" alt />
+                      </div>
+                      <div className="sidebar__post-content">
+                        <h3>
+                          <span className="sidebar__post-content-meta">
+                            <i className="fas fa-user-circle" /> By admin
+                          </span>
+                          <a href="news-details.html">Cancer Treatment</a>
+                        </h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="sidebar__post-image">
+                        <img src="assets/images/blog/lp-1-3.jpg" alt />
+                      </div>
+                      <div className="sidebar__post-content">
+                        <h3>
+                          <span className="sidebar__post-content-meta">
+                            <i className="fas fa-user-circle" /> By admin
+                          </span>
+                          <a href="news-details.html">
+                            Maternal and Child Immunization Program
                           </a>
                         </h3>
                       </div>
@@ -130,14 +180,14 @@ const DonateDetails = () => {
                             <i className="fas fa-user-circle" /> By admin
                           </span>
                           <a href="news-details.html">
-                            Bring to the table win-win survival
+                            Health Awareness & Medical Camp
                           </a>
                         </h3>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div className="donation-details__sidebar-shaare-cause">
+                {/* <div className="donation-details__sidebar-shaare-cause">
                   <div
                     className="sidebar-shape-1"
                     style={{
@@ -162,7 +212,7 @@ const DonateDetails = () => {
                       <i className="fab fa-instagram" />
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

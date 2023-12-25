@@ -110,7 +110,7 @@ const Contact = () => {
                 <div className="contact-one__content">
                   <p className="contact-one__sub-title">Helpline</p>
                   <h3 className="contact-one__number">
-                    <a href="tel:980009630">+ 98 (000) - 9630</a>
+                    <a href="tel:980009630">+880 2224412300</a>
                   </h3>
                 </div>
               </li>
@@ -122,7 +122,7 @@ const Contact = () => {
                   <p className="contact-one__sub-title">Send email</p>
                   <h3 className="contact-one__number">
                     <a href="mailto:needhelp@company.com">
-                      needhelp@company.com
+                    arcf.society.bd@gmail.com
                     </a>
                   </h3>
                 </div>

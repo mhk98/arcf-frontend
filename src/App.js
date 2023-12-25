@@ -49,6 +49,10 @@ import store from "./Redux/app/store";
 import About from "./Pages/About/About";
 import DonateEvents from "./Components/DonateEvents";
 import BackToTopButton from "./Components/BackToTopButton";
+import EducationDetails from "./Pages/Services/EducationDetails";
+import MIcroDetails from "./Pages/Services/MIcroDetails";
+import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
+import Youth from "./Pages/Services/Youth";
 
 function App() {
   return (
@@ -70,6 +74,12 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/donate-list" element={<DonateList />} />
           <Route path="/donate-details" element={<DonateDetails />} />
+          <Route path="/education-details" element={<EducationDetails />} />
+          <Route path="/micro-details" element={<MIcroDetails />} />
+          <Route
+            path="/quality-life-details"
+            element={<QualityLifeDetails />}
+          />
 
           <Route path="/donate-now" element={<DonateNow />} />
           <Route path="/gallery" element={<Gallery />} />
@@ -79,6 +89,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news-details" element={<NewsDetails />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/youth" element={<Youth />} />
         </Routes>
       </Provider>
 

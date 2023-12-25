@@ -11805,7 +11805,7 @@ body.boxed-wrapper {
 .product-details__reveiw {
   display: flex;
   align-items: center;
-  margin-top: 19px;
+  margin-top: -15px;
   padding-bottom: 30px;
   margin-bottom: 21px;
   border-bottom: 1px solid var(--oxpins-bdr-color);
@@ -12931,38 +12931,125 @@ body.boxed-wrapper {
   }
 }
 
-@media (min-width: 821px) {
+@media (min-width: 1025px) {
   .nav-container {
     display: none;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
   .main-header {
     display: none;
+  }
+
+  .mobile-navbar {
+    position: relative !important;
+  }
+
+  .open-svg {
+    position: absolute !important;
+    right: -840px !important;
+    top: -50px !important;
+  }
+
+  .mobile-menu ul {
+    margin-top: -20px;
+    margin-right: 840px;
+  }
+  .top-nav {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .mobile-logo {
+    position: absolute;
+    right: 280px;
+  }
+  .close-svg {
+    position: absolute;
+    left: 350px;
+  }
+}
+
+@media (max-width: 413px) {
+  .mobile-navbar {
+    position: relative !important;
+  }
+
+  .open-svg {
+    position: absolute !important;
+    right: -210 !important;
+    top: -50px !important;
+  }
+
+  .mobile-menu ul {
+    margin-top: -20px;
+    margin-right: 280px;
+  }
+
+  .top-nav {
+    position: relative !important;
+    margin-top: 50px !important;
+  }
+
+  .mobile-logo {
+    position: absolute !important;
+    right: 0px !important;
+  }
+  .close-svg {
+    position: absolute !important;
+    left: 120px !important;
   }
 }
 
 @media (max-width: 599px) {
   .mobile-navbar {
-    position: relative;
+    position: relative !important;
   }
 
   .open-svg {
-    position: absolute;
-    right: -220px;
-    top: -50px;
+    position: absolute !important;
+    right: -220px !important;
+    top: -50px !important;
+  }
+
+  .main-slider .swiper-slide {
+    margin-top: -100px;
+  }
+
+  .mobile-menu ul {
+    margin-top: -20px;
+    margin-right: 300px;
   }
 }
 
 @media (min-width: 600px) {
   .mobile-navbar {
-    position: relative;
+    position: relative !important;
   }
 
   .open-svg {
-    position: absolute;
-    right: -420px;
-    top: -50px;
+    position: absolute !important;
+    right: -420px !important;
+    top: -50px !important;
+  }
+
+  .top-nav {
+    position: relative !important;
+    margin-top: 50px !important;
+  }
+
+  .mobile-logo {
+    position: absolute !important;
+    right: 120px !important;
+  }
+  .close-svg {
+    position: absolute !important;
+    left: 180px !important;
+  }
+
+  .mobile-menu ul {
+    margin-top: 20px !important;
+    margin-right: 560px !important;
   }
 }
 

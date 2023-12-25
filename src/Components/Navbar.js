@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { a, Nava } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton";
 import "./Navbar.css";
 import { motion } from "framer-motion";
@@ -100,17 +100,7 @@ const Navbar = () => {
   const fadeInStart = { opacity: 0 };
   const fadeInEnd = { opacity: 1 };
   const fadeInTransition = { duration: 1 };
-  const menuItems = [
-    { text: "Home", link: "/" },
-    { text: "About", link: "/about-us" },
-    { text: "Project", link: "/projects" },
-    { text: "Events", link: "/events" },
-    { text: "News", link: "/news" },
-    { text: "Donate", link: "/donate-events" },
-    { text: "Gallery", link: "/gallery" },
-    { text: "Contact", link: "/contact" },
-    // ... other menu items
-  ];
+
   return (
     <div className="custom-cursor">
       <div className="header-container">
@@ -120,13 +110,13 @@ const Navbar = () => {
               <div className="main-menu__wrapper-inner">
                 <div className="main-menu__left">
                   <div className="main-menu__logo">
-                    <Link to="/">
+                    <a href="/">
                       <img
                         src="assets/images/resources/logo-1.png"
                         alt=""
                         width={200}
                       />
-                    </Link>
+                    </a>
                   </div>
                   <div className="main-menu__shape-1 float-bob-x">
                     <img src="assets/images/shapes/main-menu-shape-1.png" alt />
@@ -210,24 +200,55 @@ const Navbar = () => {
                   </div>
                   <div className="main-menu__right-bottom">
                     <div className="main-menu__main-menu-box">
-                      {/* <a
-                        href="#"
-                        className="mobile-nav__toggler"
-                        onClick={toggleMobileNav}
-                      >
-                        <i className="fa fa-bars" />
-                      </a> */}
-
                       <ul className="main-menu__list">
-                        {menuItems.map((item, index) => (
-                          <li
-                            key={index}
-                            className={activeItem === index ? "active" : ""}
-                            onClick={() => handleItemClick(index)}
-                          >
-                            <Link to={item.link}>{item.text}</Link>
-                          </li>
-                        ))}
+                        <li
+                          className={activeItem === 0 ? "active" : ""}
+                          onClick={() => handleItemClick(0)}
+                        >
+                          <a href="/">Home</a>
+                        </li>
+                        <li
+                          className={activeItem === 1 ? "active" : ""}
+                          onClick={() => handleItemClick(1)}
+                        >
+                          <a href="/about-us">About</a>
+                        </li>
+                        <li
+                          className={activeItem === 2 ? "active" : ""}
+                          onClick={() => handleItemClick(2)}
+                        >
+                          <a href="/projects">Project</a>
+                        </li>
+                        <li
+                          className={activeItem === 3 ? "active" : ""}
+                          onClick={() => handleItemClick(3)}
+                        >
+                          <a href="/news">News</a>
+                        </li>
+                        <li
+                          className={activeItem === 4 ? "active" : ""}
+                          onClick={() => handleItemClick(4)}
+                        >
+                          <a href="/events">Events</a>
+                        </li>
+                        <li
+                          className={activeItem === 5 ? "active" : ""}
+                          onClick={() => handleItemClick(5)}
+                        >
+                          <a href="/donate-events">Donate</a>
+                        </li>
+                        <li
+                          className={activeItem === 6 ? "active" : ""}
+                          onClick={() => handleItemClick(6)}
+                        >
+                          <a href="/gallery">Gallery</a>
+                        </li>
+                        <li
+                          className={activeItem === 7 ? "active" : ""}
+                          onClick={() => handleItemClick(7)}
+                        >
+                          <a href="/contact">Contact</a>
+                        </li>
                       </ul>
                     </div>
                     <div className="main-menu__main-menu-content-box">
@@ -245,9 +266,9 @@ const Navbar = () => {
                         />
                       </div> */}
                         <div className="main-menu__btn-box">
-                          <Link to="/donate-now" className="main-menu__btn">
+                          <a href="/donate-now" className="main-menu__btn">
                             <span className="fa fa-heart" /> Donate now
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -269,14 +290,14 @@ const Navbar = () => {
           animate={mobileNavOpen ? "opened" : "closed"}
         >
           <div className="mobile-navbar">
-            <div className="">
-              <Link to="/">
+            <div>
+              <a href="/">
                 <img
                   src="assets/images/resources/logo-1.png"
                   alt=""
                   width={145}
                 />
-              </Link>
+              </a>
             </div>
             <motion.div
               variants={hideNavItemsVariant}
@@ -296,14 +317,14 @@ const Navbar = () => {
           </div>
           <motion.div variants={mobileMenuVariant} className="mobile-menu">
             <div className="top-nav">
-              <div className="logo">
-                <Link to="/">
+              <div className="mobile-logo">
+                <a href="/">
                   <img
                     src="assets/images/resources/logo-1.png"
                     alt=""
                     width={200}
                   />
-                </Link>
+                </a>
               </div>
               <motion.button
                 variants={fadeInVariant}
@@ -311,6 +332,7 @@ const Navbar = () => {
                 style={{ fontSize: "30px", backgroundColor: "#283734" }}
               >
                 <svg
+                  className="close-svg"
                   xmlns="http://www.w3.org/2000/svg"
                   height="28"
                   width="24"
@@ -324,50 +346,104 @@ const Navbar = () => {
 
             <motion.ul
               variants={ulVariant}
-              style={{ marginTop: "-20px", marginRight: "160px" }}
+              // style={{ marginTop: "-20px", marginRight: "160px" }}
             >
-              {menuItems.map((item, index) => (
-                <motion.li
-                  whileTap={{ scale: 0.95 }}
-                  key={index}
-                  className={activeItem === index ? "active" : ""}
-                  onClick={() => handleItemClick(index)}
-                  variants={liVariant}
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 0 ? "active" : ""}
+                onClick={() => handleItemClick(0)}
+              >
+                <a style={{ color: "white", textAlign: "left" }} href="/">
+                  Home
+                </a>
+              </li>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 1 ? "active" : ""}
+                onClick={() => handleItemClick(1)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/about-us"
                 >
-                  <Link to={item.link} style={{ color: "white" }}>
-                    <motion.div style={{ textAlign: "left" }}>
-                      {item.text}
-                    </motion.div>
-                  </Link>
-                </motion.li>
-              ))}
-              <li className="text-white" style={{ display: "flex" }}>
-                <div className="icon">
-                  <span className="icon-phone-call" />
-                </div>
-                <span style={{ marginLeft: "10px" }}>+852 5650 2233</span>
+                  About
+                </a>
               </li>
-              <li className="text-white" style={{ display: "flex" }}>
-                <div className="icon">
-                  <span className="icon-message" />
-                </div>
-                <span style={{ marginLeft: "10px" }}>
-                  {" "}
-                  arcf.society.bd@gmail.com
-                </span>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 2 ? "active" : ""}
+                onClick={() => handleItemClick(2)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/projects"
+                >
+                  Project
+                </a>
               </li>
-              <li className="main-menu__right-top-social">
-                <a href="https://twitter.com/ARCF2009">
-                  <i className="fab fa-twitter" />
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 3 ? "active" : ""}
+                onClick={() => handleItemClick(3)}
+              >
+                <a style={{ color: "white", textAlign: "left" }} href="/news">
+                  News
                 </a>
-                <a href="#">
-                  <i className="fab fa-facebook" />
+              </li>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 4 ? "active" : ""}
+                onClick={() => handleItemClick(4)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/events"
+                >
+                  Events
                 </a>
-                <a href="#">
-                  <i className="fab fa-pinterest-p" />
+              </li>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 5 ? "active" : ""}
+                onClick={() => handleItemClick(5)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/donate-events"
+                >
+                  Donate
                 </a>
-                <a href="#">
-                  <i className="fab fa-instagram" />
+              </li>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 6 ? "active" : ""}
+                onClick={() => handleItemClick(6)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/gallery"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li
+                whileTap={{ scale: 0.95 }}
+                variants={liVariant}
+                className={activeItem === 7 ? "active" : ""}
+                onClick={() => handleItemClick(7)}
+              >
+                <a
+                  style={{ color: "white", textAlign: "left" }}
+                  href="/contact"
+                >
+                  Contact
                 </a>
               </li>
             </motion.ul>

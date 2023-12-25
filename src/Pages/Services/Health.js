@@ -1,5 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import h1 from "../../image/health/Free-friday-clinic.jpg";
+import h2 from "../../image/health/Medical-treatment-low-cot.jpg";
+import h3 from "../../image/health/Cancer-treatment.jpg";
+import h4 from "../../image/health/Maternal and Child Immunization Program.jpg";
+import h5 from "../../image/health/Health-Awareness-&-Medical.jpg";
+import h6 from "../../image/health/Health-Care-Program-(Inside).jpg";
 
 const Health = () => {
   return (
@@ -17,7 +22,7 @@ const Health = () => {
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
               </li>
               <li>
                 <span className="ms-2">/</span>
@@ -36,7 +41,7 @@ const Health = () => {
         }}
       >
         <div style={{ position: "absolute", right: "50px", top: "50px" }}>
-          <Link to="/projects">
+          <a href="/projects">
             <i
               style={{
                 fontSize: "35px",
@@ -47,27 +52,43 @@ const Health = () => {
               }}
               className="icon-left-arrow"
             />
-          </Link>
+          </a>
         </div>
       </div>
-      <div className="container">
-        <div className="text-center" style={{ marginTop: "80px" }}>
-          <h3 className="causes-one__title" style={{ fontWeight: "bold" }}>
-            Health
-          </h3>
 
-          <p
-            className="causes-one__text"
-            style={{ textAlign: "left", fontSize: "18px" }}
-          >
-            ARC Foundation's Health Care Program is a lifeline for those in
-            need. We provide vital medical assistance, support for treatments,
-            and ensure access to essential healthcare services. Join us in
-            promoting well-being and creating a healthier, more resilient
-            community.
-          </p>
+      <section className="product-details">
+        <div className="container">
+          <div className="row" style={{ alignItems: "center", gap: "50px" }}>
+            <div className="col-lg-6 col-xl-6">
+              <div className="product-details__top">
+                <h3 className="product-details__title">Health Care Program</h3>
+              </div>
+              <div className="product-details__reveiw" />
+              <div className="product-details__content">
+                <p className="product-details__content-text1">
+                  Dive into the heart of impactful change with ARC Foundation
+                  Events. Our events serve as powerful platforms for bringing
+                  communities together in the spirit of empowerment, education,
+                  and sustainable development. From engaging workshops to
+                  thought-provoking symposiums, each event is a catalyst for
+                  positive transformation. Discover a space where like-minded
+                  individuals, partners, and supporters unite to amplify our
+                  mission. Whether it's a fundraiser, awareness campaign, or
+                  collaborative initiative, ARC Foundation Events offer a
+                  dynamic showcase of our commitment to creating lasting impact.
+                  Join us at these inspiring gatherings as we collectively
+                  strive to build a brighter, more inclusive future for all.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-6 col-xl-4">
+              <div className="product-details__img">
+                <img src={h6} alt="" style={{ width: 370, height: 382 }} />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/*Team One Start*/}
       <section className="team-one">
@@ -77,156 +98,175 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details" style={{ color: "black" }}>
+              <a href="/donate-details" style={{ color: "black" }}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/">
-                      <img src="assets/images/resources/p-2.jpg" alt />
-                    </Link>
+                    <a href="/">
+                      <img src={h1} alt />
+                    </a>
                     <div className="causes-one__cat">
                       <p className="mt-2">Free Clinic</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">Free Friday Clinic</Link>
+                      <a href="/donate-details">Free Friday Clinic</a>
                     </h3>
                     <p className="causes-one__text">
                       A Free Friday Clinic for poor families to be aware or
                       provide doctor’s advice or prescription free of cost and
                       providing free medicine.
                       <span className="ms-2">
-                        <Link to="/donate-details">see more...</Link>
+                        <a
+                          href="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          see more...
+                        </a>
                       </span>
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="donate-details" style={{ color: "black" }}>
+              <a href="donate-details" style={{ color: "black" }}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
-                    </Link>
+                    <a href="/donate-details">
+                      <img src={h2} alt />
+                    </a>
                     <div className="causes-one__cat">
                       <p className="mt-2">Medical Support</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
-                        Medical Treatment Support Initiative with a reduced cost
-                      </Link>
+                      <a href="/donate-details">Medical Treatment low cost</a>
                     </h3>
                     <p className="causes-one__text">
                       Medical support initiative to the poor community by
                       ensuring reduced cost medical treatment & medicine
-                      facilities from our partner Nostrum Hospital & Diagnostic
-                      Centre.
+                      facilities from our partner
                       <span className="ms-2">
-                        <Link to="/donate-details">see more...</Link>
+                        <a
+                          href="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          see more...
+                        </a>
                       </span>
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <a href="/donate-details">
                 <div className="causes-one__single" style={{ color: "black" }}>
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
-                    </Link>
+                    <a href="/donate-details">
+                      <img src={h3} alt />
+                    </a>
                     <div className="causes-one__cat">
                       <p className="mt-2">Cancer Treatment</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">Cancer Treatment</Link>
+                      <a href="/donate-details">Cancer Treatment</a>
                     </h3>
                     <p className="causes-one__text">
                       Financial assistance is provided for the treatment of poor
-                      and indigent patients suffering from Blood Cancer, Women's
-                      Breast Cancer, Uterine Cancer, and all other cancer
+                      and indigent patients suffering from Blood Cancer
                       patients.
                       <span className="ms-2">
-                        <Link to="/donate-details">see more...</Link>
+                        <a
+                          href="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          see more...
+                        </a>
                       </span>
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <a href="/donate-details">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
-                    </Link>
+                    <a href="/donate-details">
+                      <img src={h4} alt="" />
+                    </a>
                     <div className="causes-one__cat">
                       <p className="mt-2">Child Program</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
+                      <a href="/donate-details">
                         Maternal and Child Immunization Program
-                      </Link>
+                      </a>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       Mothers and Children are vaccinated every week.
                       <span className="ms-2">
-                        <Link to="/donate-details">see more...</Link>
+                        <a
+                          href="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          see more...
+                        </a>
                       </span>
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
             <div
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <a href="/donate-details">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
-                      <img src="assets/images/resources/p-2.jpg" alt />
-                    </Link>
+                    <a href="/donate-details">
+                      <img src={h5} alt="" />
+                    </a>
                     <div className="causes-one__cat">
                       <p className="mt-2">Medical Camp</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
-                        Health Awareness & Medical Camp
-                      </Link>
+                      <a href="/donate-details">Health Awareness & Medical</a>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       Health awareness training and Free medical camps are
                       conducted in rural and remote areas.
                       <span className="ms-2">
-                        <Link to="/donate-details">see more...</Link>
+                        <a
+                          href="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          see more...
+                        </a>
                       </span>
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
