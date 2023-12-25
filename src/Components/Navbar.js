@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { a, Nava } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton";
 import "./Navbar.css";
 import { motion } from "framer-motion";
@@ -290,7 +289,7 @@ const Navbar = () => {
           animate={mobileNavOpen ? "opened" : "closed"}
         >
           <div className="mobile-navbar">
-            <div>
+            <div className="mobile-logo">
               <a href="/">
                 <img
                   src="assets/images/resources/logo-1.png"
@@ -300,24 +299,25 @@ const Navbar = () => {
               </a>
             </div>
             <motion.div
+              className="open-svg"
               variants={hideNavItemsVariant}
               onClick={() => setMobileNavOpen(true)}
             >
               <svg
-                className="open-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 height="28"
                 width="24"
                 viewBox="0 0 448 512"
-                fill="#00715D"
+                fill="black"
               >
                 <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
               </svg>
             </motion.div>
           </div>
+
           <motion.div variants={mobileMenuVariant} className="mobile-menu">
             <div className="top-nav">
-              <div className="mobile-logo">
+              <div className="mobile-logo1">
                 <a href="/">
                   <img
                     src="assets/images/resources/logo-1.png"
@@ -325,26 +325,30 @@ const Navbar = () => {
                     width={200}
                   />
                 </a>
-              </div>
-              <motion.button
-                variants={fadeInVariant}
-                onClick={() => setMobileNavOpen(false)}
-                style={{ fontSize: "30px", backgroundColor: "#283734" }}
-              >
-                <svg
+                <motion.button
                   className="close-svg"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="28"
-                  width="24"
-                  viewBox="0 0 384 512"
-                  fill="white"
+                  variants={fadeInVariant}
+                  onClick={() => setMobileNavOpen(false)}
+                  style={{ fontSize: "30px", backgroundColor: "#283734" }}
                 >
-                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                </svg>
-              </motion.button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="28"
+                    width="24"
+                    viewBox="0 0 384 512"
+                    fill="white"
+                  >
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                  </svg>
+                </motion.button>
+              </div>
             </div>
-
             <motion.ul
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "start",
+              }}
               variants={ulVariant}
               // style={{ marginTop: "-20px", marginRight: "160px" }}
             >
@@ -400,10 +404,7 @@ const Navbar = () => {
                 className={activeItem === 4 ? "active" : ""}
                 onClick={() => handleItemClick(4)}
               >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/events"
-                >
+                <a style={{ color: "white", textAlign: "left" }} href="/events">
                   Events
                 </a>
               </li>

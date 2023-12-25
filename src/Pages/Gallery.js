@@ -29,6 +29,25 @@ const Gallery = () => {
         </div>
       </section>
       {/*Page Header End*/}
+
+      <div className="container">
+        <div className="text-center" style={{ marginTop: "80px" }}>
+          <h3 className="section-title__title" style={{ fontWeight: "bold" }}>
+            Gallery
+          </h3>
+
+          <p
+            className="causes-one__text"
+            style={{ textAlign: "left", fontSize: "18px" }}
+          >
+            ARC Foundation empowers lives through education, health, and
+            community initiatives. From scholarships to healthcare access, we're
+            committed to fostering equality, supporting education, and driving
+            sustainable development. Join us in creating positive change and
+            transforming communities.
+          </p>
+        </div>
+      </div>
       {/*Gallery Page Start*/}
       <section className="gallery-page">
         <div className="container">

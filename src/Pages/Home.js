@@ -1,25 +1,23 @@
 import { jarallax } from "jarallax";
 import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
-import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
-import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import { useGetAllFaqQuery } from "../Redux/features/faq/faq";
+import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
+import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
 
 // import Swiper core and required modules
 import {
-  Navigation,
-  Pagination,
+  A11y,
   Autoplay,
   EffectFade,
-  Scrollbar,
-  A11y,
+  Navigation,
+  Pagination,
 } from "swiper/modules";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useGetAllaboutQuery } from "../Redux/features/about/about";
 import { Link } from "react-router-dom";
-import Donate from "../Components/Donate";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Register from "../Components/Register";
+import { useGetAllaboutQuery } from "../Redux/features/about/about";
 
 const Home = () => {
   useEffect(() => {
@@ -684,17 +682,15 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/health">Health Care Program</Link>
-                    </h3>
+                    <h3 className="causes-one__title">Health Care Program</h3>
                     <p className="causes-one__text">
                       ARC Foundation's Health Care Program is a lifeline for
                       those in need. We provide vital medical assistance.
                     </p>
 
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/health" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -727,16 +723,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/health">Education Program</Link>
-                    </h3>
+                    <h3 className="causes-one__title">Education Program</h3>
                     <p className="causes-one__text">
                       ARC Foundation's Health Care Program is a lifeline for
                       those in need. We provide vital medical assistance.
                     </p>
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/education" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -761,7 +755,7 @@ const Home = () => {
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/health">
+                    <Link to="/microcredit">
                       <img src="assets/images/resources/p-3.jpg" alt />
                     </Link>
                     <div className="causes-one__cat">
@@ -769,16 +763,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/health">Microcredit Program</Link>
-                    </h3>
+                    <h3 className="causes-one__title">Microcredit Program</h3>
                     <p className="causes-one__text">
                       ARC Foundation's Health Care Program is a lifeline for
                       those in need. We provide vital medical assistance.
                     </p>
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/microcredit" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -803,7 +795,7 @@ const Home = () => {
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/health">
+                    <Link to="/quality-life">
                       <img src="assets/images/resources/p-2.jpg" alt />
                     </Link>
                     <div className="causes-one__cat">
@@ -812,7 +804,7 @@ const Home = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/health">Improving Quality Of Life</Link>
+                      Improving Quality Of Life
                     </h3>
                     <p className="causes-one__text">
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
@@ -820,9 +812,9 @@ const Home = () => {
                       fostering positive.
                     </p>
 
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/quality-life" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -847,7 +839,7 @@ const Home = () => {
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/health">
+                    <Link to="/environment">
                       <img src="assets/images/resources/p-1.jpg" alt />
                     </Link>
                     <div className="causes-one__cat">
@@ -855,16 +847,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/health">Environment</Link>
-                    </h3>
+                    <h3 className="causes-one__title">Environment</h3>
                     <p className="causes-one__text">
                       ARC Foundation Nurturing Nature, Building Sustainability.
                       Join us in our commitment to environmental stewardship
                     </p>
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/environment" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -889,7 +879,7 @@ const Home = () => {
               >
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/health">
+                    <Link to="/orphanage">
                       <img src="assets/images/resources/p-3.jpg" alt />
                     </Link>
                     <div className="causes-one__cat">
@@ -897,17 +887,15 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/health">Orphanage</Link>
-                    </h3>
+                    <h3 className="causes-one__title">Orphanage</h3>
                     <p className="causes-one__text">
                       ARC Foundation's Orphanage Program is a haven of care and
                       opportunity. We provide love, education, and support for
                       orphaned children.
                     </p>
-                    <a href="about.html" className="thm-btn about-one__btn">
+                    <Link to="/orphanage" className="thm-btn about-one__btn">
                       See More
-                    </a>
+                    </Link>
                     {/* <div
                       className="donate-now__payment-info-btn-box"
                       style={{
@@ -2207,10 +2195,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                          <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">
@@ -2277,10 +2264,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                          <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">
@@ -2345,10 +2331,9 @@ const Home = () => {
                       </div>
                       <div className="news-one__bottom">
                         <div className="news-one__read-more">
-                          <a href="news-details.html">
-                            {" "}
+                          <Link to="/news-details">
                             <span className="icon-right-arrow" /> Read More
-                          </a>
+                          </Link>
                         </div>
                         <div className="news-one__share">
                           <a href="#">

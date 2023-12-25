@@ -111,7 +111,7 @@ const DonateDetails = () => {
                         "url(assets/images/shapes/sidebar-shape-1.png)",
                     }}
                   />
-                  <h3 className="sidebar__title">Latest Health Project</h3>
+                  <h3 className="sidebar__title">Latest posts</h3>
                   <ul className="sidebar__post-list list-unstyled">
                     <li>
                       <div className="sidebar__post-image">
@@ -122,7 +122,9 @@ const DonateDetails = () => {
                           <span className="sidebar__post-content-meta">
                             <i className="fas fa-user-circle" /> By admin
                           </span>
-                          <a href="news-details.html">Free Friday Clinic</a>
+                          <a href="news-details.html">
+                            Promoting the rights of children
+                          </a>
                         </h3>
                       </div>
                     </li>
@@ -136,36 +138,7 @@ const DonateDetails = () => {
                             <i className="fas fa-user-circle" /> By admin
                           </span>
                           <a href="news-details.html">
-                            Medical Treatment Support Initiative with a reduced
-                            cost
-                          </a>
-                        </h3>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="sidebar__post-image">
-                        <img src="assets/images/blog/lp-1-3.jpg" alt />
-                      </div>
-                      <div className="sidebar__post-content">
-                        <h3>
-                          <span className="sidebar__post-content-meta">
-                            <i className="fas fa-user-circle" /> By admin
-                          </span>
-                          <a href="news-details.html">Cancer Treatment</a>
-                        </h3>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="sidebar__post-image">
-                        <img src="assets/images/blog/lp-1-3.jpg" alt />
-                      </div>
-                      <div className="sidebar__post-content">
-                        <h3>
-                          <span className="sidebar__post-content-meta">
-                            <i className="fas fa-user-circle" /> By admin
-                          </span>
-                          <a href="news-details.html">
-                            Maternal and Child Immunization Program
+                            There are many variations of
                           </a>
                         </h3>
                       </div>
@@ -180,14 +153,14 @@ const DonateDetails = () => {
                             <i className="fas fa-user-circle" /> By admin
                           </span>
                           <a href="news-details.html">
-                            Health Awareness & Medical Camp
+                            Bring to the table win-win survival
                           </a>
                         </h3>
                       </div>
                     </li>
                   </ul>
                 </div>
-                {/* <div className="donation-details__sidebar-shaare-cause">
+                <div className="donation-details__sidebar-shaare-cause">
                   <div
                     className="sidebar-shape-1"
                     style={{
@@ -212,7 +185,7 @@ const DonateDetails = () => {
                       <i className="fab fa-instagram" />
                     </a>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

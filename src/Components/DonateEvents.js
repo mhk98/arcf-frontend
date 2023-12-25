@@ -23,9 +23,9 @@ const DonateEvents = () => {
               <li>
                 <span>/</span>
               </li>
-              <li className="active">Events</li>
+              <li className="active">Donation</li>
             </ul>
-            <h2>Events</h2>
+            <h2>Donation</h2>
           </div>
         </div>
       </section>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGetAllFaqQuery } from "../../Redux/features/faq/faq";
+import education from "../../image/about-us/education-director.jpg";
 import founder from "../../image/about-us/founder.jpg";
 import md from "../../image/about-us/managing-director.jpg";
-import director from "../../image/about-us/director-social-welfare.jpg";
-import education from "../../image/about-us/education-director.jpg";
+import vchairman from "../../image/about-us/vice-chairman.jpg";
 import "./About.css";
-import { useGetAllFaqQuery } from "../../Redux/features/faq/faq";
 const About = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
@@ -160,9 +160,7 @@ const About = () => {
             </div>
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__top">
-                <h3 class="product-details__title">
-                  About Founder & Ex Chairman
-                </h3>
+                <h3 class="product-details__title">Founder & Ex Chairman</h3>
                 <p style={{ fontWeight: "bold" }}>
                   Mohammad Abdur Rahim Chisti
                 </p>
@@ -199,7 +197,7 @@ const About = () => {
           <div class="row align-items-center">
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__top">
-                <h3 class="product-details__title">About Managing Director </h3>
+                <h3 class="product-details__title">Chairman </h3>
 
                 <p style={{ fontWeight: "bold" }}>Abdul Quddus Pathan</p>
               </div>
@@ -237,13 +235,13 @@ const About = () => {
           <div class="row align-items-center">
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__img">
-                <img src={director} alt="" width={570} height={570} />
+                <img src={vchairman} alt="" width={570} height={570} />
               </div>
             </div>
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__top">
-                <h3 class="product-details__title">Director Social Welfare</h3>
-                <p style={{ fontWeight: "bold" }}>Ashraful Alam</p>
+                <h3 class="product-details__title">Vice Chairman</h3>
+                <p style={{ fontWeight: "bold" }}>Saiful Islam</p>
               </div>
 
               <div class="product-details__content">
@@ -267,6 +265,46 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* <section class="product-details">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__top">
+                <h3 class="product-details__title">
+                  Director Foreign Appears{" "}
+                </h3>
+
+                <p style={{ fontWeight: "bold" }}> Tarek Hassan</p>
+              </div>
+
+              <div class="product-details__content">
+                <p class="product-details__content-text1">
+                  I am honored to welcome you to the ARC Foundation, a beacon of
+                  hope and positive change. As the Chairman and Founder, it is
+                  my privilege to lead an organization dedicated to transforming
+                  lives through education, empowerment, and community support.
+                  Our journey began with a simple yet profound belief – that
+                  every individual, regardless of their circumstances, deserves
+                  the opportunity to thrive. At the ARC Foundation, we are
+                  committed to breaking barriers, providing a helping hand to
+                  the vulnerable, and fostering sustainable solutions. Together,
+                  we can inspire change, empower the underserved, and build a
+                  future where everyone has the chance to claim their space in
+                  the world. Join us in our mission to make a lasting impact and
+                  create a brighter, more equitable tomorrow.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__img">
+                <img src={fappears} alt="" width={570} height={570} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
       {/*Team One Start*/}
       <section className="team-one">
@@ -485,6 +523,147 @@ const About = () => {
                 </div>
               </div>
             </div>
+
+            {/*Team One Single End*/}
+          </div>
+        </div>
+      </section>
+      {/*Team One End*/}
+      {/*Team One Start*/}
+      <section className="team-one" style={{ marginTop: "-80px" }}>
+        <div className="container">
+          <div className="row">
+            <h2 className="product-details__title mb-5 text-center">
+              Our Volunteer Team
+            </h2>
+
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="100ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src={education} alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Nazmul Hoque Rasel</a>
+                  </h3>
+                  <p className="team-one__sub-title">Education Director</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="200ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-2.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Kevin martin</a>
+                  </h3>
+                  <p className="team-one__sub-title">Volunteer</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-4.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Kamrul Islam</a>
+                  </h3>
+                  <p className="team-one__sub-title">Project Director</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="400ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-7.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Abdul Quddus Pathan</a>
+                  </h3>
+                  <p className="team-one__sub-title">Vice Chairman</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="500ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-5.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Md. Shaiful Islam</a>
+                  </h3>
+                  <p className="team-one__sub-title">Vice Chairman</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="600ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-7.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Ruksana Akter</a>
+                  </h3>
+                  <p className="team-one__sub-title">Health Director</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="700ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-2.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Mokter Hossain</a>
+                  </h3>
+                  <p className="team-one__sub-title">Executive Director</p>
+                </div>
+              </div>
+            </div>
+            {/*Team One Single End*/}
+            {/*Team One Single Start*/}
             <div
               className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
               data-wow-delay="800ms"
@@ -495,9 +674,75 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <a href="team-details.html">Md Rokeybul Hasan Khan</a>
+                    <a href="team-details.html">Jahid Hasan</a>
                   </h3>
-                  <p className="team-one__sub-title">Administration Director</p>
+                  <p className="team-one__sub-title">Finance Director</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="800ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-5.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Md. Nazmol Hoque Rasel</a>
+                  </h3>
+                  <p className="team-one__sub-title">Education Director</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="800ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-5.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Md. Suleman Bhuiyan</a>
+                  </h3>
+                  <p className="team-one__sub-title">Development Director</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="800ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-5.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Md. Ashraful Alam</a>
+                  </h3>
+                  <p className="team-one__sub-title">Social Welfare Director</p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="800ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src="assets/images/team/team-1-5.webp" alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <a href="team-details.html">Md. Saiful Islam</a>
+                  </h3>
+                  <p className="team-one__sub-title">
+                    Public Relation Director
+                  </p>
                 </div>
               </div>
             </div>

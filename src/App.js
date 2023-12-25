@@ -45,14 +45,14 @@ import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
 // import "./assets/vendors/vegas/vegas.min.css";
 import { Provider } from "react-redux";
-import store from "./Redux/app/store";
-import About from "./Pages/About/About";
 import DonateEvents from "./Components/DonateEvents";
 import BackToTopButton from "./Components/BackToTopButton";
 import EducationDetails from "./Pages/Services/EducationDetails";
 import MIcroDetails from "./Pages/Services/MIcroDetails";
 import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
 import Youth from "./Pages/Services/Youth";
+import store from "./Redux/app/store";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -89,7 +89,6 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news-details" element={<NewsDetails />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/youth" element={<Youth />} />
         </Routes>
       </Provider>
 
