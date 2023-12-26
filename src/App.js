@@ -44,14 +44,40 @@ import "./assets/vendors/swiper/swiper.min.css";
 import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
 // import "./assets/vendors/vegas/vegas.min.css";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import DonateEvents from "./Components/DonateEvents";
 import About from "./Pages/About/About";
 import store from "./Redux/app/store";
 
 function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
+  useEffect(() => {
+    const handleCursor = (e) => {
+      console.log(e.clientX, e.clientY);
+      setX(e.clientX - 10);
+      setY(e.clientY - 10);
+    };
+
+    window.addEventListener("mousemove", handleCursor);
+    return () => {
+      window.removeEventListener("mousemove", handleCursor);
+    };
+  }, []);
   return (
-    <div className="">
+    <div className="App">
+      <motion.div
+        className="cursor"
+        animate={{
+          translateX: x,
+          translateY: y,
+        }}
+      >
+         <div className="inner-cursor"></div>
+      </motion.div>
       <Navbar />
       <Provider store={store}>
         <Routes>

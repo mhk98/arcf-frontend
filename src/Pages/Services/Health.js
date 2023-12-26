@@ -186,7 +186,7 @@ const Health = () => {
                       </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
-                      Mothers and Children are vaccinated every week.
+                    ARC Foundation's Maternal & Child Program Ensures Health, Education, and Support for Every Mother and Child.
                       <span className="ms-2">
                         <Link to="/donate-details">see more...</Link>
                       </span>

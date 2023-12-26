@@ -693,8 +693,7 @@ const Home = () => {
                     <p className="causes-one__text">
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
                       diverse programs, we focus on improving quality of life,
-                      fostering positive change, and creating lasting impact in
-                      communities
+                      fostering positive
                     </p>
 
                     <Link to="/quality-life" className="thm-btn about-one__btn">
@@ -735,8 +734,7 @@ const Home = () => {
                     <h3 className="causes-one__title">Environment</h3>
                     <p className="causes-one__text">
                       ARC Foundation Nurturing Nature, Building Sustainability.
-                      Join us in our commitment to environmental stewardship and
-                      creating a greener, healthier future for all
+                      Join us in our commitment to environmental stewardship
                     </p>
                     <Link to="/environment" className="thm-btn about-one__btn">
                       See More
@@ -777,8 +775,7 @@ const Home = () => {
                     <p className="causes-one__text">
                       ARC Foundation's Orphanage Program is a haven of care and
                       opportunity. We provide love, education, and support for
-                      orphaned children. Join us in creating a nurturing home
-                      for every child.
+                      orphaned children.
                     </p>
                     <Link to="/orphanage" className="thm-btn about-one__btn">
                       See More

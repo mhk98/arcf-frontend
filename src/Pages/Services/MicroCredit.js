@@ -144,15 +144,12 @@ const MicroCredit = () => {
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
-                    <Link to="/donate-details">
-                      Entrepreneurship Development Program
-                    </Link>
+                    <Link to="/donate-details">Entrepreneurship Program</Link>
                   </h3>
                   <p className="causes-one__text">
                     A small entrepreneurship program for disadvantaged working
                     men and women to succeed in life through their developed
-                    skills and financial support to small and medium
-                    entrepreneurs.
+                    skills and financial support to entrepreneurs.
                     <span className="ms-2">
                       <Link to="/donate-details">see more...</Link>
                     </span>

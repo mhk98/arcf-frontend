@@ -30,31 +30,43 @@ const AllProject = () => {
       </section>
       {/*Page Header End*/}
 
-      <div className="container">
-        <div className="text-center" style={{ marginTop: "80px" }}>
-          <h3 className="section-title__title" style={{ fontWeight: "bold" }}>
-            Activities
-          </h3>
-
-          <p
-            className="causes-one__text"
-            style={{ textAlign: "left", fontSize: "18px", color: "black" }}
-          >
-            Dive into the heart of impactful change with ARC Foundation Events.
-            Our events serve as powerful platforms for bringing communities
-            together in the spirit of empowerment, education, and sustainable
-            development. From engaging workshops to thought-provoking
-            symposiums, each event is a catalyst for positive transformation.
-            Discover a space where like-minded individuals, partners, and
-            supporters unite to amplify our mission. Whether it's a fundraiser,
-            awareness campaign, or collaborative initiative, ARC Foundation
-            Events offer a dynamic showcase of our commitment to creating
-            lasting impact. Join us at these inspiring gatherings as we
-            collectively strive to build a brighter, more inclusive future for
-            all.
-          </p>
+      <section class="product-details">
+        <div class="container">
+          <div class="row" style={{ alignItems: "center", gap: "120px" }}>
+            <div class="col-lg-6 col-xl-4">
+              <div class="product-details__img">
+                <img
+                  style={{ width: "370px", height: "382px" }}
+                  src="assets/images/shop/product-details-img-1.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__top">
+                <h3 class="product-details__title">Activities</h3>
+              </div>
+              <div class="product-details__reveiw"></div>
+              <div class="product-details__content">
+                <p class="product-details__content-text1">
+                  Dive into the heart of impactful change with ARC Foundation
+                  Events. Our events serve as powerful platforms for bringing
+                  communities together in the spirit of empowerment, education,
+                  and sustainable development. From engaging workshops to
+                  thought-provoking symposiums, each event is a catalyst for
+                  positive transformation. Discover a space where like-minded
+                  individuals, partners, and supporters unite to amplify our
+                  mission. Whether it's a fundraiser, awareness campaign, or
+                  collaborative initiative, ARC Foundation Events offer a
+                  dynamic showcase of our commitment to creating lasting impact.
+                  Join us at these inspiring gatherings as we collectively
+                  strive to build a brighter, more inclusive future for all.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/*Team One Start*/}
       <section className="team-one">

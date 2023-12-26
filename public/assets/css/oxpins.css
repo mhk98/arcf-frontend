@@ -11787,7 +11787,7 @@ body.boxed-wrapper {
 }
 
 .product-details__title {
-  font-size: 34px;
+  font-size: 26px;
   line-height: 44px;
   font-weight: 900;
   margin: 0;
@@ -11808,7 +11808,7 @@ body.boxed-wrapper {
 .product-details__reveiw {
   display: flex;
   align-items: center;
-  margin-top: 19px;
+  margin-top: -10px;
   padding-bottom: 30px;
   margin-bottom: 21px;
   border-bottom: 1px solid var(--oxpins-bdr-color);

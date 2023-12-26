@@ -87,9 +87,7 @@ const Education = () => {
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
-                    <Link to="/donate-details">
-                      Night School for Working and Street Children
-                    </Link>
+                    <Link to="/donate-details">Night School Children</Link>
                   </h3>
                   <p className="causes-one__text">
                     A Free Friday Clinic for poor families to be aware or
@@ -145,9 +143,7 @@ const Education = () => {
                 </div>
                 <div className="causes-one__content">
                   <h3 className="causes-one__title">
-                    <Link to="/donate-details">
-                      Free Books and Other Educational Goods Distribution
-                    </Link>
+                    <Link to="/donate-details">Free Books Distribution</Link>
                   </h3>
                   <p className="causes-one__text">
                     Books, all kinds of educational materials, computers, etc.
