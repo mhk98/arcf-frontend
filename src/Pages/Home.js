@@ -4,6 +4,8 @@ import { WOW } from "wowjs";
 import { useGetAllFaqQuery } from "../Redux/features/faq/faq";
 import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
+import h2 from "../image/Helping-each-other-can-make-world-better.png";
+import h1 from "../image/What-We-Do.png";
 
 // import Swiper core and required modules
 import {
@@ -35,6 +37,7 @@ const Home = () => {
 
   const [slides, setSlides] = useState([]);
   const { data, isLoading, isError, error } = useGetAllSliderQuery();
+  console.log("slides", slides);
 
   useEffect(() => {
     if (isError) {
@@ -95,6 +98,15 @@ const Home = () => {
   }, [aboutData, aboutLoading, aboutError, error2]);
 
   console.log("aboutData", aboutData);
+
+  const imagePaths = [
+    "assets/images/gallery/gallery-1-1.jpg",
+    "assets/images/gallery/gallery-1-2.jpg",
+    "assets/images/gallery/gallery-1-3.jpg",
+    "assets/images/gallery/gallery-1-4.jpg",
+    "assets/images/gallery/gallery-1-5.jpg",
+    // Add more image paths as needed
+  ];
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -103,83 +115,189 @@ const Home = () => {
 
         <section className="main-slider clearfix" style={{ height: "100%" }}>
           <div className="swiper-container thm-swiper__slider">
-            {isLoading ? (
+            {/* {isLoading ? (
               <p style={{ height: "100vh" }}>Loading...</p>
-            ) : (
-              <Swiper
-                modules={[Navigation, Pagination, Autoplay, EffectFade]}
-                slidesPerView={1}
-                loop={true}
-                effect="fade"
-                direction="horizontal"
-                pagination={{
-                  clickable: true,
-                  el: "#main-slider-pagination",
-                }}
-                navigation={{
-                  nextEl: ".swiper-button-next", // Use class selector
-                  prevEl: ".swiper-button-prev", // Use class selector
-                }}
-                autoplay={{
-                  delay: 5000,
-                }}
-              >
-                {slides.length
-                  ? slides.map((slide) => (
-                      <SwiperSlide key={slide.Id}>
-                        <div className="swiper-slide">
-                          <div
-                            className="image-layer"
-                            // style={{
-                            //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide.image})`,
-                            // }}
+            ) : ( */}
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay, EffectFade]}
+              slidesPerView={1}
+              loop={true}
+              effect="fade"
+              direction="horizontal"
+              pagination={{
+                clickable: true,
+                el: "#main-slider-pagination",
+              }}
+              navigation={{
+                nextEl: ".swiper-button-next", // Use class selector
+                prevEl: ".swiper-button-prev", // Use class selector
+              }}
+              autoplay={{
+                delay: 5000,
+              }}
+            >
+              {/* {slides.length
+                  ? slides.map((slide) => ( */}
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
 
-                            // style={{
-                            //   backgroundImage:
-                            //     "url(assets/images/backgrounds/main-slider-1-1.png)",
-                            // }}
-                          >
-                            <img
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-1.png)",
+                    }}
+                  >
+                    {/* <img
                               src={`https://arcf-backend.onrender.com/${slide.image}`}
                               alt=""
-                            />
-                          </div>
+                            /> */}
+                  </div>
 
-                          <div className="main-slider-shape-2 float-bob-x">
-                            <img
-                              src="assets/images/shapes/main-slider-shape-2.png"
-                              alt
-                            />
-                          </div>
-                          <div className="container">
-                            <div className="row">
-                              <div className="col-xl-6 col-lg-8">
-                                <div className="main-slider__content">
-                                  <p className="main-slider__sub-title">
-                                    {slide.title}
-                                  </p>
-                                  <h2 className="main-slider__title">
-                                    {slide.text}
-                                  </h2>
-                                  <div className="main-slider__btn-box">
-                                    <a
-                                      href="about.html"
-                                      className="thm-btn main-slider__btn"
-                                    >
-                                      {" "}
-                                      Discover more
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Empowering Lives, Transforming Futures.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))
-                  : null}
-              </Swiper>
-            )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
+
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-2.png)",
+                    }}
+                  >
+                    {/* <img
+                              src={`https://arcf-backend.onrender.com/${slide.image}`}
+                              alt=""
+                            /> */}
+                  </div>
+
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Creating Impact, One Community at a Time.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                  <div
+                    className="image-layer"
+                    // style={{
+                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    // }}
+
+                    style={{
+                      backgroundImage:
+                        "url(assets/images/backgrounds/main-slider-1-3.png)",
+                    }}
+                  >
+                    {/* <img
+                              src={`https://arcf-backend.onrender.com/${slide.image}`}
+                              alt=""
+                            /> */}
+                  </div>
+
+                  <div className="main-slider-shape-2 float-bob-x">
+                    <img
+                      src="assets/images/shapes/main-slider-shape-2.png"
+                      alt
+                    />
+                  </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-8">
+                        <div className="main-slider__content">
+                          <p className="main-slider__sub-title">
+                            {/* {slide.title} */}
+                            Always donate for childrens
+                          </p>
+                          <h2 className="main-slider__title">
+                            {/* {slide.text} */}
+                            Rise for Equality, Education, and Development.
+                          </h2>
+                          <div className="main-slider__btn-box">
+                            <a
+                              href="about.html"
+                              className="thm-btn main-slider__btn"
+                            >
+                              {" "}
+                              Discover more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              {/* ))
+                  : null} */}
+            </Swiper>
+            {/* )} */}
 
             {/* If we need navigation buttons */}
             <div className="main-slider__nav">
@@ -203,18 +321,18 @@ const Home = () => {
               {/* {abouts.length > 0
                 ? abouts.map((about) => ( */}
               <div className="row" style={{ alignItems: "center" }}>
-                <div className="col-xl-6">
-                  <div className="about-one__left">
+                <div className="col-xl-6 ">
+                  <div className="about-one__left shadow p-4 bg-white rounded">
                     <div
                       className="about-one__img-box wow fadeInUp"
                       data-wow-delay="100ms"
                       // data-wow-duration="2500ms"
                     >
-                      <div className="gallery-page__img">
+                      <div className="gallery-page__img ">
                         <img
                           // src={`https://arcf-backend.onrender.com/${about.image}`}
 
-                          src="assets/images/resources/about-four-img-2.jpg"
+                          src={h1}
                           alt=""
                         />
                       </div>
@@ -314,10 +432,7 @@ const Home = () => {
                       data-wow-duration="2500ms"
                     >
                       <div className="about-one__img">
-                        <img
-                          src="assets/images/resources/about-one-img-1.jpg"
-                          alt=""
-                        />
+                        <img src={h2} alt="" />
                       </div>
                       <div className="about-one__img-border" />
                       <div className="about-one__curved-circle-box">
@@ -834,13 +949,12 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         {/*Become Volunteer One End*/}
 
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <h2 className="section-title__title">Donation</h2>
+              <h2 className="section-title__title">Donate Now</h2>
             </div>
             <div className="row">
               <div
@@ -1710,17 +1824,32 @@ const Home = () => {
         </section>
 
         {/*Brand One Start*/}
+
         <section className="brand-one">
           <div className="container">
             <div className="thm-swiper__slider swiper-container">
               <Swiper
-                // install Swiper modules
                 modules={[Navigation, Pagination, A11y, Autoplay]}
-                spaceBetween={50}
+                spaceBetween={20} // Adjust spacing between slides for different devices
                 slidesPerView={6}
                 loop={true}
                 autoplay={{
                   delay: 2000,
+                }}
+                breakpoints={{
+                  // Define breakpoints for different screen sizes
+                  0: {
+                    slidesPerView: 2, // Show 2 slides on smaller screens like mobile devices
+                    spaceBetween: 10, // Adjust spacing for smaller screens
+                  },
+                  768: {
+                    slidesPerView: 4, // Show 4 slides on tablets
+                    spaceBetween: 15,
+                  },
+                  1024: {
+                    slidesPerView: 6, // Show 6 slides on larger screens like desktops
+                    spaceBetween: 20,
+                  },
                 }}
               >
                 <SwiperSlide>
@@ -1744,7 +1873,6 @@ const Home = () => {
                 <SwiperSlide>
                   <img src="assets/images/brand/brand-1-3.png" alt="" />
                 </SwiperSlide>
-                ...
               </Swiper>
             </div>
           </div>
@@ -1756,7 +1884,7 @@ const Home = () => {
         {/*Gallery One Start*/}
         <section className="gallery-one">
           <div className="gallery-one__top">
-            <h3 className="gallery-one__top-title">Our photo gallery</h3>
+            <h3 className="gallery-one__top-title">Our Photo Gallery</h3>
           </div>
           <div className="gallery-one__bottom">
             <div className="gallery-one__container">
@@ -1893,7 +2021,7 @@ const Home = () => {
                     development, and mentorship.
                   </p>
                   <a href="/contact" className="thm-btn faq-one__btn">
-                    Learn how to get help
+                    Learn More
                   </a>
                 </div>
               </div>
@@ -2032,7 +2160,7 @@ const Home = () => {
             <div className="section-title text-center">
               <span className="section-title__tagline">News &amp; Blog</span>
               <h2 className="section-title__title">
-                Our Latest <br /> News and Blog
+                Our Latest & News and Blog
               </h2>
             </div>
             <div className="row">

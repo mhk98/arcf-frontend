@@ -11808,7 +11808,7 @@ body.boxed-wrapper {
 .product-details__reveiw {
   display: flex;
   align-items: center;
-  margin-top: -10px;
+  margin-top: -15px;
   padding-bottom: 30px;
   margin-bottom: 21px;
   border-bottom: 1px solid var(--oxpins-bdr-color);
@@ -12934,70 +12934,6 @@ body.boxed-wrapper {
   }
 }
 
-@media (max-width: 600px) {
-  .main-slider .swiper-slide {
-    margin-top: -30px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .nav-container {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .main-header {
-    display: none;
-  }
-
-  .mobile-navbar {
-    position: relative;
-  }
-
-  .open-svg {
-    position: absolute !important;
-    right: -845px !important;
-    top: -50px !important;
-  }
-}
-
-@media (max-width: 599px) {
-  .mobile-navbar {
-    position: relative;
-  }
-
-  .open-svg {
-    position: absolute;
-    right: -220px;
-    top: -50px;
-  }
-}
-
-@media (min-width: 600px) {
-  .mobile-navbar {
-    position: relative;
-  }
-
-  .open-svg {
-    position: absolute;
-    right: -420px;
-    top: -50px;
-  }
-}
-
-@media (min-width: 768px) {
-  .mobile-navbar {
-    position: relative;
-  }
-
-  .open-svg {
-    position: absolute;
-    right: -600px;
-    top: -50px;
-  }
-}
-
 .modal-footer {
   margin-top: -100px;
 }
@@ -13015,22 +12951,48 @@ body.boxed-wrapper {
   height: 100px;
 }
 
-@media (max-width: 414px) {
+@media (min-width: 1025px) {
+  .nav-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-header {
+    display: none;
+  }
+
+  .mobile-menu {
+    background-color: rgba(28, 72, 64, 0.98) !important;
+  }
+
   .mobile-navbar {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
   }
 
-  .open-svg {
-    position: absolute;
-    right: -210px;
-    top: -50px;
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .close-svg {
+    margin-top: -550px;
   }
 }
 
-@media (max-width: 600px) {
-  .main-slider .swiper-slide {
-    position: relative;
-    background-color: var(--oxpins-black);
-    margin-top: 50px;
-  }
+/* .left-direction {
+  /* position: relative; */
 }
+
+.left-icon {
+  /* position: absolute; */
+  top: 50px;
+  right: 50px;
+  background-color: #fbd45a;
+  padding: 10px;
+  border-radius: 100%;
+} */

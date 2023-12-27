@@ -30,25 +30,25 @@ const AllProject = () => {
       </section>
       {/*Page Header End*/}
 
-      <section class="product-details">
-        <div class="container">
-          <div class="row" style={{ alignItems: "center", gap: "120px" }}>
-            <div class="col-lg-6 col-xl-4">
-              <div class="product-details__img">
+      <section className="product-details">
+        <div className="container">
+          <div className="row" style={{ alignItems: "center", gap: "50px" }}>
+            <div className="col-lg-6 col-xl-4">
+              <div className="product-details__img">
                 <img
-                  style={{ width: "370px", height: "382px" }}
                   src="assets/images/shop/product-details-img-1.webp"
-                  alt=""
+                  alt
+                  style={{ width: 370, height: 382 }}
                 />
               </div>
             </div>
-            <div class="col-lg-6 col-xl-6">
-              <div class="product-details__top">
-                <h3 class="product-details__title">Activities</h3>
+            <div className="col-lg-6 col-xl-6">
+              <div className="product-details__top">
+                <h3 className="product-details__title">Activities</h3>
               </div>
-              <div class="product-details__reveiw"></div>
-              <div class="product-details__content">
-                <p class="product-details__content-text1">
+              <div className="product-details__reveiw" />
+              <div className="product-details__content">
+                <p className="product-details__content-text1">
                   Dive into the heart of impactful change with ARC Foundation
                   Events. Our events serve as powerful platforms for bringing
                   communities together in the spirit of empowerment, education,
@@ -80,7 +80,7 @@ const AllProject = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src="assets/images/resources/p-2.jpg" alt="" />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Health</p>
@@ -93,9 +93,11 @@ const AllProject = () => {
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Health Care Program is a lifeline for
                       those in need. We provide vital medical assistance,
-                      support for treatments,
+                      support for treatments.
                       <span className="ms-2">
-                        <Link to="/health">see more...</Link>
+                        <Link to="/health" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -122,9 +124,11 @@ const AllProject = () => {
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Education and Child Development Program
-                      is shaping futures. We provide quality education support
+                      is shaping futures. We provide quality education
                       <span className="ms-2">
-                        <Link to="/education">see more...</Link>
+                        <Link to="/education" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -138,22 +142,24 @@ const AllProject = () => {
               <Link to="/microcredit">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <a href="/microcredit">
+                    <Link to="/microcredit">
                       <img src="assets/images/resources/p-4.jpg" alt />
-                    </a>
+                    </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Microcredit Program</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/microcredit">Micro Entrepreneur Program</Link>
+                      <Link to="/microcredit">Microcredit Program</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Micro Entrepreneurship Development
                       Program sparks success. We empower individuals with skills
                       <span className="ms-2">
-                        <Link to="/microcredit">see more...</Link>
+                        <Link to="/microcredit" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -183,7 +189,9 @@ const AllProject = () => {
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
                       diverse programs, we focus on improving quality of life,
                       <span className="ms-2">
-                        <Link to="/quality-life">see more...</Link>
+                        <Link to="/quality-life" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -212,7 +220,9 @@ const AllProject = () => {
                       ARC Foundation Nurturing Nature, Building Sustainability.
                       Join us in our commitment to environmental stewardship
                       <span className="ms-2">
-                        <Link to="/environment">see more...</Link>
+                        <Link to="/environment" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -239,10 +249,12 @@ const AllProject = () => {
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       ARC Foundation's Orphanage Program is a haven of care and
-                      opportunity. We provide love, education, and support for
-                      orphaned
+                      opportunity. We provide education, and support for
+                      orphaned children.
                       <span className="ms-2">
-                        <Link to="/orphanage">see more...</Link>
+                        <Link to="/orphanage" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -268,10 +280,13 @@ const AllProject = () => {
                       <Link to="/oldhome">Old Home</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
-                      ARC Foundation's Old Home Program ensures dignity for
-                      seniors. We provide compassionate care, companionship
+                      Old Home Program ensures dignity for seniors. We provide
+                      companionship and fulfilling environment for elderly
+                      residents.
                       <span className="ms-2">
-                        <Link to="/oldhome">see more...</Link>
+                        <Link to="/oldhome" style={{ fontWeight: "bold" }}>
+                          see more...
+                        </Link>
                       </span>
                     </p>
                     {/* <div

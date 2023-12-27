@@ -1,119 +1,129 @@
 import { createBrowserRouter } from "react-router-dom";
-import DonateEvents from "../Components/DonateEvents";
-import Footer from "../Components/Footer";
+
 import Navbar from "../Components/Navbar";
+import Home from "../Pages/Home";
 import About from "../Pages/About/About";
 import AllProject from "../Pages/AllProject";
-import Contact from "../Pages/Contact";
-import DonateDetails from "../Pages/Donations/DonateDetails";
+import Health from "../Pages/Services/Health";
+import Education from "../Pages/Services/Education";
+import MicroCredit from "../Pages/Services/MicroCredit";
+import QualityLife from "../Pages/Services/QualityLife";
+import Environment from "../Pages/Services/Environment";
+import Orphanage from "../Pages/Services/Orphanage";
+import Oldhome from "../Pages/Services/Oldhome";
+import BecomeVolunteer from "../Pages/Services/BecomeVolunteer";
 import DonateList from "../Pages/Donations/DonateList";
+import DonateDetails from "../Pages/Donations/DonateDetails";
+import EducationDetails from "../Pages/Services/EducationDetails";
+import MIcroDetails from "../Pages/Services/MIcroDetails";
+import QualityLifeDetails from "../Pages/Services/QualityLifeDetails";
 import DonateNow from "../Pages/Donations/DonateNow";
-import EventDetails from "../Pages/Events/EventDetails";
-import Events from "../Pages/Events/Events";
 import Gallery from "../Pages/Gallery";
-import Home from "../Pages/Home";
+import Events from "../Pages/Events/Events";
+import EventDetails from "../Pages/Events/EventDetails";
+import DonateEvents from "../Components/DonateEvents";
 import News from "../Pages/News/News";
 import NewsDetails from "../Pages/News/NewsDetails";
-import BecomeVolunteer from "../Pages/Services/BecomeVolunteer";
-import Education from "../Pages/Services/Education";
-import Environment from "../Pages/Services/Environment";
-import MicroCredit from "../Pages/Services/MicroCredit";
-import Oldhome from "../Pages/Services/Oldhome";
-import Orphanage from "../Pages/Services/Orphanage";
-import QualityLife from "../Pages/Services/QualityLife";
-
+import Contact from "../Pages/Contact";
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Navbar />
-        <Footer />
-      </>
-    ),
+    element: <Navbar />,
     children: [
       {
-        index: true, // Corrected from "index: true"
+        index: true,
         element: <Home />,
       },
       {
-        path: "about-us",
+        path: "/about-us",
         element: <About />,
       },
       {
-        path: "projects",
+        path: "/projects",
         element: <AllProject />,
       },
       {
-        path: "microcredit",
-        element: <MicroCredit />,
+        path: "/health",
+        element: <Health />,
       },
       {
-        path: "quality-life",
-        element: <QualityLife />,
-      },
-      {
-        path: "environment",
-        element: <Environment />,
-      },
-      {
-        path: "orphanage",
-        element: <Orphanage />,
-      },
-      {
-        path: "oldhome",
-        element: <Oldhome />,
-      },
-      {
-        path: "become-volunteer",
-        element: <BecomeVolunteer />,
-      },
-      {
-        path: "education",
+        path: "/education",
         element: <Education />,
       },
       {
-        path: "donate-list",
-        element: <DonateList />,
+        path: "/microcredit",
+        element: <MicroCredit />,
       },
       {
-        path: "oldhome",
+        path: "/quality-life",
+        element: <QualityLife />,
+      },
+      {
+        path: "/environment",
+        element: <Environment />,
+      },
+      {
+        path: "/orphanage",
+        element: <Orphanage />,
+      },
+      {
+        path: "/oldhome",
         element: <Oldhome />,
       },
       {
-        path: "donate-details",
+        path: "/become-volunteer",
+        element: <BecomeVolunteer />,
+      },
+      {
+        path: "/donate-list",
+        element: <DonateList />,
+      },
+      {
+        path: "/donate-details",
         element: <DonateDetails />,
       },
       {
-        path: "donate-now",
+        path: "/education-details",
+        element: <EducationDetails />,
+      },
+      {
+        path: "/micro-details",
+        element: <MIcroDetails />,
+      },
+      {
+        path: "//quality-life-details",
+        element: <QualityLifeDetails />,
+      },
+      {
+        path: "/donate-now",
         element: <DonateNow />,
       },
       {
-        path: "gallery",
+        path: "/gallery",
         element: <Gallery />,
       },
       {
-        path: "events",
+        path: "/events",
         element: <Events />,
       },
       {
-        path: "event-details",
+        path: "/event-details",
         element: <EventDetails />,
       },
       {
-        path: "donate-events",
+        path: "/donate-events",
         element: <DonateEvents />,
       },
       {
-        path: "news",
+        path: "/news",
         element: <News />,
       },
       {
-        path: "news-details",
+        path: "/news-details",
         element: <NewsDetails />,
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <Contact />,
       },
     ],

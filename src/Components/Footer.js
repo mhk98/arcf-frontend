@@ -126,6 +126,16 @@ const Footer = () => {
                         </p>
                       </div>
                     </li>
+                    <li>
+                      <div className="icon">
+                        <i className="fas fa-phone-alt" />
+                      </div>
+                      <div className="text">
+                        <p>
+                          <a href="tel:980009630">+880 1328237810</a>
+                        </p>
+                      </div>
+                    </li>
                   </ul>
                   <div className="site-footer__social">
                     <a href="#">

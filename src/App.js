@@ -49,6 +49,9 @@ import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import DonateEvents from "./Components/DonateEvents";
 import About from "./Pages/About/About";
+import EducationDetails from "./Pages/Services/EducationDetails";
+import MIcroDetails from "./Pages/Services/MIcroDetails";
+import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
 import store from "./Redux/app/store";
 
 function App() {
@@ -76,7 +79,7 @@ function App() {
           translateY: y,
         }}
       >
-         <div className="inner-cursor"></div>
+        <div className="inner-cursor"></div>
       </motion.div>
       <Navbar />
       <Provider store={store}>
@@ -95,6 +98,12 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/donate-list" element={<DonateList />} />
           <Route path="/donate-details" element={<DonateDetails />} />
+          <Route path="/education-details" element={<EducationDetails />} />
+          <Route path="/micro-details" element={<MIcroDetails />} />
+          <Route
+            path="/quality-life-details"
+            element={<QualityLifeDetails />}
+          />
 
           <Route path="/donate-now" element={<DonateNow />} />
           <Route path="/gallery" element={<Gallery />} />

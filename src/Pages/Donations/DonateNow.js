@@ -259,6 +259,9 @@ const DonateNow = () => {
                     />
                   </div> */}
                   <div className="donation-details__organizer-content">
+                    <h3 style={{ color: "black", fontWeight: "bold" }}>
+                      ARC Foundation
+                    </h3>
                     <p className="donation-details__organizer-title">
                       <span style={{ fontWeight: "bold" }}>Bank Name:</span>{" "}
                       Sonali Bank Limited
