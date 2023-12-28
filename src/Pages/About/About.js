@@ -22,6 +22,7 @@ import t4 from "../../image/about-us/t4.jpg";
 import vchairman from "../../image/about-us/vice-chairman.jpg";
 import v1 from "../../image/volunteer/v1.jpg";
 import v2 from "../../image/volunteer/v2.jpg";
+import edudirector from "../../image/about-us/education-director.jpg"
 
 import "./About.css";
 const About = () => {
@@ -375,7 +376,7 @@ const About = () => {
             >
               <div className="team-one__single">
                 <div className="team-one__img">
-                  <img src={edirector} alt />
+                  <img src={edudirector} alt />
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">

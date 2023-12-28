@@ -261,7 +261,7 @@ const Navbar = () => {
                             handleMenuClick();
                           }}
                         >
-                          <Link to="/donate-events">Donate</Link>
+                          <Link to="/donate-events">Donation</Link>
                         </li>
                         <li
                           className={activeItem === 6 ? "active" : ""}
@@ -371,7 +371,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 0 ? "active" : ""}
-                    onClick={() => handleItemClick(0)}
+                    onClick={() => {
+                      handleItemClick(0);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link style={{ color: "white", textAlign: "left" }} to="/">
                       Home
@@ -381,7 +384,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 1 ? "active" : ""}
-                    onClick={() => handleItemClick(1)}
+                    onClick={() => {
+                      handleItemClick(1);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -394,7 +400,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 2 ? "active" : ""}
-                    onClick={() => handleItemClick(2)}
+                    onClick={() => {
+                      handleItemClick(2);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -407,7 +416,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 3 ? "active" : ""}
-                    onClick={() => handleItemClick(3)}
+                    onClick={() => {
+                      handleItemClick(3);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -420,7 +432,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 4 ? "active" : ""}
-                    onClick={() => handleItemClick(4)}
+                    onClick={() => {
+                      handleItemClick(4);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -433,7 +448,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 5 ? "active" : ""}
-                    onClick={() => handleItemClick(5)}
+                    onClick={() => {
+                      handleItemClick(5);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -446,7 +464,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 6 ? "active" : ""}
-                    onClick={() => handleItemClick(6)}
+                    onClick={() => {
+                      handleItemClick(6);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}
@@ -459,7 +480,10 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     variants={liVariant}
                     className={activeItem === 7 ? "active" : ""}
-                    onClick={() => handleItemClick(7)}
+                    onClick={() => {
+                      handleItemClick(7);
+                      setMobileNavOpen(false);
+                    }}
                   >
                     <Link
                       style={{ color: "white", textAlign: "left" }}

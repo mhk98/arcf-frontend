@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGetAllProjectsQuery } from "../Redux/features/projects/projects";
 
 const AllProject = () => {
+  const [projects, setProjects] = useState([]);
+
+  const { data, isLoading, isError, error } = useGetAllProjectsQuery();
+
+  useEffect(() => {
+    if (isError) {
+      console.error("Error fetching projects data", error);
+    } else if (!isLoading) {
+      if (data) {
+        setProjects(data);
+      }
+    }
+  }, [data, isLoading, isError, error]);
+
+  console.log("projects", data);
   return (
     <div>
       {/*Page Header Start*/}
@@ -32,16 +48,14 @@ const AllProject = () => {
 
       <section className="product-details">
         <div className="container">
-          <div className="row" style={{ alignItems: "center", gap: "50px" }}>
-            <div className="col-lg-6 col-xl-4">
-              <div className="product-details__img">
-                <img
-                  src="assets/images/shop/product-details-img-1.webp"
-                  alt
-                  style={{ width: 370, height: 382 }}
-                />
-              </div>
-            </div>
+          <div
+            className="row"
+            style={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "50px",
+            }}
+          >
             <div className="col-lg-6 col-xl-6">
               <div className="product-details__top">
                 <h3 className="product-details__title">Activities</h3>
@@ -62,6 +76,16 @@ const AllProject = () => {
                   Join us at these inspiring gatherings as we collectively
                   strive to build a brighter, more inclusive future for all.
                 </p>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-xl-4">
+              <div className="product-details__img">
+                <img
+                  src="assets/images/shop/product-details-img-1.webp"
+                  alt=""
+                  style={{ width: 370, height: 382 }}
+                />
               </div>
             </div>
           </div>

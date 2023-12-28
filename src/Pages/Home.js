@@ -42,7 +42,7 @@ const Home = () => {
   useEffect(() => {
     if (isError) {
       // Handle error, you can log it or display an error message.
-      console.error("Error fetching cart data:", error);
+      console.error("Error fetching slides data:", error);
     } else if (!isLoading) {
       // Only set the cart if there is data and it's not already set to avoid infinite re-renders.
       if (data && data.data) {
@@ -322,19 +322,13 @@ const Home = () => {
                 ? abouts.map((about) => ( */}
               <div className="row" style={{ alignItems: "center" }}>
                 <div className="col-xl-6 ">
-                  <div className="about-one__left shadow p-4 bg-white rounded">
+                  <div className="about-one__left ">
                     <div
-                      className="about-one__img-box wow fadeInUp"
+                      className="col-xl-6 col-lg-6 wow fadeInUp"
                       data-wow-delay="100ms"
-                      // data-wow-duration="2500ms"
                     >
-                      <div className="gallery-page__img ">
-                        <img
-                          // src={`https://arcf-backend.onrender.com/${about.image}`}
-
-                          src={h1}
-                          alt=""
-                        />
+                      <div className="what_we_do">
+                        <img className="imageWithShadow" src={h1} alt="" />
                       </div>
                     </div>
                   </div>
@@ -664,7 +658,7 @@ const Home = () => {
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <h2 className="section-title__title">Our Project Features</h2>
+              <h2 className="section-title__title">Our Projects</h2>
             </div>
             <div className="row">
               <div
@@ -954,7 +948,7 @@ const Home = () => {
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <h2 className="section-title__title">Donate Now</h2>
+              <h2 className="section-title__title">Donation</h2>
             </div>
             <div className="row">
               <div
@@ -995,7 +989,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
@@ -1282,7 +1276,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
@@ -1569,7 +1563,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
