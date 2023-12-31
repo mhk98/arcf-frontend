@@ -32,16 +32,10 @@ const Events = () => {
 
       <section className="product-details">
         <div className="container">
-          <div className="row" style={{ alignItems: "center", gap: "50px" }}>
-            <div className="col-lg-6 col-xl-4">
-              <div className="product-details__img">
-                <img
-                  src="assets/images/shop/product-details-img-1.webp"
-                  alt
-                  style={{ width: 370, height: 382 }}
-                />
-              </div>
-            </div>
+          <div
+            className="row"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
             <div className="col-lg-6 col-xl-6">
               <div className="product-details__top">
                 <h3 className="product-details__title">Events</h3>
@@ -62,6 +56,15 @@ const Events = () => {
                   Join us at these inspiring gatherings as we collectively
                   strive to build a brighter, more inclusive future for all.
                 </p>
+              </div>
+            </div>
+            <div className="col-lg-6 col-xl-4">
+              <div className="product-details__img">
+                <img
+                  src="assets/images/shop/product-details-img-1.webp"
+                  alt
+                  style={{ width: 370, height: 382 }}
+                />
               </div>
             </div>
           </div>

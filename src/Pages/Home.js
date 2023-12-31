@@ -4,6 +4,8 @@ import { WOW } from "wowjs";
 import { useGetAllFaqQuery } from "../Redux/features/faq/faq";
 import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
+import h2 from "../image/Helping-each-other-can-make-world-better.png";
+import h1 from "../image/What-We-Do.png";
 
 // import Swiper core and required modules
 import {
@@ -35,12 +37,11 @@ const Home = () => {
 
   const [slides, setSlides] = useState([]);
   const { data, isLoading, isError, error } = useGetAllSliderQuery();
-  console.log("slides", slides);
 
   useEffect(() => {
     if (isError) {
       // Handle error, you can log it or display an error message.
-      console.error("Error fetching cart data:", error);
+      console.error("Error fetching slides data:", error);
     } else if (!isLoading) {
       // Only set the cart if there is data and it's not already set to avoid infinite re-renders.
       if (data && data.data) {
@@ -48,6 +49,8 @@ const Home = () => {
       }
     }
   }, [data, isLoading, isError, error]);
+
+  console.log("slides");
 
   const [activeAccordion, setActiveAccordion] = useState(null);
 
@@ -97,14 +100,6 @@ const Home = () => {
 
   console.log("aboutData", aboutData);
 
-  const imagePaths = [
-    "assets/images/gallery/gallery-1-1.jpg",
-    "assets/images/gallery/gallery-1-2.jpg",
-    "assets/images/gallery/gallery-1-3.jpg",
-    "assets/images/gallery/gallery-1-4.jpg",
-    "assets/images/gallery/gallery-1-5.jpg",
-    // Add more image paths as needed
-  ];
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -113,9 +108,6 @@ const Home = () => {
 
         <section className="main-slider clearfix" style={{ height: "100%" }}>
           <div className="swiper-container thm-swiper__slider">
-            {/* {isLoading ? (
-              <p style={{ height: "100vh" }}>Loading...</p>
-            ) : ( */}
             <Swiper
               modules={[Navigation, Pagination, Autoplay, EffectFade]}
               slidesPerView={1}
@@ -134,14 +126,12 @@ const Home = () => {
                 delay: 5000,
               }}
             >
-              {/* {slides.length
-                  ? slides.map((slide) => ( */}
               <SwiperSlide>
-                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                <div className="swiper-slide">
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
                     // }}
 
                     style={{
@@ -150,9 +140,9 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                              src={`https://arcf-backend.onrender.com/${slide.image}`}
-                              alt=""
-                            /> */}
+                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            alt=""
+                          /> */}
                   </div>
 
                   <div className="main-slider-shape-2 float-bob-x">
@@ -171,7 +161,7 @@ const Home = () => {
                           </p>
                           <h2 className="main-slider__title">
                             {/* {slide.text} */}
-                            Empowering Lives, Transforming Futures.
+                            Empowering Lives, Transforming Futures
                           </h2>
                           <div className="main-slider__btn-box">
                             <a
@@ -189,11 +179,11 @@ const Home = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                <div className="swiper-slide">
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
                     // }}
 
                     style={{
@@ -202,9 +192,9 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                              src={`https://arcf-backend.onrender.com/${slide.image}`}
-                              alt=""
-                            /> */}
+                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            alt=""
+                          /> */}
                   </div>
 
                   <div className="main-slider-shape-2 float-bob-x">
@@ -223,7 +213,7 @@ const Home = () => {
                           </p>
                           <h2 className="main-slider__title">
                             {/* {slide.text} */}
-                            Creating Impact, One Community at a Time.
+                            Creating Impact, One Community at a Time
                           </h2>
                           <div className="main-slider__btn-box">
                             <a
@@ -241,11 +231,11 @@ const Home = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="swiper-slide" style={{ marginTop: "70px" }}>
+                <div className="swiper-slide">
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
+                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
                     // }}
 
                     style={{
@@ -254,9 +244,9 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                              src={`https://arcf-backend.onrender.com/${slide.image}`}
-                              alt=""
-                            /> */}
+                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            alt=""
+                          /> */}
                   </div>
 
                   <div className="main-slider-shape-2 float-bob-x">
@@ -275,7 +265,7 @@ const Home = () => {
                           </p>
                           <h2 className="main-slider__title">
                             {/* {slide.text} */}
-                            Rise for Equality, Education, and Development.
+                            Rise for Equality, Education, and Development
                           </h2>
                           <div className="main-slider__btn-box">
                             <a
@@ -292,10 +282,7 @@ const Home = () => {
                   </div>
                 </div>
               </SwiperSlide>
-              {/* ))
-                  : null} */}
             </Swiper>
-            {/* )} */}
 
             {/* If we need navigation buttons */}
             <div className="main-slider__nav">
@@ -319,24 +306,6 @@ const Home = () => {
               {/* {abouts.length > 0
                 ? abouts.map((about) => ( */}
               <div className="row" style={{ alignItems: "center" }}>
-                <div className="col-xl-6">
-                  <div className="about-one__left">
-                    <div
-                      className="about-one__img-box wow fadeInUp"
-                      data-wow-delay="100ms"
-                      // data-wow-duration="2500ms"
-                    >
-                      <div className="gallery-page__img">
-                        <img
-                          // src={`https://arcf-backend.onrender.com/${about.image}`}
-
-                          src="assets/images/resources/about-four-img-2.jpg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div
                   className="col-xl-6 wow fadeInUp"
                   data-wow-delay="100ms"
@@ -399,6 +368,18 @@ const Home = () => {
                     </ul> */}
                   </div>
                 </div>
+                <div className="col-xl-6 ">
+                  <div className="about-one__left ">
+                    <div
+                      className="col-xl-6 col-lg-6 wow fadeInUp"
+                      data-wow-delay="100ms"
+                    >
+                      <div className="what_we_do">
+                        <img className="imageWithShadow" src={h1} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* ))
                 : null} */}
@@ -430,10 +411,7 @@ const Home = () => {
                       data-wow-duration="2500ms"
                     >
                       <div className="about-one__img">
-                        <img
-                          src="assets/images/resources/about-one-img-1.png"
-                          alt=""
-                        />
+                        <img src={h2} alt="" />
                       </div>
                       <div className="about-one__img-border" />
                       <div className="about-one__curved-circle-box">
@@ -665,7 +643,7 @@ const Home = () => {
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <h2 className="section-title__title">Our Project Features</h2>
+              <h2 className="section-title__title">Our Projects</h2>
             </div>
             <div className="row">
               <div
@@ -809,7 +787,7 @@ const Home = () => {
                     <p className="causes-one__text">
                       ARC Foundation Elevating Lives, Enhancing Futures. Through
                       diverse programs, we focus on improving quality of life,
-                      fostering positive.
+                      fostering positive
                     </p>
 
                     <Link to="/quality-life" className="thm-btn about-one__btn">
@@ -955,7 +933,7 @@ const Home = () => {
         <section className="causes-one">
           <div className="container">
             <div className="section-title text-center">
-              <h2 className="section-title__title">Microcredit Program</h2>
+              <h2 className="section-title__title">Donation</h2>
             </div>
             <div className="row">
               <div
@@ -996,7 +974,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
@@ -1283,7 +1261,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
@@ -1570,7 +1548,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donate now
+                          Donation Now
                         </button>
                       </div>
 
@@ -1885,7 +1863,7 @@ const Home = () => {
         {/*Gallery One Start*/}
         <section className="gallery-one">
           <div className="gallery-one__top">
-            <h3 className="gallery-one__top-title">Our photo gallery</h3>
+            <h3 className="gallery-one__top-title">Our Photo Gallery</h3>
           </div>
           <div className="gallery-one__bottom">
             <div className="gallery-one__container">
@@ -2022,7 +2000,7 @@ const Home = () => {
                     development, and mentorship.
                   </p>
                   <a href="/contact" className="thm-btn faq-one__btn">
-                    Learn how to get help
+                    Learn More
                   </a>
                 </div>
               </div>

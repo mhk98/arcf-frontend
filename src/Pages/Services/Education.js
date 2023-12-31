@@ -17,7 +17,7 @@ const Education = () => {
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <span className="ms-2">/</span>
@@ -30,27 +30,38 @@ const Education = () => {
       </section>
       {/*Page Header End*/}
 
-      <div
-        className="container"
-        style={{
-          position: "relative",
-        }}
-      >
-        <div style={{ position: "absolute", right: "50px", top: "50px" }}>
-          <a href="/projects">
+      <Link to="/projects">
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginTop: "50px",
+          }}
+        >
+          <div
+            style={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              backgroundColor: "#FBD45A",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginLeft: "auto",
+            }}
+          >
             <i
               style={{
-                fontSize: "35px",
-                padding: "5px",
-                backgroundColor: "#FBD45A",
-                borderRadius: "100%",
+                fontSize: "25px",
                 color: "black",
+                cursor: "pointer",
               }}
               className="icon-left-arrow"
             />
-          </a>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <section className="product-details">
         <div className="container">
@@ -103,28 +114,30 @@ const Education = () => {
               <Link to="/education-details">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <a href="/education-details">
+                    <Link to="/education-details">
                       <img src="assets/images/resources/p-2.jpg" alt="" />
-                    </a>
+                    </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Night School</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <a href="/education-details">Street Children Night School</a>
+                      <Link to="/education-details">
+                        Street Children Night School
+                      </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       A Free Friday Clinic for poor families to be aware or
                       provide doctor’s advice or prescription free of cost and
                       providing free medicine.
                       <span className="ms-2">
-                        <a
-                          href="/education-details"
+                        <Link
+                          to="/education-details"
                           style={{ fontWeight: "bold" }}
                         >
                           see more...
-                        </a>
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -138,27 +151,27 @@ const Education = () => {
               <Link to="/education-details">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <a href="/education-details">
+                    <Link to="/education-details">
                       <img src="assets/images/resources/p-1.jpg" alt="" />
-                    </a>
+                    </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Education Scholarship</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <a href="/education-details">Education Scholarship</a>
+                      <Link to="/education-details">Education Scholarship</Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       One-time and multi-term scholarships are provided to poor
                       and meritorious students to continue their studies.
                       <span className="ms-2">
-                        <a
-                          href="/education-details"
+                        <Link
+                          to="/education-details"
                           style={{ fontWeight: "bold" }}
                         >
                           see more...
-                        </a>
+                        </Link>
                       </span>
                     </p>
                   </div>
@@ -173,27 +186,29 @@ const Education = () => {
               <Link to="/education-details">
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <a href="/education-details">
+                    <Link to="/education-details">
                       <img src="assets/images/resources/p-3.jpg" alt="" />
-                    </a>
+                    </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Free Books and Other Educational</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <a href="/education-details">Free Books Distribution</a>
+                      <Link to="/education-details">
+                        Free Books Distribution
+                      </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       Books, all kinds of educational materials, computers, etc.
                       are distributed free of cost to poor students.
                       <span className="ms-2">
-                        <a
-                          href="/education-details"
+                        <Link
+                          to="/education-details"
                           style={{ fontWeight: "bold" }}
                         >
                           see more...
-                        </a>
+                        </Link>
                       </span>
                     </p>
                   </div>

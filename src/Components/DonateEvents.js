@@ -33,7 +33,10 @@ const DonateEvents = () => {
 
       <section className="product-details">
         <div className="container">
-          <div className="row" style={{ alignItems: "center", gap: "50px" }}>
+          <div
+            className="row"
+            style={{ alignItems: "center", justifyContent: "space-between" }}
+          >
             <div className="col-lg-6 col-xl-4">
               <div className="product-details__img">
                 <img

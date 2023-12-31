@@ -34,10 +34,10 @@ const Footer = () => {
                     style={{ marginTop: "-50px" }}
                   >
                     <p className="footer-widget__about-text">
-                      Nulla ultricies justo sit amet ante efficitur, eget
-                      pharetra augue efficitur. Vestibulum viverra, dolor sit
-                      amet ultricies. Vestibulum viverra, dolor sit amet
-                      ultricies.
+                      ARC Foundation empowers lives through education,
+                      healthcare, and community programs. Join us in creating
+                      positive change and transforming communities. Together, we
+                      rise for a brighter future.
                     </p>
                   </div>
                   <div className="footer-widget__btn">
@@ -67,7 +67,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <a href="//donate-now">Donations</a>
+                      <a href="/donate-now">Donations</a>
                     </li>
                   </ul>
                 </div>
@@ -80,16 +80,22 @@ const Footer = () => {
                   <h3 className="footer-widget__title">Non profit</h3>
                   <ul className="footer-widget__non-profit-list list-unstyled clearfix">
                     <li>
-                      <a href="donation-details.html">Help Child Cancer</a>
+                      <Link to="/health/Health">Health Care Program</Link>
                     </li>
                     <li>
-                      <a href="donation-details.html">Clean Pure Water</a>
+                      <Link to="/education/Education">
+                        Education Child Program
+                      </Link>
                     </li>
                     <li>
-                      <a href="donation-details.html">Give them Education</a>
+                      <Link to="/microcredit/Microcredit">
+                        Microcredit Program
+                      </Link>
                     </li>
                     <li>
-                      <a href="donation-details.html">Start a Fundraising</a>
+                      <Link to="/quality-life/Quality-Life">
+                        Improving Quality Of Life
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -123,6 +129,16 @@ const Footer = () => {
                       <div className="text">
                         <p>
                           <a href="tel:980009630">+880 2224412300</a>
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="icon">
+                        <i className="fas fa-phone-alt" />
+                      </div>
+                      <div className="text">
+                        <p>
+                          <a href="tel:980009630">+880 1328237810</a>
                         </p>
                       </div>
                     </li>

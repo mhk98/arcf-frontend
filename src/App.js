@@ -15,9 +15,9 @@ import NewsDetails from "./Pages/News/NewsDetails";
 import BecomeVolunteer from "./Pages/Services/BecomeVolunteer";
 import Education from "./Pages/Services/Education";
 
-// import "./assets/css/oxpins-responsive.css";
-// import "./assets/css/oxpins.css";
-import AllProject from "./Pages/AllProject";
+import "./assets/css/oxpins-responsive.css";
+import "./assets/css/oxpins.css";
+
 import Environment from "./Pages/Services/Environment";
 import Health from "./Pages/Services/Health";
 import MicroCredit from "./Pages/Services/MicroCredit";
@@ -44,26 +44,53 @@ import "./assets/vendors/swiper/swiper.min.css";
 import "./assets/vendors/timepicker/timePicker.css";
 import "./assets/vendors/tiny-slider/tiny-slider.min.css";
 // import "./assets/vendors/vegas/vegas.min.css";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import DonateEvents from "./Components/DonateEvents";
-import BackToTopButton from "./Components/BackToTopButton";
+import About from "./Pages/About/About";
 import EducationDetails from "./Pages/Services/EducationDetails";
 import MIcroDetails from "./Pages/Services/MIcroDetails";
 import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
-import Youth from "./Pages/Services/Youth";
 import store from "./Redux/app/store";
-import About from "./Pages/About/About";
+import AllProject from "./Pages/Services/Projects/AllProject";
+import Youth from "./Pages/Services/Youth";
 
 function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
+  useEffect(() => {
+    const handleCursor = (e) => {
+      console.log(e.clientX, e.clientY);
+      setX(e.clientX - 10);
+      setY(e.clientY - 10);
+    };
+
+    window.addEventListener("mousemove", handleCursor);
+    return () => {
+      window.removeEventListener("mousemove", handleCursor);
+    };
+  }, []);
   return (
-    <div className="">
+    <div className="App">
+      <motion.div
+        className="cursor"
+        animate={{
+          translateX: x,
+          translateY: y,
+        }}
+      >
+        <div className="inner-cursor"></div>
+      </motion.div>
       <Navbar />
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/projects" element={<AllProject />} />
-          <Route path="/health" element={<Health />} />
+          <Route path="/health/:id" element={<Health />} />
+          {/* <Route path="/health" element={<Health />} /> */}
           <Route path="/education" element={<Education />} />
           <Route path="/microcredit" element={<MicroCredit />} />
           <Route path="/quality-life" element={<QualityLife />} />
@@ -89,6 +116,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news-details" element={<NewsDetails />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/editor" element={<Youth />} />
         </Routes>
       </Provider>
 

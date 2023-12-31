@@ -122,7 +122,7 @@ const Contact = () => {
                   <p className="contact-one__sub-title">Send email</p>
                   <h3 className="contact-one__number">
                     <a href="mailto:needhelp@company.com">
-                    arcf.society.bd@gmail.com
+                      arcf.society.bd@gmail.com
                     </a>
                   </h3>
                 </div>
@@ -132,8 +132,12 @@ const Contact = () => {
                   <span className="icon-location" />
                 </div>
                 <div className="contact-one__content">
-                  <p className="contact-one__sub-title">380 St Kilda Road</p>
-                  <h3 className="contact-one__number">Melbourne, Australia</h3>
+                  <p className="contact-one__sub-title">
+                    321, Fatema Manjil, Fakir Market, Pagar, BSCIC,
+                  </p>
+                  <h3 className="contact-one__number">
+                    Tongi, Gazipur-1710, Bangladesh
+                  </h3>
                 </div>
               </li>
             </ul>

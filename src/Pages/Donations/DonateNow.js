@@ -1,5 +1,5 @@
-import Form from "react-bootstrap/Form";
 import React from "react";
+import Form from "react-bootstrap/Form";
 
 const DonateNow = () => {
   return (
@@ -194,7 +194,7 @@ const DonateNow = () => {
                         type="submit"
                         className="thm-btn donate-now__payment-info-btn"
                       >
-                        Donate now
+                        Donate
                       </button>
                     </div>
                   </form>

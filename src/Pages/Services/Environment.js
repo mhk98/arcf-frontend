@@ -42,7 +42,7 @@ const Environment = () => {
                   </div>
                   <div className="donation-details__content">
                     <h3 className="donation-details__title">
-                      Let’s education for children get good life
+                      Let’s Environment for children get good life
                     </h3>
                     <p className="donation-details__text">
                       The ARC Foundation recognizes the profound impact of

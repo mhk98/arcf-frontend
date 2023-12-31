@@ -1,5 +1,4 @@
 import React from "react";
-import { a } from "react-router-dom";
 
 const Oldhome = () => {
   return (
@@ -42,7 +41,7 @@ const Oldhome = () => {
                   </div>
                   <div className="donation-details__content">
                     <h3 className="donation-details__title">
-                      Let’s education for children get good life
+                      Old home for retuired people get good life
                     </h3>
                     <p className="donation-details__text">
                       The ARC Foundation's Old Home Program is a compassionate

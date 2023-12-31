@@ -1662,9 +1662,9 @@
 
 
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
-    .main-menu__right-top-social {
+    /* .main-menu__right-top-social {
         display: none;
-    }
+    } */
 
     .main-menu-three__search-cat {
         margin-left: 40px;
@@ -1676,13 +1676,13 @@
 
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-    .main-menu__right-top-social {
+    /* .main-menu__right-top-social {
         display: none;
-    }
+    } */
 
-    .main-menu__right-top {
+    /* .main-menu__right-top {
         justify-content: inherit;
-    }
+    } */
 
     .main-menu__right-top-address-list li+li {
         margin-left: 14px;

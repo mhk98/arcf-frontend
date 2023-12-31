@@ -101,3 +101,13 @@ nav {
   align-items: center;
   gap: 120px;
 }
+
+/* Assuming .active class for active menu items */
+.mobile-menu ul li.active a {
+  color: white !important;
+}
+
+.activeLink {
+  color: white;
+  /* Add any other styles for the active link */
+}

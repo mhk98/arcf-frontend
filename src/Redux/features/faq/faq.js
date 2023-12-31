@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const faqApi = createApi({
   reducerPath: "faqApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://arcf-backend.onrender.com/api/v1/",
+    baseUrl: "https://arcf-backend.onrender.com/",
   }),
 
   tagTypes: ["faq"], // Define the tag type

@@ -44,7 +44,7 @@ const QualityLifeDetails = () => {
                   </div>
                   <div className="donation-details__content">
                     <h3 className="donation-details__title">
-                      Let’s education for children get good life
+                    Improving Quality Of Life Development Program
                     </h3>
                     <p className="donation-details__text">
                       Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci

@@ -4,7 +4,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
 
-  /* font-family: var(--oxpins-font-three); */
+  font-family: var(--oxpins-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -248,14 +248,15 @@ label {
   height: 600px;
 }
 
-/* CSS for active menu item */
-.main-menu__list li.active a {
-  color: white;
-}
-
 .main-header {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+/* Add this to your CSS or styling file */
+.main-menu__list li.active a {
+  color: #fff !important; /* Replace with your desired text color for the active item */
+  /* Add any other styles for the active menu item */
 }

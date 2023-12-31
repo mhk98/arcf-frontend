@@ -1,5 +1,4 @@
 import React from "react";
-import { a } from "react-router-dom";
 
 const Orphanage = () => {
   return (
@@ -42,7 +41,7 @@ const Orphanage = () => {
                   </div>
                   <div className="donation-details__content">
                     <h3 className="donation-details__title">
-                      Let’s education for children get good life
+                      Let’s Orphanage for children get good life
                     </h3>
                     <p className="donation-details__text">
                       ARC Foundation supports orphans with care, education, and

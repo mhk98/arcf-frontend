@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton";
 import "./Navbar.css";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -100,6 +101,14 @@ const Navbar = () => {
   const fadeInEnd = { opacity: 1 };
   const fadeInTransition = { duration: 1 };
 
+  const handleMenuClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
+
   return (
     <div className="custom-cursor">
       <div className="header-container">
@@ -109,13 +118,13 @@ const Navbar = () => {
               <div className="main-menu__wrapper-inner">
                 <div className="main-menu__left">
                   <div className="main-menu__logo">
-                    <a href="/">
+                    <Link to="/">
                       <img
                         src="assets/images/resources/logo-1.png"
                         alt=""
                         width={200}
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="main-menu__shape-1 float-bob-x">
                     <img src="assets/images/shapes/main-menu-shape-1.png" alt />
@@ -135,7 +144,7 @@ const Navbar = () => {
                         <p className="main-menu__volunteers-text">
                           "become-volunteer.html">
                             Become a<span>volunteers</span>
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div> */}
@@ -150,7 +159,7 @@ const Navbar = () => {
                             <div className="content">
                               {/* <p>Helpline</p> */}
                               <h5 className="">
-                                <a href="tel:980009630">+880 2224412300</a>
+                                <Link to="tel:980009630">+880 2224412300</Link>
                               </h5>
                             </div>
                           </li>
@@ -161,12 +170,12 @@ const Navbar = () => {
                             <div className="content">
                               {/* <p>Send email</p> */}
                               <h5>
-                                <a
+                                <Link
                                   className="mt-4"
-                                  href="mailto:needhelp@company.com"
+                                  to="mailto:needhelp@company.com"
                                 >
                                   arcf.society.bd@gmail.com
-                                </a>
+                                </Link>
                               </h5>
                             </div>
                           </li>
@@ -182,18 +191,18 @@ const Navbar = () => {
                         </ul>
                       </div>
                       <div className="main-menu__right-top-social">
-                        <a href="https://twitter.com/ARCF2009">
+                        <Link to="https://twitter.com/ARCF2009">
                           <i className="fab fa-twitter" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                           <i className="fab fa-facebook" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                           <i className="fab fa-pinterest-p" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                           <i className="fab fa-instagram" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -202,72 +211,96 @@ const Navbar = () => {
                       <ul className="main-menu__list">
                         <li
                           className={activeItem === 0 ? "active" : ""}
-                          onClick={() => handleItemClick(0)}
+                          onClick={() => {
+                            handleItemClick(0);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/">Home</a>
+                          <Link to="/">Home</Link>
                         </li>
                         <li
                           className={activeItem === 1 ? "active" : ""}
-                          onClick={() => handleItemClick(1)}
+                          onClick={() => {
+                            handleItemClick(1);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/about-us">About</a>
+                          <Link to="/about-us">About</Link>
                         </li>
                         <li
                           className={activeItem === 2 ? "active" : ""}
-                          onClick={() => handleItemClick(2)}
+                          onClick={() => {
+                            handleItemClick(2);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/projects">Project</a>
+                          <Link to="/projects">Project</Link>
                         </li>
                         <li
                           className={activeItem === 3 ? "active" : ""}
-                          onClick={() => handleItemClick(3)}
+                          onClick={() => {
+                            handleItemClick(3);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/news">News</a>
+                          <Link to="/news">News</Link>
                         </li>
                         <li
                           className={activeItem === 4 ? "active" : ""}
-                          onClick={() => handleItemClick(4)}
+                          onClick={() => {
+                            handleItemClick(4);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/events">Events</a>
+                          <Link to="/events">Events</Link>
                         </li>
                         <li
                           className={activeItem === 5 ? "active" : ""}
-                          onClick={() => handleItemClick(5)}
+                          onClick={() => {
+                            handleItemClick(5);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/donate-events">Donate</a>
+                          <Link to="/donate-events">Donation</Link>
                         </li>
                         <li
                           className={activeItem === 6 ? "active" : ""}
-                          onClick={() => handleItemClick(6)}
+                          onClick={() => {
+                            handleItemClick(6);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/gallery">Gallery</a>
+                          <Link to="/gallery">Gallery</Link>
                         </li>
                         <li
                           className={activeItem === 7 ? "active" : ""}
-                          onClick={() => handleItemClick(7)}
+                          onClick={() => {
+                            handleItemClick(7);
+                            handleMenuClick();
+                          }}
                         >
-                          <a href="/contact">Contact</a>
+                          <Link to="/contact">Contact</Link>
                         </li>
                       </ul>
                     </div>
                     <div className="main-menu__main-menu-content-box">
                       <div className="main-menu__search-cat-btn-box">
                         {/* <div className="main-menu__search-box">
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           className="main-menu__search search-toggler icon-magnifying-glass"
                         />
                       </div> */}
                         {/* <div className="main-menu__cat-box">
-                        <a
-                          href="cart.html"
+                        <Link
+                          to="cart.html"
                           className="main-menu__cart icon-shopping-cart"
                         />
                       </div> */}
                         <div className="main-menu__btn-box">
-                          <a href="/donate-now" className="main-menu__btn">
+                          <Link to="/donate-now" className="main-menu__btn">
                             <span className="fa fa-heart" /> Donate now
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -290,13 +323,13 @@ const Navbar = () => {
         >
           <div className="mobile-navbar">
             <div className="mobile-logo">
-              <a href="/">
+              <Link to="/">
                 <img
                   src="assets/images/resources/logo-1.png"
                   alt=""
                   width={145}
                 />
-              </a>
+              </Link>
             </div>
             <motion.div
               className="open-svg"
@@ -317,137 +350,167 @@ const Navbar = () => {
 
           <motion.div variants={mobileMenuVariant} className="mobile-menu">
             <div className="top-nav">
-              <div className="mobile-logo1">
-                <a href="/">
+              <div>
+                <Link to="/">
                   <img
                     src="assets/images/resources/logo-1.png"
                     alt=""
                     width={200}
                   />
-                </a>
-                <motion.button
-                  className="close-svg"
-                  variants={fadeInVariant}
-                  onClick={() => setMobileNavOpen(false)}
-                  style={{ fontSize: "30px", backgroundColor: "#283734" }}
+                </Link>
+                <motion.ul
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "start",
+                  }}
+                  variants={ulVariant}
+                  // style={{ marginTop: "-20px", marginRight: "160px" }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="28"
-                    width="24"
-                    viewBox="0 0 384 512"
-                    fill="white"
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 0 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(0);
+                      setMobileNavOpen(false);
+                    }}
                   >
-                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                  </svg>
-                </motion.button>
+                    <Link style={{ color: "white", textAlign: "left" }} to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 1 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(1);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/about-us"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 2 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(2);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/projects"
+                    >
+                      Project
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 3 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(3);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/news"
+                    >
+                      News
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 4 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(4);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/events"
+                    >
+                      Events
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 5 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(5);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/donate-events"
+                    >
+                      Donate
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 6 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(6);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/gallery"
+                    >
+                      Gallery
+                    </Link>
+                  </li>
+                  <li
+                    whileTap={{ scale: 0.95 }}
+                    variants={liVariant}
+                    className={activeItem === 7 ? "active" : ""}
+                    onClick={() => {
+                      handleItemClick(7);
+                      setMobileNavOpen(false);
+                    }}
+                  >
+                    <Link
+                      style={{ color: "white", textAlign: "left" }}
+                      to="/contact"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </motion.ul>
               </div>
+              <motion.button
+                className="close-svg"
+                variants={fadeInVariant}
+                onClick={() => setMobileNavOpen(false)}
+                style={{ fontSize: "30px", backgroundColor: "#283734" }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  width="24"
+                  viewBox="0 0 384 512"
+                  fill="white"
+                >
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+              </motion.button>
             </div>
-            <motion.ul
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "start",
-              }}
-              variants={ulVariant}
-              // style={{ marginTop: "-20px", marginRight: "160px" }}
-            >
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 0 ? "active" : ""}
-                onClick={() => handleItemClick(0)}
-              >
-                <a style={{ color: "white", textAlign: "left" }} href="/">
-                  Home
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 1 ? "active" : ""}
-                onClick={() => handleItemClick(1)}
-              >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/about-us"
-                >
-                  About
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 2 ? "active" : ""}
-                onClick={() => handleItemClick(2)}
-              >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/projects"
-                >
-                  Project
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 3 ? "active" : ""}
-                onClick={() => handleItemClick(3)}
-              >
-                <a style={{ color: "white", textAlign: "left" }} href="/news">
-                  News
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 4 ? "active" : ""}
-                onClick={() => handleItemClick(4)}
-              >
-                <a style={{ color: "white", textAlign: "left" }} href="/events">
-                  Events
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 5 ? "active" : ""}
-                onClick={() => handleItemClick(5)}
-              >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/donate-events"
-                >
-                  Donate
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 6 ? "active" : ""}
-                onClick={() => handleItemClick(6)}
-              >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/gallery"
-                >
-                  Gallery
-                </a>
-              </li>
-              <li
-                whileTap={{ scale: 0.95 }}
-                variants={liVariant}
-                className={activeItem === 7 ? "active" : ""}
-                onClick={() => handleItemClick(7)}
-              >
-                <a
-                  style={{ color: "white", textAlign: "left" }}
-                  href="/contact"
-                >
-                  Contact
-                </a>
-              </li>
-            </motion.ul>
           </motion.div>
         </motion.nav>
       </main>
