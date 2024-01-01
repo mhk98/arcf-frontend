@@ -55,6 +55,7 @@ import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
 import store from "./Redux/app/store";
 import AllProject from "./Pages/Services/Projects/AllProject";
 import Youth from "./Pages/Services/Youth";
+import HealthCategoryDetails from "./Pages/Services/Health/HealthCategoryDetails";
 
 function App() {
   const [x, setX] = useState(0);
@@ -90,6 +91,10 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/projects" element={<AllProject />} />
           <Route path="/health/:id" element={<Health />} />
+          <Route
+            path="/health-category-details/:id"
+            element={<HealthCategoryDetails />}
+          />
           {/* <Route path="/health" element={<Health />} /> */}
           <Route path="/education" element={<Education />} />
           <Route path="/microcredit" element={<MicroCredit />} />

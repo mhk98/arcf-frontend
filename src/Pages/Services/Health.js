@@ -172,7 +172,10 @@ const Health = () => {
                   className="col-xl-4 col-lg-4 wow fadeInUp"
                   data-wow-delay="100ms"
                 >
-                  <Link to="/donate-details" style={{ color: "black" }}>
+                  <Link
+                    to={`/health-category-details/${item.Id}`}
+                    style={{ color: "black" }}
+                  >
                     <div className="causes-one__single">
                       <div className="causes-one__img">
                         <Link to="/">
