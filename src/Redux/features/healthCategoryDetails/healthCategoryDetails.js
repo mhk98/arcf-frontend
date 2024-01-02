@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const healthCategoryDetailsApi = createApi({
   reducerPath: "healthCategoryDetailsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://arcf-backend.onrender.com//api/v1/",
+    baseUrl: "https://arcf-backend.onrender.com/api/v1/",
   }),
 
   tagTypes: ["healthCategoryDetails"], // Define the tag type

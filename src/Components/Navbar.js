@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../image/resource/logo-1.png";
+import shape from "../image/resource/main-menu-shape-1.png";
 import BackToTopButton from "./BackToTopButton";
 import "./Navbar.css";
 
@@ -119,15 +121,11 @@ const Navbar = () => {
                 <div className="main-menu__left">
                   <div className="main-menu__logo">
                     <Link to="/">
-                      <img
-                        src="assets/images/resources/logo-1.png"
-                        alt=""
-                        width={200}
-                      />
+                      <img src={logo} alt="" width={200} />
                     </Link>
                   </div>
                   <div className="main-menu__shape-1 float-bob-x">
-                    <img src="assets/images/shapes/main-menu-shape-1.png" alt />
+                    <img src={shape} alt="" />
                   </div>
                 </div>
                 <div className="main-menu__right">
@@ -324,11 +322,7 @@ const Navbar = () => {
           <div className="mobile-navbar">
             <div className="mobile-logo">
               <Link to="/">
-                <img
-                  src="assets/images/resources/logo-1.png"
-                  alt=""
-                  width={145}
-                />
+                <img src={logo} alt="" width={145} />
               </Link>
             </div>
             <motion.div
@@ -352,11 +346,7 @@ const Navbar = () => {
             <div className="top-nav">
               <div>
                 <Link to="/">
-                  <img
-                    src="assets/images/resources/logo-1.png"
-                    alt=""
-                    width={200}
-                  />
+                  <img src={logo} alt="" width={200} />
                 </Link>
                 <motion.ul
                   style={{

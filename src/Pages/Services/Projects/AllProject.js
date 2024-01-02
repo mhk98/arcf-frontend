@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useGetAllProjectsQuery } from "../../../Redux/features/projects/projects";
-import { useGetSingleHealthBannerQuery } from "../../../Redux/features/healthBanner/healthBanner";
 import { useGetAllProjectsBannerQuery } from "../../../Redux/features/projectBanner/projectBanner";
+import { useGetAllProjectsQuery } from "../../../Redux/features/projects/projects";
 import { useGetAllProjectsDetailsQuery } from "../../../Redux/features/projectsDetails/projectsDetails";
 
 const AllProject = () => {
@@ -57,6 +56,13 @@ const AllProject = () => {
     }
   }, [data2, isLoading2, isError2, error2]);
 
+  const handleMenuClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
   return (
     <div>
       {isLoading1 ? (
@@ -79,7 +85,9 @@ const AllProject = () => {
               <div className="page-header__inner">
                 <ul className="thm-breadcrumb list-unstyled">
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" onClick={() => handleMenuClick()}>
+                      Home
+                    </Link>
                   </li>
                   <li>
                     <span className="ms-2">/</span>
@@ -149,7 +157,10 @@ const AllProject = () => {
                   className="col-xl-4 col-lg-4 wow fadeInUp"
                   data-wow-delay="100ms"
                 >
-                  <Link to={`/health/${project.category}`}>
+                  <Link
+                    to={`/health/${project.category}`}
+                    onClick={() => handleMenuClick()}
+                  >
                     <div className="causes-one__single">
                       <div className="causes-one__img">
                         <Link to="/health">

@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { useGetAllFaqQuery } from "../../Redux/features/faq/faq";
 import developmentDirector from "../../image/about-us/development-director.jpg";
 import adirector from "../../image/about-us/director-administrator.jpg";
-import {
-  default as edirector,
-  default as exdirector,
-} from "../../image/about-us/executive-director.jpg";
+import edudirector from "../../image/about-us/education-director.jpg";
+import { default as exdirector } from "../../image/about-us/executive-director.jpg";
 import fdirector from "../../image/about-us/finance-director.jpg";
 import foreignDirector from "../../image/about-us/foreign-appears.jpg";
 import founder from "../../image/about-us/founder.jpg";
@@ -22,7 +20,6 @@ import t4 from "../../image/about-us/t4.jpg";
 import vchairman from "../../image/about-us/vice-chairman.jpg";
 import v1 from "../../image/volunteer/v1.jpg";
 import v2 from "../../image/volunteer/v2.jpg";
-import edudirector from "../../image/about-us/education-director.jpg"
 
 import "./About.css";
 const About = () => {
@@ -53,6 +50,15 @@ const About = () => {
   }, [faqData, faqLoading, faqError, error1]);
 
   console.log("faq", faqes);
+
+  const handleMenuClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
+
   return (
     <div>
       <section className="page-header">
@@ -67,7 +73,9 @@ const About = () => {
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={() => handleMenuClick()}>
+                  Home
+                </Link>
               </li>
               <li>
                 <span>/</span>
@@ -157,7 +165,11 @@ const About = () => {
                   </li>
                 </ul>
                 <div className="about-four__btn-box">
-                  <Link to="/contact" className="thm-btn about-four__btn">
+                  <Link
+                    to="/contact"
+                    onClick={() => handleMenuClick()}
+                    className="thm-btn about-four__btn"
+                  >
                     Discover More
                   </Link>
                 </div>
@@ -341,7 +353,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Jahid Hasan</Link>
+                    <Link to=" ">Jahid Hasan</Link>
                   </h3>
                   <p className="team-one__sub-title">Finance Director</p>
                 </div>
@@ -359,7 +371,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">kamrul Islam</Link>
+                    <Link to=" ">kamrul Islam</Link>
                   </h3>
                   <p className="team-one__sub-title">Project Director</p>
                 </div>
@@ -380,7 +392,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Md. Nazmol Hoque Rasel</Link>
+                    <Link to=" ">Md. Nazmol Hoque Rasel</Link>
                   </h3>
                   <p className="team-one__sub-title">Education Director</p>
                 </div>
@@ -398,7 +410,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Dr. Ruksana Akter</Link>
+                    <Link to=" ">Dr. Ruksana Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Health Director</p>
                 </div>
@@ -416,7 +428,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">MD Rokeybul Hasan khan </Link>
+                    <Link to=" ">MD Rokeybul Hasan khan </Link>
                   </h3>
                   <p className="team-one__sub-title">Director Administrator</p>
                 </div>
@@ -434,7 +446,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">MD. Saiful Islam</Link>
+                    <Link to=" ">MD. Saiful Islam</Link>
                   </h3>
                   <p className="team-one__sub-title">
                     Public Relation Director
@@ -454,7 +466,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Tarek Hassan</Link>
+                    <Link to=" ">Tarek Hassan</Link>
                   </h3>
                   <p className="team-one__sub-title">
                     Director Foreign Appears
@@ -472,7 +484,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Suleman Bhuiyan</Link>
+                    <Link to=" ">Suleman Bhuiyan</Link>
                   </h3>
                   <p className="team-one__sub-title">Development Director</p>
                 </div>
@@ -488,7 +500,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Social welfare director</Link>
+                    <Link to=" ">Social welfare director</Link>
                   </h3>
                   <p className="team-one__sub-title">Social Welfare Director</p>
                 </div>
@@ -521,7 +533,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html"> Tanjila Akter</Link>
+                    <Link to=" "> Tanjila Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -539,7 +551,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html"> Jannatul Ferdaus</Link>
+                    <Link to=" "> Jannatul Ferdaus</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -557,7 +569,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Yesmin Akter</Link>
+                    <Link to=" ">Yesmin Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -575,7 +587,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Mahfuz Ahamed</Link>
+                    <Link to=" ">Mahfuz Ahamed</Link>
                   </h3>
                   <p className="team-one__sub-title">Vice Chairman</p>
                 </div>
@@ -592,7 +604,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">MD. Sobuj</Link>
+                    <Link to=" ">MD. Sobuj</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -608,9 +620,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">
-                      MD. Mostafijur Rahman Shawon
-                    </Link>
+                    <Link to=" ">MD. Mostafijur Rahman Shawon</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -651,7 +661,11 @@ const About = () => {
               Join your hand with us for a <br /> better life and future
             </h3>
             <div className="become-volunteer-one__btn-box">
-              <Link to="/contact" className="thm-btn become-volunteer-one__btn">
+              <Link
+                to="/contact"
+                onClick={() => handleMenuClick()}
+                className="thm-btn become-volunteer-one__btn"
+              >
                 Discover More
               </Link>
             </div>
@@ -691,7 +705,11 @@ const About = () => {
                   individuals for self-reliance through information, skills
                   development, and mentorship.
                 </p>
-                <Link to="faq.html" className="thm-btn faq-one__btn">
+                <Link
+                  to="/contact"
+                  onClick={() => handleMenuClick()}
+                  className="thm-btn faq-one__btn"
+                >
                   Learn how to get help
                 </Link>
               </div>

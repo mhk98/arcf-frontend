@@ -10,6 +10,7 @@ import { healthBannerApi } from "../features/healthBanner/healthBanner";
 import { healthDetailsApi } from "../features/healthDetails/healthDetails";
 import { projectsBannerApi } from "../features/projectBanner/projectBanner";
 import { projectsDetailsApi } from "../features/projectsDetails/projectsDetails";
+import { healthCategoryDetailsApi } from "../features/healthCategoryDetails/healthCategoryDetails";
 
 const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
     [healthDetailsApi.reducerPath]: healthDetailsApi.reducer,
     [projectsBannerApi.reducerPath]: projectsBannerApi.reducer,
     [projectsDetailsApi.reducerPath]: projectsDetailsApi.reducer,
+    [healthCategoryDetailsApi.reducerPath]: healthCategoryDetailsApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
@@ -34,7 +36,8 @@ const store = configureStore({
       healthBannerApi.middleware,
       healthDetailsApi.middleware,
       projectsBannerApi.middleware,
-      projectsDetailsApi.middleware
+      projectsDetailsApi.middleware,
+      healthCategoryDetailsApi.middleware,
     ),
 });
 

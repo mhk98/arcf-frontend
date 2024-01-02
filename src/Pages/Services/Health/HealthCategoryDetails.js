@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useGetSinglehealthCategoryDetailsQuery } from "../../../Redux/features/healthCategoryDetails/healthCategoryDetails";
+import "react-quill/dist/quill.snow.css";
 import { useParams } from "react-router-dom";
-
+import { useGetSinglehealthCategoryDetailsQuery } from "../../../Redux/features/healthCategoryDetails/healthCategoryDetails";
+import headerBanner from "../../../image/health/page-header-bg.jpg";
 const HealthCategoryDetails = () => {
   const { id } = useParams();
 
   const { data, isLoading, isError, error } =
     useGetSinglehealthCategoryDetailsQuery(id);
-  const [healthDetails, setHealthDetails] = useState([]);
+  const [healthDetails, setHealthDetails] = useState("");
 
   useEffect(() => {
     if (isError) {
@@ -20,13 +21,12 @@ const HealthCategoryDetails = () => {
   }, [data, isLoading, isError, error]);
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <section className="page-header">
         <div
           className="page-header-bg"
           style={{
-            backgroundImage:
-              "url(assets/images/backgrounds/page-header-bg.jpg)",
+            backgroundImage: `url(${headerBanner})`,
           }}
         ></div>
         <div className="container">
@@ -66,7 +66,6 @@ const HealthCategoryDetails = () => {
                     </h3>
 
                     <div
-                      className="donation-details__text"
                       dangerouslySetInnerHTML={{
                         __html: healthDetails.attributeName,
                       }}
@@ -111,9 +110,9 @@ const HealthCategoryDetails = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-xl-4 col-lg-5">
+            <div className="col-xl-4 col-lg-5">
               <div className="donation-details__sidebar">
-                <div className="sidebar__post">
+                {/* <div className="sidebar__post">
                   <div
                     className="sidebar-shape-1"
                     style={{
@@ -169,7 +168,7 @@ const HealthCategoryDetails = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="donation-details__sidebar-shaare-cause">
                   <div
                     className="sidebar-shape-1"
@@ -197,7 +196,7 @@ const HealthCategoryDetails = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
