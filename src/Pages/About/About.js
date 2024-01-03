@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGetAllFaqQuery } from "../../Redux/features/faq/faq";
+import banner from "../../image/about-us/about-banner.jpg";
 import developmentDirector from "../../image/about-us/development-director.jpg";
 import adirector from "../../image/about-us/director-administrator.jpg";
 import edudirector from "../../image/about-us/education-director.jpg";
-import { default as exdirector } from "../../image/about-us/executive-director.jpg";
+import executiveDirector from "../../image/about-us/executive-director.jpg";
 import fdirector from "../../image/about-us/finance-director.jpg";
 import foreignDirector from "../../image/about-us/foreign-appears.jpg";
 import founder from "../../image/about-us/founder.jpg";
@@ -66,7 +67,8 @@ const About = () => {
           className="page-header-bg"
           style={{
             backgroundImage:
-              "url(assets/images/backgrounds/About-Us-top-banner.jpg)",
+              // "url(assets/images/backgrounds/About-Us-top-banner.jpg)",
+              `url(${banner})`,
           }}
         />
         <div className="container">
@@ -301,9 +303,9 @@ const About = () => {
           <div class="row align-items-center">
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__top">
-                <h3 class="product-details__title">Executive Director</h3>
+                <h3 class="product-details__title">Assistant Vice chairman</h3>
 
-                <p style={{ fontWeight: "bold" }}> Mokter Hossain</p>
+                <p style={{ fontWeight: "bold" }}> MD Rokeybul Hasan khan</p>
               </div>
 
               <div class="product-details__content">
@@ -327,7 +329,43 @@ const About = () => {
 
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__img">
-                <img src={exdirector} alt="" width={570} height={570} />
+                <img src={adirector} alt="" width={570} height={570} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-details">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__img">
+                <img src={executiveDirector} alt="" width={570} height={570} />
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__top">
+                <h3 class="product-details__title">Executive Director </h3>
+                <p style={{ fontWeight: "bold" }}>Mokter Hossain</p>
+              </div>
+
+              <div class="product-details__content">
+                <p class="product-details__content-text1">
+                  I am honored to welcome you to the ARC Foundation, a beacon of
+                  hope and positive change. As the Chairman and Founder, it is
+                  my privilege to lead an organization dedicated to transforming
+                  lives through education, empowerment, and community support.
+                  Our journey began with a simple yet profound belief – that
+                  every individual, regardless of their circumstances, deserves
+                  the opportunity to thrive. At the ARC Foundation, we are
+                  committed to breaking barriers, providing a helping hand to
+                  the vulnerable, and fostering sustainable solutions. Together,
+                  we can inspire change, empower the underserved, and build a
+                  future where everyone has the chance to claim their space in
+                  the world. Join us in our mission to make a lasting impact and
+                  create a brighter, more equitable tomorrow.
+                </p>
               </div>
             </div>
           </div>
@@ -361,22 +399,26 @@ const About = () => {
             </div>
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
+
             <div
               className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="200ms"
+              data-wow-delay="700ms"
             >
               <div className="team-one__single">
                 <div className="team-one__img">
-                  <img src={pdirector} alt />
+                  <img src={pbdirector} alt />
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to=" ">kamrul Islam</Link>
+                    <Link to=" ">MD. Saiful Islam</Link>
                   </h3>
-                  <p className="team-one__sub-title">Project Director</p>
+                  <p className="team-one__sub-title">
+                    Public Relation Director
+                  </p>
                 </div>
               </div>
             </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
 
@@ -418,42 +460,10 @@ const About = () => {
             </div>
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
-            <div
-              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="600ms"
-            >
-              <div className="team-one__single">
-                <div className="team-one__img">
-                  <img src={adirector} alt />
-                </div>
-                <div className="team-one__content">
-                  <h3 className="team-one__name">
-                    <Link to=" ">MD Rokeybul Hasan khan </Link>
-                  </h3>
-                  <p className="team-one__sub-title">Director Administrator</p>
-                </div>
-              </div>
-            </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
-            <div
-              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="700ms"
-            >
-              <div className="team-one__single">
-                <div className="team-one__img">
-                  <img src={pbdirector} alt />
-                </div>
-                <div className="team-one__content">
-                  <h3 className="team-one__name">
-                    <Link to=" ">MD. Saiful Islam</Link>
-                  </h3>
-                  <p className="team-one__sub-title">
-                    Public Relation Director
-                  </p>
-                </div>
-              </div>
-            </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
             <div
@@ -471,6 +481,23 @@ const About = () => {
                   <p className="team-one__sub-title">
                     Director Foreign Appears
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="200ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src={pdirector} alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <Link to=" ">kamrul Islam</Link>
+                  </h3>
+                  <p className="team-one__sub-title">Project Director</p>
                 </div>
               </div>
             </div>

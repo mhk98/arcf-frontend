@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useGetAllHealthQuery } from "../../Redux/features/health/health";
+import { useGetSingleHealthQuery } from "../../Redux/features/health/health";
 import { useGetSingleHealthBannerQuery } from "../../Redux/features/healthBanner/healthBanner";
 import { useGetSingleHealthDetailsQuery } from "../../Redux/features/healthDetails/healthDetails";
 
 const Health = () => {
-  const { id } = useParams();
+  const { category } = useParams();
   const [health, setHealth] = useState([]);
-  const { data, isLoading, isError, error } = useGetAllHealthQuery();
-
+  const { data, isLoading, isError, error } = useGetSingleHealthQuery(category);
+  
+  console.log("caegory", category);
   useEffect(() => {
     if (isError) {
       console.error("Error fetching projects data", error);
@@ -36,7 +37,7 @@ const Health = () => {
       }
     }
   }, [data1, isLoading1, isError1, error1]);
-  console.log("data1", banner.title);
+  console.log("data1", banner);
 
   const [healthDetails, setHealthDetails] = useState([]);
   const {
@@ -65,13 +66,10 @@ const Health = () => {
           <div
             className="page-header-bg"
             style={{
-              backgroundImage: `url(https://arcf-backend.onrender.com/${banner?.image})`,
+              backgroundImage: `url(http://localhost:5000//${banner?.image})`,
             }}
           >
-            <img
-              src={`https://arcf-backend.onrender.com/${banner?.image}`}
-              alt=""
-            />
+            <img src={`http://localhost:5000//${banner?.image}`} alt="" />
           </div>
           <div className="container">
             <div className="page-header__inner">
@@ -151,7 +149,7 @@ const Health = () => {
             <div className="col-lg-6 col-xl-4">
               <div className="product-details__img">
                 <img
-                  src={`https://arcf-backend.onrender.com/${healthDetails.image}`}
+                  src={`http://localhost:5000//${healthDetails.image}`}
                   alt=""
                   style={{ width: 370, height: 382 }}
                 />
@@ -180,7 +178,7 @@ const Health = () => {
                       <div className="causes-one__img">
                         <Link to="/">
                           <img
-                            src={`https://arcf-backend.onrender.com/${item.image}`}
+                            src={`http://localhost:5000//${item.image}`}
                             alt
                           />
                         </Link>

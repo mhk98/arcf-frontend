@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import p1 from "../image/health/Health-Care-Program.jpg"
-import p2 from "../image/education/Education and Child Program.jpg"
-import p3 from "../image/environment/Environment.jpg"
-import p4 from "../image/orphanage/Orphanage.jpg"
-import p5 from "../image/old-home/Old-Home.jpg"
-import p6 from "../image/quality-life/Human-Aid.jpg"
+import project1 from "../image/health/Health-Care-Program.jpg"
+import project2 from "../image/education/Education and Child Program.jpg"
+import project3 from "../image/environment/Environment.jpg"
+import project4 from "../image/orphanage/Orphanage.jpg"
+import project5 from "../image/old-home/Old-Home.jpg"
+import project6 from "../image/quality-life/Human-Aid.jpg"
 const DonateEvents = () => {
   return (
     <div>
@@ -89,7 +89,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p1} alt />
+                    <img src={project1} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Health</p>
@@ -376,7 +376,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p2} alt />
+                    <img src={project2} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Education</p>
@@ -663,7 +663,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p6} alt />
+                    <img src={project6} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Health</p>
@@ -950,7 +950,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p3} alt />
+                    <img src={project3} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Environment</p>
@@ -1236,7 +1236,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p4} alt />
+                    <img src={project4} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Orphanage</p>
@@ -1523,7 +1523,7 @@ const DonateEvents = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/health">
-                    <img src={p5} alt />
+                    <img src={project5} alt />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Old Home</p>

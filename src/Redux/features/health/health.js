@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const healthApi = createApi({
   reducerPath: "healthApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://arcf-backend.onrender.com/api/v1/",
+    baseUrl: "http://localhost:5000//api/v1/",
   }),
 
   tagTypes: ["healths"], // Define the tag type
@@ -34,21 +34,30 @@ export const healthApi = createApi({
       invalidatesTags: ["healths"],
     }),
 
-    getAllHealth: build.query({
-      query: () => ({
-        url: `/health`,
+    getSingleHealth: build.query({
+      query: (category) => ({
+        url: `/health/${category}`,
       }),
       providesTags: ["healths"],
 
       refetchOnMountOrArgChange: true,
       pollingInterval: 1000,
     }),
+    // getAllHealth: build.query({
+    //   query: () => ({
+    //     url: `/health`,
+    //   }),
+    //   providesTags: ["healths"],
+
+    //   refetchOnMountOrArgChange: true,
+    //   pollingInterval: 1000,
+    // }),
   }),
 });
 
 export const {
   useCreateHealthMutation,
-  useGetAllHealthQuery,
+  useGetSingleHealthQuery,
   useDeleteHealthMutation,
   useUpdateHealthMutation,
 } = healthApi;

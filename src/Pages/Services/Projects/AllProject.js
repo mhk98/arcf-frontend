@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useGetAllProjectsBannerQuery } from "../../../Redux/features/projectBanner/projectBanner";
 import { useGetAllProjectsQuery } from "../../../Redux/features/projects/projects";
@@ -73,13 +74,10 @@ const AllProject = () => {
             <div
               className="page-header-bg"
               style={{
-                backgroundImage: `url(https://arcf-backend.onrender.com/${item?.image})`,
+                backgroundImage: `url(http://localhost:5000//${item?.image})`,
               }}
             >
-              <img
-                src={`https://arcf-backend.onrender.com/${item?.image}`}
-                alt=""
-              />
+              <img src={`http://localhost:5000//${item?.image}`} alt="" />
             </div>
             <div className="container">
               <div className="page-header__inner">
@@ -106,7 +104,23 @@ const AllProject = () => {
       <section className="product-details">
         <div className="container">
           {isLoading2 ? (
-            <h2 className="text-center">Loading...</h2>
+            <Button
+              style={{
+                backgroundColor: "#00715D",
+                border: "none",
+              }}
+              disabled
+            >
+              <Spinner
+                style={{ textAlign: "center" }}
+                as="span"
+                animation="grow"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+              />
+              Loading...
+            </Button>
           ) : projectDetails ? (
             projectDetails.map((item) => (
               <div
@@ -131,7 +145,7 @@ const AllProject = () => {
                 <div className="col-lg-6 col-xl-4">
                   <div className="product-details__img">
                     <img
-                      src={`https://arcf-backend.onrender.com/${item.image}`}
+                      src={`http://localhost:5000//${item.image}`}
                       alt=""
                       style={{ width: 370, height: 382 }}
                     />
@@ -150,7 +164,23 @@ const AllProject = () => {
         <div className="container">
           <div className="row">
             {isLoading ? (
-              <h2 className="text-center">Loading...</h2>
+              <Button
+                style={{
+                  backgroundColor: "#00715D",
+                  border: "none",
+                }}
+                disabled
+              >
+                <Spinner
+                  style={{ textAlign: "center" }}
+                  as="span"
+                  animation="grow"
+                  size="sm"
+                  role="status"
+                  aria-hidden="true"
+                />
+                Loading...
+              </Button>
             ) : projects.length > 0 ? (
               projects.map((project) => (
                 <div
@@ -158,14 +188,14 @@ const AllProject = () => {
                   data-wow-delay="100ms"
                 >
                   <Link
-                    to={`/health/${project.category}`}
+                    to={`/project/${project.category}`}
                     onClick={() => handleMenuClick()}
                   >
                     <div className="causes-one__single">
                       <div className="causes-one__img">
                         <Link to="/health">
                           <img
-                            src={`https://arcf-backend.onrender.com/${project.image}`}
+                            src={`http://localhost:5000//${project.image}`}
                             alt=""
                           />
                         </Link>
