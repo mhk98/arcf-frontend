@@ -152,7 +152,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(http://localhost:5000//${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -161,7 +161,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`http://localhost:5000//${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>
@@ -204,7 +204,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(http://localhost:5000//${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -213,7 +213,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`http://localhost:5000//${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>
@@ -256,7 +256,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(http://localhost:5000//${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -265,7 +265,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`http://localhost:5000//${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>

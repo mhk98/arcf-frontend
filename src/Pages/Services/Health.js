@@ -8,7 +8,7 @@ const Health = () => {
   const { category } = useParams();
   const [health, setHealth] = useState([]);
   const { data, isLoading, isError, error } = useGetSingleHealthQuery(category);
-  
+
   console.log("caegory", category);
   useEffect(() => {
     if (isError) {
@@ -66,10 +66,10 @@ const Health = () => {
           <div
             className="page-header-bg"
             style={{
-              backgroundImage: `url(http://localhost:5000//${banner?.image})`,
+              backgroundImage: `url(http://localhost:5000/${banner?.image})`,
             }}
           >
-            <img src={`http://localhost:5000//${banner?.image}`} alt="" />
+            <img src={`http://localhost:5000/${banner?.image}`} alt="" />
           </div>
           <div className="container">
             <div className="page-header__inner">
@@ -149,7 +149,7 @@ const Health = () => {
             <div className="col-lg-6 col-xl-4">
               <div className="product-details__img">
                 <img
-                  src={`http://localhost:5000//${healthDetails.image}`}
+                  src={`http://localhost:5000/${healthDetails.image}`}
                   alt=""
                   style={{ width: 370, height: 382 }}
                 />
@@ -178,7 +178,7 @@ const Health = () => {
                       <div className="causes-one__img">
                         <Link to="/">
                           <img
-                            src={`http://localhost:5000//${item.image}`}
+                            src={`http://localhost:5000/${item.image}`}
                             alt
                           />
                         </Link>
