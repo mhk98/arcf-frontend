@@ -131,7 +131,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -140,7 +140,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>
@@ -183,7 +183,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -192,7 +192,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>
@@ -235,7 +235,7 @@ const Home = () => {
                   <div
                     className="image-layer"
                     // style={{
-                    //   backgroundImage: `url(https://arcf-backend.onrender.com/${slide?.image})`,
+                    //   backgroundImage: `url(http://localhost:5000/${slide?.image})`,
                     // }}
 
                     style={{
@@ -244,7 +244,7 @@ const Home = () => {
                     }}
                   >
                     {/* <img
-                            src={`https://arcf-backend.onrender.com/${slide.image}`}
+                            src={`http://localhost:5000/${slide.image}`}
                             alt=""
                           /> */}
                   </div>
@@ -375,7 +375,42 @@ const Home = () => {
                       data-wow-delay="100ms"
                     >
                       <div className="what_we_do">
-                        <img className="imageWithShadow" src={h1} alt="" />
+                        {/* <img className="imageWithShadow" src={h1} alt="" /> */}
+
+                        <Swiper
+                          modules={[Navigation, Pagination, Autoplay]}
+                          slidesPerView={1}
+                          effect="fade"
+                          loop={true}
+                          autoplay={{
+                            delay: 5000,
+                          }}
+                          // breakpoints={{
+                          //   // Define breakpoints for different screen sizes
+                          //   0: {
+                          //     slidesPerView: 2, // Show 2 slides on smaller screens like mobile devices
+                          //     spaceBetween: 10, // Adjust spacing for smaller screens
+                          //   },
+                          //   768: {
+                          //     slidesPerView: 4, // Show 4 slides on tablets
+                          //     spaceBetween: 15,
+                          //   },
+                          //   1024: {
+                          //     slidesPerView: 6, // Show 6 slides on larger screens like desktops
+                          //     spaceBetween: 20,
+                          //   },
+                          // }}
+                        >
+                          <SwiperSlide>
+                            <img src={h1} alt="" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={h1} alt="" />
+                          </SwiperSlide>
+                          <SwiperSlide>
+                            <img src={h1} alt="" />
+                          </SwiperSlide>
+                        </Swiper>
                       </div>
                     </div>
                   </div>

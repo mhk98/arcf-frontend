@@ -4,7 +4,8 @@ import { useGetAllProjectsQuery } from "../../../Redux/features/projects/project
 import { useGetSingleHealthBannerQuery } from "../../../Redux/features/healthBanner/healthBanner";
 import { useGetAllProjectsBannerQuery } from "../../../Redux/features/projectBanner/projectBanner";
 import { useGetAllProjectsDetailsQuery } from "../../../Redux/features/projectsDetails/projectsDetails";
-
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 const AllProject = () => {
   const [projects, setProjects] = useState([]);
 
@@ -67,13 +68,10 @@ const AllProject = () => {
             <div
               className="page-header-bg"
               style={{
-                backgroundImage: `url(https://arcf-backend.onrender.com/${item?.image})`,
+                backgroundImage: `url(http://localhost:5000/${item?.image})`,
               }}
             >
-              <img
-                src={`https://arcf-backend.onrender.com/${item?.image}`}
-                alt=""
-              />
+              <img src={`http://localhost:5000/${item?.image}`} alt="" />
             </div>
             <div className="container">
               <div className="page-header__inner">
@@ -123,7 +121,7 @@ const AllProject = () => {
                 <div className="col-lg-6 col-xl-4">
                   <div className="product-details__img">
                     <img
-                      src={`https://arcf-backend.onrender.com/${item.image}`}
+                      src={`http://localhost:5000/${item.image}`}
                       alt=""
                       style={{ width: 370, height: 382 }}
                     />
@@ -154,7 +152,7 @@ const AllProject = () => {
                       <div className="causes-one__img">
                         <Link to="/health">
                           <img
-                            src={`https://arcf-backend.onrender.com/${project.image}`}
+                            src={`http://localhost:5000/${project.image}`}
                             alt=""
                           />
                         </Link>

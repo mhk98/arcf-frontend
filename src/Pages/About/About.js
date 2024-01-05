@@ -22,8 +22,9 @@ import t4 from "../../image/about-us/t4.jpg";
 import vchairman from "../../image/about-us/vice-chairman.jpg";
 import v1 from "../../image/volunteer/v1.jpg";
 import v2 from "../../image/volunteer/v2.jpg";
-import edudirector from "../../image/about-us/education-director.jpg"
-
+import edudirector from "../../image/about-us/education-director.jpg";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./About.css";
 const About = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -56,13 +57,45 @@ const About = () => {
   return (
     <div>
       <section className="page-header">
-        <div
+        <Swiper
           className="page-header-bg"
-          style={{
-            backgroundImage:
-              "url(assets/images/backgrounds/About-Us-top-banner.jpg)",
-          }}
-        />
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          spaceBetween={0} // Adjust space between slides if needed
+          slidesPerView={1}
+          effect="fade"
+          loop={true}
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/project-banner.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          {/* Add more SwiperSlides if needed */}
+        </Swiper>
+
         <div className="container">
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
@@ -74,7 +107,7 @@ const About = () => {
               </li>
               <li className="active">Pages</li>
             </ul>
-            <h2>About us</h2>
+            <h2>Projects</h2>
           </div>
         </div>
       </section>
