@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGetAllFaqQuery } from "../../Redux/features/faq/faq";
+import banner from "../../image/about-us/about-banner.jpg";
 import developmentDirector from "../../image/about-us/development-director.jpg";
 import adirector from "../../image/about-us/director-administrator.jpg";
-import {
-  default as edirector,
-  default as exdirector,
-} from "../../image/about-us/executive-director.jpg";
+import edudirector from "../../image/about-us/education-director.jpg";
+import executiveDirector from "../../image/about-us/executive-director.jpg";
 import fdirector from "../../image/about-us/finance-director.jpg";
 import foreignDirector from "../../image/about-us/foreign-appears.jpg";
 import founder from "../../image/about-us/founder.jpg";
@@ -22,9 +21,8 @@ import t4 from "../../image/about-us/t4.jpg";
 import vchairman from "../../image/about-us/vice-chairman.jpg";
 import v1 from "../../image/volunteer/v1.jpg";
 import v2 from "../../image/volunteer/v2.jpg";
-import edudirector from "../../image/about-us/education-director.jpg";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+
+
 import "./About.css";
 const About = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -54,53 +52,32 @@ const About = () => {
   }, [faqData, faqLoading, faqError, error1]);
 
   console.log("faq", faqes);
+
+  const handleMenuClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
+
   return (
     <div>
       <section className="page-header">
-        <Swiper
+        <div
           className="page-header-bg"
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
-          spaceBetween={0} // Adjust space between slides if needed
-          slidesPerView={1}
-          effect="fade"
-          loop={true}
-          autoplay={{ delay: 2000 }}
-        >
-          <SwiperSlide>
-            <div
-              className="page-header-bg"
-              style={{
-                backgroundImage:
-                  "url(assets/images/backgrounds/page-header-bg.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="page-header-bg"
-              style={{
-                backgroundImage:
-                  "url(assets/images/backgrounds/project-banner.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="page-header-bg"
-              style={{
-                backgroundImage:
-                  "url(assets/images/backgrounds/page-header-bg.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
-          {/* Add more SwiperSlides if needed */}
-        </Swiper>
-
+          style={{
+            backgroundImage:
+              "url(assets/images/backgrounds/About-Us-top-banner.jpg)",
+          }}
+        />
         <div className="container">
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={() => handleMenuClick()}>
+                  Home
+                </Link>
               </li>
               <li>
                 <span>/</span>
@@ -190,7 +167,11 @@ const About = () => {
                   </li>
                 </ul>
                 <div className="about-four__btn-box">
-                  <Link to="/contact" className="thm-btn about-four__btn">
+                  <Link
+                    to="/contact"
+                    onClick={() => handleMenuClick()}
+                    className="thm-btn about-four__btn"
+                  >
                     Discover More
                   </Link>
                 </div>
@@ -322,9 +303,9 @@ const About = () => {
           <div class="row align-items-center">
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__top">
-                <h3 class="product-details__title">Executive Director</h3>
+                <h3 class="product-details__title">Assistant Vice chairman</h3>
 
-                <p style={{ fontWeight: "bold" }}> Mokter Hossain</p>
+                <p style={{ fontWeight: "bold" }}> MD Rokeybul Hasan khan</p>
               </div>
 
               <div class="product-details__content">
@@ -348,7 +329,43 @@ const About = () => {
 
             <div class="col-lg-6 col-xl-6">
               <div class="product-details__img">
-                <img src={exdirector} alt="" width={570} height={570} />
+                <img src={adirector} alt="" width={570} height={570} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-details">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__img">
+                <img src={executiveDirector} alt="" width={570} height={570} />
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-6">
+              <div class="product-details__top">
+                <h3 class="product-details__title">Executive Director </h3>
+                <p style={{ fontWeight: "bold" }}>Mokter Hossain</p>
+              </div>
+
+              <div class="product-details__content">
+                <p class="product-details__content-text1">
+                  I am honored to welcome you to the ARC Foundation, a beacon of
+                  hope and positive change. As the Chairman and Founder, it is
+                  my privilege to lead an organization dedicated to transforming
+                  lives through education, empowerment, and community support.
+                  Our journey began with a simple yet profound belief – that
+                  every individual, regardless of their circumstances, deserves
+                  the opportunity to thrive. At the ARC Foundation, we are
+                  committed to breaking barriers, providing a helping hand to
+                  the vulnerable, and fostering sustainable solutions. Together,
+                  we can inspire change, empower the underserved, and build a
+                  future where everyone has the chance to claim their space in
+                  the world. Join us in our mission to make a lasting impact and
+                  create a brighter, more equitable tomorrow.
+                </p>
               </div>
             </div>
           </div>
@@ -374,7 +391,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Jahid Hasan</Link>
+                    <Link to=" ">Jahid Hasan</Link>
                   </h3>
                   <p className="team-one__sub-title">Finance Director</p>
                 </div>
@@ -382,22 +399,26 @@ const About = () => {
             </div>
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
+
             <div
               className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="200ms"
+              data-wow-delay="700ms"
             >
               <div className="team-one__single">
                 <div className="team-one__img">
-                  <img src={pdirector} alt />
+                  <img src={pbdirector} alt />
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">kamrul Islam</Link>
+                    <Link to=" ">MD. Saiful Islam</Link>
                   </h3>
-                  <p className="team-one__sub-title">Project Director</p>
+                  <p className="team-one__sub-title">
+                    Public Relation Director
+                  </p>
                 </div>
               </div>
             </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
 
@@ -413,7 +434,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Md. Nazmol Hoque Rasel</Link>
+                    <Link to=" ">Md. Nazmol Hoque Rasel</Link>
                   </h3>
                   <p className="team-one__sub-title">Education Director</p>
                 </div>
@@ -431,7 +452,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Dr. Ruksana Akter</Link>
+                    <Link to=" ">Dr. Ruksana Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Health Director</p>
                 </div>
@@ -439,42 +460,10 @@ const About = () => {
             </div>
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
-            <div
-              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="600ms"
-            >
-              <div className="team-one__single">
-                <div className="team-one__img">
-                  <img src={adirector} alt />
-                </div>
-                <div className="team-one__content">
-                  <h3 className="team-one__name">
-                    <Link to="team-details.html">MD Rokeybul Hasan khan </Link>
-                  </h3>
-                  <p className="team-one__sub-title">Director Administrator</p>
-                </div>
-              </div>
-            </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
-            <div
-              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay="700ms"
-            >
-              <div className="team-one__single">
-                <div className="team-one__img">
-                  <img src={pbdirector} alt />
-                </div>
-                <div className="team-one__content">
-                  <h3 className="team-one__name">
-                    <Link to="team-details.html">MD. Saiful Islam</Link>
-                  </h3>
-                  <p className="team-one__sub-title">
-                    Public Relation Director
-                  </p>
-                </div>
-              </div>
-            </div>
+
             {/*Team One Single End*/}
             {/*Team One Single Start*/}
             <div
@@ -487,11 +476,28 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Tarek Hassan</Link>
+                    <Link to=" ">Tarek Hassan</Link>
                   </h3>
                   <p className="team-one__sub-title">
                     Director Foreign Appears
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+              data-wow-delay="200ms"
+            >
+              <div className="team-one__single">
+                <div className="team-one__img">
+                  <img src={pdirector} alt />
+                </div>
+                <div className="team-one__content">
+                  <h3 className="team-one__name">
+                    <Link to=" ">kamrul Islam</Link>
+                  </h3>
+                  <p className="team-one__sub-title">Project Director</p>
                 </div>
               </div>
             </div>
@@ -505,7 +511,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Suleman Bhuiyan</Link>
+                    <Link to=" ">Suleman Bhuiyan</Link>
                   </h3>
                   <p className="team-one__sub-title">Development Director</p>
                 </div>
@@ -521,7 +527,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Social welfare director</Link>
+                    <Link to=" ">Social welfare director</Link>
                   </h3>
                   <p className="team-one__sub-title">Social Welfare Director</p>
                 </div>
@@ -554,7 +560,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html"> Tanjila Akter</Link>
+                    <Link to=" "> Tanjila Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -572,7 +578,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html"> Jannatul Ferdaus</Link>
+                    <Link to=" "> Jannatul Ferdaus</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -590,7 +596,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Yesmin Akter</Link>
+                    <Link to=" ">Yesmin Akter</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -608,7 +614,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">Mahfuz Ahamed</Link>
+                    <Link to=" ">Mahfuz Ahamed</Link>
                   </h3>
                   <p className="team-one__sub-title">Vice Chairman</p>
                 </div>
@@ -625,7 +631,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">MD. Sobuj</Link>
+                    <Link to=" ">MD. Sobuj</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -641,9 +647,7 @@ const About = () => {
                 </div>
                 <div className="team-one__content">
                   <h3 className="team-one__name">
-                    <Link to="team-details.html">
-                      MD. Mostafijur Rahman Shawon
-                    </Link>
+                    <Link to=" ">MD. Mostafijur Rahman Shawon</Link>
                   </h3>
                   <p className="team-one__sub-title">Volunteer</p>
                 </div>
@@ -684,7 +688,11 @@ const About = () => {
               Join your hand with us for a <br /> better life and future
             </h3>
             <div className="become-volunteer-one__btn-box">
-              <Link to="/contact" className="thm-btn become-volunteer-one__btn">
+              <Link
+                to="/contact"
+                onClick={() => handleMenuClick()}
+                className="thm-btn become-volunteer-one__btn"
+              >
                 Discover More
               </Link>
             </div>
@@ -724,7 +732,11 @@ const About = () => {
                   individuals for self-reliance through information, skills
                   development, and mentorship.
                 </p>
-                <Link to="faq.html" className="thm-btn faq-one__btn">
+                <Link
+                  to="/contact"
+                  onClick={() => handleMenuClick()}
+                  className="thm-btn faq-one__btn"
+                >
                   Learn how to get help
                 </Link>
               </div>

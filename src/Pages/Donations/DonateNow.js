@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-
+import BkashPayment from "../../Components/PaymentOption/BkashPayment";
+import NagadPayment from "../../Components/PaymentOption/NagadPayment";
+import OnlinePayment from "../../Components/PaymentOption/OnlinePayment";
+import "../../Components/PaymentOption/Payment.css";
+import UpayPayment from "../../Components/PaymentOption/UpayPayment";
+import nagadPayment from "../../image/payment/nagad-payment.jpg";
+import onlinePayment from "../../image/payment/online-payment.png";
+import bkashPayment from "../../image/payment/bkash-payment1.jpg";
+import upayPayment from "../../image/payment/upay-payment.jpg";
 const DonateNow = () => {
+  const [activeButton, setActiveButton] = useState(0);
+
+  const handleButtonClick = (index) => {
+    setActiveButton(index);
+  };
   return (
     <div>
       {/*Donate Now Start*/}
@@ -15,11 +28,13 @@ const DonateNow = () => {
                     Enter your donation
                   </h3>
                   <div className="donate-now__enter-donation-input">
-                    <select className="selectpicker">
+                    <p className="donation_currency">$</p>
+
+                    {/* <select className="selectpicker">
                       <option>$</option>
                       <option>₤</option>
                       <option>¥</option>
-                    </select>
+                    </select> */}
                     <input
                       type="text"
                       name="donation-money"
@@ -131,73 +146,69 @@ const DonateNow = () => {
                 </div>
                 <div className="donate-now__payment-info">
                   <h3 className="donate-now__title">Payment info</h3>
-                  <form className="donate-now__payment-info-form">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <input
-                            type="text"
-                            placeholder="Card number"
-                            name="number"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <input
-                            type="text"
-                            placeholder="MM / YY"
-                            name="date"
-                            id="datepicker"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <input
-                            type="text"
-                            placeholder="Card code ( CVC )"
-                            name="code"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <input
-                            type="text"
-                            placeholder="Billing address"
-                            name="Billing"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <input type="text" placeholder="City" name="City" />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="donate-now__payment-info-input">
-                          <select
-                            className="selectpicker"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Country</option>
-                            <option value={1}>USA</option>
-                            <option value={2}>England</option>
-                            <option value={3}>Australia</option>
-                          </select>
-                        </div>
-                      </div>
+
+                  <div className="row gap-5">
+                    <div
+                      className={`payment-option col-xl-5 ${
+                        activeButton === 0 ? "active" : ""
+                      }`}
+                      onClick={() => handleButtonClick(0)}
+                    >
+                      <p className=""> Online Payment</p>
+                      <img src={onlinePayment} alt="" />
                     </div>
-                    <div className="donate-now__payment-info-btn-box">
-                      <button
-                        type="submit"
-                        className="thm-btn donate-now__payment-info-btn"
-                      >
-                        Donate
-                      </button>
+                    <div
+                      className={`payment-option col-xl-5 ${
+                        activeButton === 1 ? "active" : ""
+                      }`}
+                      onClick={() => handleButtonClick(1)}
+                    >
+                      <p className=""> Nagad Payment</p>
+                      <img src={nagadPayment} alt="" />
                     </div>
-                  </form>
+
+                    <div
+                      className={`payment-option col-xl-5 ${
+                        activeButton === 2 ? "active" : ""
+                      }`}
+                      onClick={() => handleButtonClick(2)}
+                    >
+                      <p className=""> Bkash Payment</p>
+                      <img src={bkashPayment} alt="" />
+                    </div>
+                    <div
+                      className={`payment-option col-xl-5 ${
+                        activeButton === 3 ? "active" : ""
+                      }`}
+                      onClick={() => handleButtonClick(3)}
+                    >
+                      <p className=""> Upay Payment</p>
+                      <img src={upayPayment} alt="" />
+                    </div>
+                  </div>
+
+                  <div className="payment-container">
+                    {activeButton === 0 && (
+                      <div>
+                        <OnlinePayment />
+                      </div>
+                    )}
+                    {activeButton === 1 && (
+                      <div>
+                        <NagadPayment />
+                      </div>
+                    )}
+                    {activeButton === 2 && (
+                      <div>
+                        <BkashPayment />
+                      </div>
+                    )}
+                    {activeButton === 3 && (
+                      <div>
+                        <UpayPayment />
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

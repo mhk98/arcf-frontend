@@ -34,21 +34,30 @@ export const healthApi = createApi({
       invalidatesTags: ["healths"],
     }),
 
-    getAllHealth: build.query({
-      query: () => ({
-        url: `/health`,
+    getSingleHealth: build.query({
+      query: (category) => ({
+        url: `/health/${category}`,
       }),
       providesTags: ["healths"],
 
       refetchOnMountOrArgChange: true,
       pollingInterval: 1000,
     }),
+    // getAllHealth: build.query({
+    //   query: () => ({
+    //     url: `/health`,
+    //   }),
+    //   providesTags: ["healths"],
+
+    //   refetchOnMountOrArgChange: true,
+    //   pollingInterval: 1000,
+    // }),
   }),
 });
 
 export const {
   useCreateHealthMutation,
-  useGetAllHealthQuery,
+  useGetSingleHealthQuery,
   useDeleteHealthMutation,
   useUpdateHealthMutation,
 } = healthApi;

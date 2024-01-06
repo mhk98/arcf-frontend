@@ -10015,6 +10015,15 @@ body.locked .page-wrapper {
   display: block;
 }
 
+.donation_currency {
+  font-size: 50px;
+  font-family: var(--oxpins-font-two);
+  font-weight: 900;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  color: white;
+}
 .donate-now__enter-donation-input input[type="text"] {
   height: 130px;
   width: 100%;
@@ -10032,7 +10041,7 @@ body.locked .page-wrapper {
   letter-spacing: -0.04em;
 }
 
-.donate-now__enter-donation-input
+/* .donate-now__enter-donation-input
   .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(
     .input-group-btn
   ) {
@@ -10041,13 +10050,13 @@ body.locked .page-wrapper {
   left: 0;
   top: 0;
   margin-top: 0;
-}
+} */
 
-.donate-now__enter-donation-input .bootstrap-select > .dropdown-toggle::after {
+/* .donate-now__enter-donation-input .bootstrap-select > .dropdown-toggle::after {
   display: none;
-}
+} */
 
-.donate-now__enter-donation-input .bootstrap-select > .dropdown-toggle {
+/* .donate-now__enter-donation-input .bootstrap-select > .dropdown-toggle {
   position: relative;
   height: 130px;
   width: 145px;
@@ -10066,7 +10075,7 @@ body.locked .page-wrapper {
   font-family: var(--oxpins-font-two);
   text-align: center;
   letter-spacing: -0.04em;
-}
+} */
 
 .donate-now__enter-donation-input
   .bootstrap-select
@@ -13029,3 +13038,21 @@ body.boxed-wrapper {
   padding: 10px;
   border-radius: 100%;
 }  */
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+  .gallery-one__single {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Adjustments for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery-one__single {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+

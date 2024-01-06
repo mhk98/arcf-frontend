@@ -50,12 +50,14 @@ import { Provider } from "react-redux";
 import DonateEvents from "./Components/DonateEvents";
 import About from "./Pages/About/About";
 import EducationDetails from "./Pages/Services/EducationDetails";
-import MIcroDetails from "./Pages/Services/MIcroDetails";
-import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
-import store from "./Redux/app/store";
-import AllProject from "./Pages/Services/Projects/AllProject";
-import Youth from "./Pages/Services/Youth";
 import HealthCategoryDetails from "./Pages/Services/Health/HealthCategoryDetails";
+import MIcroDetails from "./Pages/Services/MIcroDetails";
+import AllProject from "./Pages/Services/Projects/AllProject";
+import QualityLifeDetails from "./Pages/Services/QualityLifeDetails";
+import Youth from "./Pages/Services/Youth";
+import store from "./Redux/app/store";
+import ProjectSubCategory from "./Pages/Services/Projects/ProjectSubCategory";
+import ProjectSubCategoryDetails from "./Pages/Services/Projects/ProjectSubCategoryDetails";
 
 function App() {
   const [x, setX] = useState(0);
@@ -90,8 +92,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/projects" element={<AllProject />} />
-          <Route path="/projects" element={<AllProject />} />
-          <Route path="/health/:id" element={<Health />} />
+          <Route path="/project/:id" element={<ProjectSubCategory />} />
+          <Route
+            path="/project-subcategory-details/:projectId/:subcategoryId"
+            element={<ProjectSubCategoryDetails />}
+          />
           <Route
             path="/health-category-details/:id"
             element={<HealthCategoryDetails />}

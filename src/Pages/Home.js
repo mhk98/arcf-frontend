@@ -6,7 +6,28 @@ import { useGetAllSliderQuery } from "../Redux/features/slider/slider";
 import bg from "../assets/images/backgrounds/become-volunteer-one-bg.jpg";
 import h2 from "../image/Helping-each-other-can-make-world-better.png";
 import h1 from "../image/What-We-Do.png";
-
+import {
+  default as p2,
+  default as project2,
+} from "../image/education/Education and Child Program.jpg";
+import {
+  default as p5,
+  default as project3,
+} from "../image/environment/Environment.jpg";
+import {
+  default as p1,
+  default as project1,
+} from "../image/health/Health-Care-Program.jpg";
+import p3 from "../image/micocredit/Microcredit-Program.jpg";
+import project5 from "../image/old-home/Old-Home.jpg";
+import {
+  default as p6,
+  default as project4,
+} from "../image/orphanage/Orphanage.jpg";
+import {
+  default as p4,
+  default as project6,
+} from "../image/quality-life/Improving-Quality-Of-Life.jpg";
 // import Swiper core and required modules
 import {
   A11y,
@@ -20,7 +41,14 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Register from "../Components/Register";
 import { useGetAllaboutQuery } from "../Redux/features/about/about";
-
+import nagadPayment from "../image/payment/nagad-payment.jpg";
+import onlinePayment from "../image/payment/online-payment.png";
+import bkashPayment from "../image/payment/bkash-payment1.jpg";
+import upayPayment from "../image/payment/upay-payment.jpg";
+import OnlinePayment from "../Components/PaymentOption/OnlinePayment";
+import NagadPayment from "../Components/PaymentOption/NagadPayment";
+import BkashPayment from "../Components/PaymentOption/BkashPayment";
+import UpayPayment from "../Components/PaymentOption/UpayPayment";
 const Home = () => {
   useEffect(() => {
     // Initialize WOW.js
@@ -100,6 +128,12 @@ const Home = () => {
 
   console.log("aboutData", aboutData);
 
+  const [activeButton, setActiveButton] = useState(0);
+
+  const handleButtonClick = (index) => {
+    setActiveButton(index);
+  };
+
   return (
     <div className="custom-cursor">
       {/* /.preloader */}
@@ -163,15 +197,14 @@ const Home = () => {
                             {/* {slide.text} */}
                             Empowering Lives, Transforming Futures
                           </h2>
-                          <div className="main-slider__btn-box">
-                            <a
-                              href="about.html"
+                          {/* <div className="main-slider__btn-box">
+                            <Link
+                              to="/contact"
                               className="thm-btn main-slider__btn"
                             >
-                              {" "}
                               Discover more
-                            </a>
-                          </div>
+                            </Link>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -215,15 +248,14 @@ const Home = () => {
                             {/* {slide.text} */}
                             Creating Impact, One Community at a Time
                           </h2>
-                          <div className="main-slider__btn-box">
-                            <a
-                              href="about.html"
+                          {/* <div className="main-slider__btn-box">
+                            <Link
+                              to="/contact"
                               className="thm-btn main-slider__btn"
                             >
-                              {" "}
                               Discover more
-                            </a>
-                          </div>
+                            </Link>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -267,15 +299,14 @@ const Home = () => {
                             {/* {slide.text} */}
                             Rise for Equality, Education, and Development
                           </h2>
-                          <div className="main-slider__btn-box">
-                            <a
-                              href="about.html"
+                          {/* <div className="main-slider__btn-box">
+                            <Link
+                              to="/contact"
                               className="thm-btn main-slider__btn"
                             >
-                              {" "}
                               Discover more
-                            </a>
-                          </div>
+                            </Link>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -688,7 +719,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src={p1} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Health</p>
@@ -729,7 +760,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-1.jpg" alt />
+                      <img src={p2} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Education</p>
@@ -769,7 +800,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/microcredit">
-                      <img src="assets/images/resources/p-3.jpg" alt />
+                      <img src={p3} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Microcredit Program</p>
@@ -809,7 +840,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/quality-life">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src={p4} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Improving Quality Of Life</p>
@@ -853,7 +884,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/environment">
-                      <img src="assets/images/resources/p-1.jpg" alt />
+                      <img src={p5} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Environment</p>
@@ -893,7 +924,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/orphanage">
-                      <img src="assets/images/resources/p-3.jpg" alt />
+                      <img src={p6} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Orphanage</p>
@@ -978,7 +1009,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-2.jpg" alt />
+                      <img src={project1} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Health</p>
@@ -1009,7 +1040,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donation Now
+                          Donate now
                         </button>
                       </div>
 
@@ -1063,11 +1094,14 @@ const Home = () => {
                                               Enter your donation
                                             </h3>
                                             <div className="donate-now__enter-donation-input">
-                                              <select className="selectpicker">
+                                              <p className="donation_currency">
+                                                $
+                                              </p>
+                                              {/* <select className="selectpicker">
                                                 <option>$</option>
                                                 <option>₤</option>
                                                 <option>¥</option>
-                                              </select>
+                                              </select> */}
                                               <input
                                                 type="text"
                                                 name="donation-money"
@@ -1165,85 +1199,106 @@ const Home = () => {
                                             <h3 className="donate-now__title">
                                               Payment info
                                             </h3>
-                                            <form className="donate-now__payment-info-form">
-                                              <div className="row">
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <input
-                                                      type="text"
-                                                      placeholder="Card number"
-                                                      name="number"
-                                                    />
-                                                  </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <input
-                                                      type="text"
-                                                      placeholder="MM / YY"
-                                                      name="date"
-                                                      id="datepicker"
-                                                    />
-                                                  </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <input
-                                                      type="text"
-                                                      placeholder="Card code ( CVC )"
-                                                      name="code"
-                                                    />
-                                                  </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <input
-                                                      type="text"
-                                                      placeholder="Billing address"
-                                                      name="Billing"
-                                                    />
-                                                  </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <input
-                                                      type="text"
-                                                      placeholder="City"
-                                                      name="City"
-                                                    />
-                                                  </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
-                                                    <select
-                                                      className="selectpicker"
-                                                      aria-label="Default select example"
-                                                    >
-                                                      <option selected>
-                                                        Country
-                                                      </option>
-                                                      <option value={1}>
-                                                        USA
-                                                      </option>
-                                                      <option value={2}>
-                                                        England
-                                                      </option>
-                                                      <option value={3}>
-                                                        Australia
-                                                      </option>
-                                                    </select>
-                                                  </div>
-                                                </div>
+
+                                            <div className="row gap-5">
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 0
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(0)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Online Payment
+                                                </p>
+                                                <img
+                                                  src={onlinePayment}
+                                                  alt=""
+                                                />
                                               </div>
-                                              <div className="donate-now__payment-info-btn-box">
-                                                <button
-                                                  type="submit"
-                                                  className="thm-btn donate-now__payment-info-btn"
-                                                >
-                                                  Donate now
-                                                </button>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 1
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(1)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Nagad Payment
+                                                </p>
+                                                <img
+                                                  src={nagadPayment}
+                                                  alt=""
+                                                />
                                               </div>
-                                            </form>
+
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 2
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(2)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Bkash Payment
+                                                </p>
+                                                <img
+                                                  src={bkashPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 3
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(3)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Upay Payment
+                                                </p>
+                                                <img src={upayPayment} alt="" />
+                                              </div>
+                                            </div>
+
+                                            <div className="payment-container">
+                                              {activeButton === 0 && (
+                                                <div>
+                                                  <OnlinePayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 1 && (
+                                                <div>
+                                                  <NagadPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 2 && (
+                                                <div>
+                                                  <BkashPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 3 && (
+                                                <div>
+                                                  <UpayPayment />
+                                                </div>
+                                              )}
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -1266,7 +1321,7 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-1.jpg" alt />
+                      <img src={project2} alt />
                     </Link>
                     <div className="causes-one__cat">
                       <p className="mt-2">Education</p>
@@ -1296,7 +1351,7 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donation Now
+                          Donate now
                         </button>
                       </div>
 
@@ -1452,56 +1507,279 @@ const Home = () => {
                                             <h3 className="donate-now__title">
                                               Payment info
                                             </h3>
-                                            <form className="donate-now__payment-info-form">
+
+                                            <div className="row gap-5">
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 0
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(0)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Online Payment
+                                                </p>
+                                                <img
+                                                  src={onlinePayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 1
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(1)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Nagad Payment
+                                                </p>
+                                                <img
+                                                  src={nagadPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 2
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(2)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Bkash Payment
+                                                </p>
+                                                <img
+                                                  src={bkashPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 3
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(3)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Upay Payment
+                                                </p>
+                                                <img src={upayPayment} alt="" />
+                                              </div>
+                                            </div>
+
+                                            <div className="payment-container">
+                                              {activeButton === 0 && (
+                                                <div>
+                                                  <OnlinePayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 1 && (
+                                                <div>
+                                                  <NagadPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 2 && (
+                                                <div>
+                                                  <BkashPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 3 && (
+                                                <div>
+                                                  <UpayPayment />
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src={project6} alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Improving Quality Of Life</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Improving Quality Of Life</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Health Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
                                               <div className="row">
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <input
                                                       type="text"
-                                                      placeholder="Card number"
-                                                      name="number"
+                                                      placeholder="First name"
+                                                      name="name"
                                                     />
                                                   </div>
                                                 </div>
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <input
                                                       type="text"
-                                                      placeholder="MM / YY"
-                                                      name="date"
-                                                      id="datepicker"
+                                                      placeholder="Last name"
+                                                      name="last-name"
                                                     />
                                                   </div>
                                                 </div>
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <input
-                                                      type="text"
-                                                      placeholder="Card code ( CVC )"
-                                                      name="code"
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
                                                     />
                                                   </div>
                                                 </div>
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <input
                                                       type="text"
-                                                      placeholder="Billing address"
-                                                      name="Billing"
+                                                      placeholder="Phone"
+                                                      name="phone"
                                                     />
                                                   </div>
                                                 </div>
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <input
                                                       type="text"
-                                                      placeholder="City"
-                                                      name="City"
+                                                      placeholder="Address"
+                                                      name="Address"
                                                     />
                                                   </div>
                                                 </div>
                                                 <div className="col-xl-6">
-                                                  <div className="donate-now__payment-info-input">
+                                                  <div className="donate-now__personal-info-input">
                                                     <select
                                                       className="selectpicker"
                                                       aria-label="Default select example"
@@ -1522,15 +1800,123 @@ const Home = () => {
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div className="donate-now__payment-info-btn-box">
-                                                <button
-                                                  type="submit"
-                                                  className="thm-btn donate-now__payment-info-btn"
-                                                >
-                                                  Donate now
-                                                </button>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
                                               </div>
                                             </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+
+                                            <div className="row gap-5">
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 0
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(0)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Online Payment
+                                                </p>
+                                                <img
+                                                  src={onlinePayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 1
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(1)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Nagad Payment
+                                                </p>
+                                                <img
+                                                  src={nagadPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 2
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(2)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Bkash Payment
+                                                </p>
+                                                <img
+                                                  src={bkashPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 3
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(3)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Upay Payment
+                                                </p>
+                                                <img src={upayPayment} alt="" />
+                                              </div>
+                                            </div>
+
+                                            <div className="payment-container">
+                                              {activeButton === 0 && (
+                                                <div>
+                                                  <OnlinePayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 1 && (
+                                                <div>
+                                                  <NagadPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 2 && (
+                                                <div>
+                                                  <BkashPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 3 && (
+                                                <div>
+                                                  <UpayPayment />
+                                                </div>
+                                              )}
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -1553,15 +1939,15 @@ const Home = () => {
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/health">
-                      <img src="assets/images/resources/p-3.jpg" alt />
+                      <img src={project3} alt />
                     </Link>
                     <div className="causes-one__cat">
-                      <p className="mt-2">Microcredit Program</p>
+                      <p className="mt-2">Environment</p>
                     </div>
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/health">Microcredit Program</Link>
+                      <Link to="/health">Environment</Link>
                     </h3>
                     <p className="causes-one__text">
                       ARC Foundation's Health Care Program is a lifeline for
@@ -1583,7 +1969,315 @@ const Home = () => {
                           data-bs-target="#exampleModal"
                           data-bs-whatever="@mdo"
                         >
-                          Donation Now
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Education Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="First name"
+                                                      name="name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Last name"
+                                                      name="last-name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Phone"
+                                                      name="phone"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Address"
+                                                      name="Address"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+
+                                            <div className="row gap-5">
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 0
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(0)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Online Payment
+                                                </p>
+                                                <img
+                                                  src={onlinePayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 1
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(1)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Nagad Payment
+                                                </p>
+                                                <img
+                                                  src={nagadPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 2
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(2)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Bkash Payment
+                                                </p>
+                                                <img
+                                                  src={bkashPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 3
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(3)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Upay Payment
+                                                </p>
+                                                <img src={upayPayment} alt="" />
+                                              </div>
+                                            </div>
+
+                                            <div className="payment-container">
+                                              {activeButton === 0 && (
+                                                <div>
+                                                  <OnlinePayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 1 && (
+                                                <div>
+                                                  <NagadPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 2 && (
+                                                <div>
+                                                  <BkashPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 3 && (
+                                                <div>
+                                                  <UpayPayment />
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src={project4} alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Orphanage</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Orphanage</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
                         </button>
                       </div>
 
@@ -1818,6 +2512,423 @@ const Home = () => {
                                                 </button>
                                               </div>
                                             </form>
+                                            <div className="donate-now__payment-info">
+                                              <h3 className="donate-now__title">
+                                                Payment info
+                                              </h3>
+
+                                              <div className="row gap-5">
+                                                <div
+                                                  className={`payment-option col-xl-5 ${
+                                                    activeButton === 0
+                                                      ? "active"
+                                                      : ""
+                                                  }`}
+                                                  onClick={() =>
+                                                    handleButtonClick(0)
+                                                  }
+                                                >
+                                                  <p className="">
+                                                    {" "}
+                                                    Online Payment
+                                                  </p>
+                                                  <img
+                                                    src={onlinePayment}
+                                                    alt=""
+                                                  />
+                                                </div>
+                                                <div
+                                                  className={`payment-option col-xl-5 ${
+                                                    activeButton === 1
+                                                      ? "active"
+                                                      : ""
+                                                  }`}
+                                                  onClick={() =>
+                                                    handleButtonClick(1)
+                                                  }
+                                                >
+                                                  <p className="">
+                                                    {" "}
+                                                    Nagad Payment
+                                                  </p>
+                                                  <img
+                                                    src={nagadPayment}
+                                                    alt=""
+                                                  />
+                                                </div>
+
+                                                <div
+                                                  className={`payment-option col-xl-5 ${
+                                                    activeButton === 2
+                                                      ? "active"
+                                                      : ""
+                                                  }`}
+                                                  onClick={() =>
+                                                    handleButtonClick(2)
+                                                  }
+                                                >
+                                                  <p className="">
+                                                    {" "}
+                                                    Bkash Payment
+                                                  </p>
+                                                  <img
+                                                    src={bkashPayment}
+                                                    alt=""
+                                                  />
+                                                </div>
+                                                <div
+                                                  className={`payment-option col-xl-5 ${
+                                                    activeButton === 3
+                                                      ? "active"
+                                                      : ""
+                                                  }`}
+                                                  onClick={() =>
+                                                    handleButtonClick(3)
+                                                  }
+                                                >
+                                                  <p className="">
+                                                    {" "}
+                                                    Upay Payment
+                                                  </p>
+                                                  <img
+                                                    src={upayPayment}
+                                                    alt=""
+                                                  />
+                                                </div>
+                                              </div>
+
+                                              <div className="payment-container">
+                                                {activeButton === 0 && (
+                                                  <div>
+                                                    <OnlinePayment />
+                                                  </div>
+                                                )}
+                                                {activeButton === 1 && (
+                                                  <div>
+                                                    <NagadPayment />
+                                                  </div>
+                                                )}
+                                                {activeButton === 2 && (
+                                                  <div>
+                                                    <BkashPayment />
+                                                  </div>
+                                                )}
+                                                {activeButton === 3 && (
+                                                  <div>
+                                                    <UpayPayment />
+                                                  </div>
+                                                )}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-xl-4 col-lg-4 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link to="/health">
+                      <img src={project5} alt />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Old Home</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link to="/health">Old Home</Link>
+                    </h3>
+                    <p className="causes-one__text">
+                      ARC Foundation's Health Care Program is a lifeline for
+                      those in need. We provide vital medical assistance.
+                    </p>
+                    <div>
+                      <div
+                        className="donate-now__payment-info-btn-box"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <button
+                          type="submit"
+                          className="thm-btn donate-now__payment-info-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@mdo"
+                        >
+                          Donate now
+                        </button>
+                      </div>
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex={-1}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                        style={{ display: "none" }}
+                      >
+                        <div className="modal-dialog modal-lg">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
+                New message to @getbootstrap
+              </h1> */}
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              />
+                            </div>
+                            <div className="modal-body">
+                              <form>
+                                <section className="donate-now">
+                                  <div className="container">
+                                    <div className="row">
+                                      <div className="col-xl-12 col-lg-11">
+                                        <div className="donate-now__left">
+                                          <div>
+                                            <h3 className="donate-now__title">
+                                              Microcredit Support
+                                            </h3>
+                                            <p>
+                                              ARC Foundation's Health Care
+                                              Program is a lifeline for those in
+                                              need. We provide vital medical
+                                              assistance, support for
+                                              treatments, and ensure access to
+                                              essential healthcare services.
+                                              Join us in promoting well-being
+                                              and creating a healthier, more
+                                              resilient community.
+                                            </p>
+                                            <p></p>
+                                          </div>
+                                          <div className="donate-now__enter-donation">
+                                            <h3 className="donate-now__title">
+                                              Enter your donation
+                                            </h3>
+                                            <div className="donate-now__enter-donation-input">
+                                              <select className="selectpicker">
+                                                <option>$</option>
+                                                <option>₤</option>
+                                                <option>¥</option>
+                                              </select>
+                                              <input
+                                                type="text"
+                                                name="donation-money"
+                                                defaultValue=".00"
+                                              />
+                                            </div>
+                                          </div>
+                                          <div className="donate-now__personal-info-box">
+                                            <h3 className="donate-now__title">
+                                              Personal info
+                                            </h3>
+                                            <form className="donate-now__personal-info-form">
+                                              <div className="row">
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="First name"
+                                                      name="name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Last name"
+                                                      name="last-name"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="email"
+                                                      placeholder="Email address"
+                                                      name="email"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Phone"
+                                                      name="phone"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <input
+                                                      type="text"
+                                                      placeholder="Address"
+                                                      name="Address"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="col-xl-6">
+                                                  <div className="donate-now__personal-info-input">
+                                                    <select
+                                                      className="selectpicker"
+                                                      aria-label="Default select example"
+                                                    >
+                                                      <option selected>
+                                                        Country
+                                                      </option>
+                                                      <option value={1}>
+                                                        USA
+                                                      </option>
+                                                      <option value={2}>
+                                                        England
+                                                      </option>
+                                                      <option value={3}>
+                                                        Australia
+                                                      </option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-xl-12">
+                                                  <div className="donate-now__personal-info-input donate-now__personal-info-message-box">
+                                                    <textarea
+                                                      name="message"
+                                                      placeholder="Write message"
+                                                      defaultValue={""}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                          <div className="donate-now__payment-info">
+                                            <h3 className="donate-now__title">
+                                              Payment info
+                                            </h3>
+
+                                            <div className="row gap-5">
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 0
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(0)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Online Payment
+                                                </p>
+                                                <img
+                                                  src={onlinePayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 1
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(1)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Nagad Payment
+                                                </p>
+                                                <img
+                                                  src={nagadPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 2
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(2)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Bkash Payment
+                                                </p>
+                                                <img
+                                                  src={bkashPayment}
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                className={`payment-option col-xl-5 ${
+                                                  activeButton === 3
+                                                    ? "active"
+                                                    : ""
+                                                }`}
+                                                onClick={() =>
+                                                  handleButtonClick(3)
+                                                }
+                                              >
+                                                <p className="">
+                                                  {" "}
+                                                  Upay Payment
+                                                </p>
+                                                <img src={upayPayment} alt="" />
+                                              </div>
+                                            </div>
+
+                                            <div className="payment-container">
+                                              {activeButton === 0 && (
+                                                <div>
+                                                  <OnlinePayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 1 && (
+                                                <div>
+                                                  <NagadPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 2 && (
+                                                <div>
+                                                  <BkashPayment />
+                                                </div>
+                                              )}
+                                              {activeButton === 3 && (
+                                                <div>
+                                                  <UpayPayment />
+                                                </div>
+                                              )}
+                                            </div>
                                           </div>
                                         </div>
                                       </div>

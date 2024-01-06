@@ -20,7 +20,8 @@ const News = () => {
             <div
               className="page-header-bg"
               style={{
-                backgroundImage: "url(assets/images/backgrounds/banner1.jpg)",
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
               }}
             ></div>
           </SwiperSlide>
@@ -36,7 +37,8 @@ const News = () => {
             <div
               className="page-header-bg"
               style={{
-                backgroundImage: "url(assets/images/backgrounds/banner3.jpg)",
+                backgroundImage:
+                  "url(assets/images/backgrounds/project-banner.jpg)",
               }}
             ></div>
           </SwiperSlide>
