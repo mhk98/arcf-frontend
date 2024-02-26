@@ -21,7 +21,7 @@ const Contact = () => {
   //     mailerMessage: message,
   //   };
   //   const res = await axios.post(
-  //     "http://localhost:5000/api/v1/contact/create-contact",
+  //     "https://server.arcfbd.org/api/v1/contact/create-contact",
   //     data
   //   );
   // };
@@ -39,7 +39,7 @@ const Contact = () => {
       console.log("data", data);
       //     // Use IP address instead of hostname
       const res = await axios.post(
-        "http://localhost:5000/api/v1/contact/create-contact", // replace x.x.x.x with the actual IP address
+        "https://server.arcfbd.org/api/v1/contact/create-contact", // replace x.x.x.x with the actual IP address
         data
       );
 
@@ -95,30 +95,30 @@ const Contact = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               {/* Add more SwiperSlides if needed */}

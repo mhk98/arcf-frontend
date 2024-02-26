@@ -93,7 +93,7 @@ const About = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -101,7 +101,7 @@ const About = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -109,7 +109,7 @@ const About = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -147,13 +147,13 @@ const About = () => {
                     <div className="about-four__img-box">
                       <div className="about-four__img">
                         <img
-                          src={`http://localhost:5000/${about.image1}`}
+                          src={`https://server.arcfbd.org/${about.image1}`}
                           alt=""
                         />
                       </div>
                       <div className="about-four__img-two">
                         <img
-                          src={`http://localhost:5000/${about.image2}`}
+                          src={`https://server.arcfbd.org/${about.image2}`}
                           alt=""
                         />
                       </div>
@@ -223,7 +223,7 @@ const About = () => {
                 <div class="col-lg-6 col-xl-6">
                   <div class="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       width={570}
                       height={570}
@@ -268,7 +268,7 @@ const About = () => {
                 <div class="col-lg-6 col-xl-6">
                   <div class="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       width={570}
                       height={570}
@@ -291,7 +291,7 @@ const About = () => {
                 <div class="col-lg-6 col-xl-6">
                   <div class="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       width={570}
                       height={570}
@@ -336,7 +336,7 @@ const About = () => {
                 <div class="col-lg-6 col-xl-6">
                   <div class="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       width={570}
                       height={570}
@@ -359,7 +359,7 @@ const About = () => {
                 <div class="col-lg-6 col-xl-6">
                   <div class="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       width={570}
                       height={570}
@@ -400,7 +400,10 @@ const About = () => {
                 >
                   <div className="team-one__single">
                     <div className="team-one__img">
-                      <img src={`http://localhost:5000/${team.image}`} alt="" />
+                      <img
+                        src={`https://server.arcfbd.org/${team.image}`}
+                        alt=""
+                      />
                     </div>
                     <div className="team-one__content">
                       <h3 className="team-one__name">
@@ -435,7 +438,7 @@ const About = () => {
                   <div className="team-one__single">
                     <div className="team-one__img">
                       <img
-                        src={`http://localhost:5000/${member.image}`}
+                        src={`https://server.arcfbd.org/${member.image}`}
                         alt=""
                       />
                     </div>

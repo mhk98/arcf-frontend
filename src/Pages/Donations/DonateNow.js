@@ -237,7 +237,7 @@ const DonateNow = () => {
                     <div className="causes-one__img">
                       <Link>
                         <img
-                          src={`http://localhost:5000/${project.image1}`}
+                          src={`https://server.arcfbd.org/${project.image1}`}
                           alt=""
                         />
                       </Link>

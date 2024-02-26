@@ -71,30 +71,30 @@ const ProjectSubCategory = () => {
                   <div
                     className="page-header-bg"
                     style={{
-                      backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                      backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                     }}
                   >
-                    {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                    {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div
                     className="page-header-bg"
                     style={{
-                      backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                      backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                     }}
                   >
-                    {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                    {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div
                     className="page-header-bg"
                     style={{
-                      backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                      backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                     }}
                   >
-                    {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                    {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                   </div>
                 </SwiperSlide>
                 {/* Add more SwiperSlides if needed */}
@@ -167,7 +167,7 @@ const ProjectSubCategory = () => {
                   <div className="col-lg-6 col-xl-4">
                     <div className="product-details__img">
                       <img
-                        src={`http://localhost:5000/${item.image4}`}
+                        src={`https://server.arcfbd.org/${item.image4}`}
                         alt=""
                         style={{ width: 370, height: 382 }}
                       />
@@ -211,7 +211,7 @@ const ProjectSubCategory = () => {
                       <div className="causes-one__single">
                         <div className="causes-one__img">
                           <img
-                            src={`http://localhost:5000/${category.image}`}
+                            src={`https://server.arcfbd.org/${category.image}`}
                             alt=""
                           />
 

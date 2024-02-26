@@ -53,7 +53,7 @@ const HealthCategoryDetails = () => {
                 <div className="donation-details__top">
                   <div className="donation-details__img">
                     <img
-                      src={`http://localhost:5000/${healthDetails.image}`}
+                      src={`https://server.arcfbd.org/${healthDetails.image}`}
                       alt=""
                     />
                     <div className="donation-details__date">

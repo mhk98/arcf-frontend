@@ -89,30 +89,30 @@ const AllProject = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               {/* Add more SwiperSlides if needed */}
@@ -182,7 +182,7 @@ const AllProject = () => {
                 <div className="col-lg-6 col-xl-4">
                   <div className="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       style={{ width: 370, height: 382 }}
                     />
@@ -231,7 +231,7 @@ const AllProject = () => {
                     <div className="causes-one__single">
                       <div className="causes-one__img">
                         {/* <img
-                          src={`http://localhost:5000/${project.image}`}
+                          src={`https://server.arcfbd.org/${project.image}`}
                           alt=""
                         /> */}
 
@@ -248,21 +248,21 @@ const AllProject = () => {
                           <SwiperSlide>
                             <img
                               className="slider-img"
-                              src={`http://localhost:5000/${project.image1}`}
+                              src={`https://server.arcfbd.org/${project.image1}`}
                               alt=""
                             />
                           </SwiperSlide>
                           <SwiperSlide>
                             <img
                               className="slider-img"
-                              src={`http://localhost:5000/${project.image2}`}
+                              src={`https://server.arcfbd.org/${project.image2}`}
                               alt=""
                             />
                           </SwiperSlide>
                           <SwiperSlide>
                             <img
                               className="slider-img"
-                              src={`http://localhost:5000/${project.image3}`}
+                              src={`https://server.arcfbd.org/${project.image3}`}
                               alt=""
                             />
                           </SwiperSlide>

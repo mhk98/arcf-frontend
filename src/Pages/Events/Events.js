@@ -26,7 +26,9 @@ const News = () => {
   const [eventsDetails, setEventsDetails] = useState([]);
 
   const getAllEventsDetails = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/eventsDetails");
+    const res = await axios.get(
+      "https://server.arcfbd.org/api/v1/eventsDetails"
+    );
     setEventsDetails(res.data.data);
   };
 
@@ -37,7 +39,7 @@ const News = () => {
   const [events, setEvents] = useState([]);
 
   const getAllEvents = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/events");
+    const res = await axios.get("https://server.arcfbd.org/api/v1/events");
     setEvents(res.data.data);
   };
 
@@ -71,30 +73,30 @@ const News = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               {/* Add more SwiperSlides if needed */}
@@ -134,7 +136,7 @@ const News = () => {
                 <div className="col-lg-6 col-xl-4">
                   <div className="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`https://server.arcfbd.org/${item.image}`}
                       alt=""
                       style={{ width: 370, height: 382 }}
                     />
@@ -177,7 +179,7 @@ const News = () => {
                     <div className="news-one__single">
                       <div className="news-one__img">
                         <img
-                          src={`http://localhost:5000/${events.image}`}
+                          src={`https://server.arcfbd.org/${events.image}`}
                           alt=""
                         />
                       </div>
@@ -246,7 +248,7 @@ const News = () => {
                     <div className="news-one__single">
                       <div className="news-one__img">
                         <img
-                          src={`http://localhost:5000/${events.image}`}
+                          src={`https://server.arcfbd.org/${events.image}`}
                           alt=""
                         />
                       </div>

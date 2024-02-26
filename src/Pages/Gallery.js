@@ -29,13 +29,17 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
 
   const getAllImage = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/imageGallery");
+    const res = await axios.get(
+      "https://server.arcfbd.org/api/v1/imageGallery"
+    );
     setImages(res.data.data);
   };
   const [videos, setVideos] = useState([]);
 
   const getAllVideo = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/videoGallery");
+    const res = await axios.get(
+      "https://server.arcfbd.org/api/v1/videoGallery"
+    );
     setVideos(res.data.data);
   };
 
@@ -90,7 +94,7 @@ const Gallery = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -98,7 +102,7 @@ const Gallery = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -106,7 +110,7 @@ const Gallery = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 ></div>
               </SwiperSlide>
@@ -175,7 +179,7 @@ const Gallery = () => {
                 <div className="col-lg-6 col-xl-4">
                   <div className="product-details__img">
                     <img
-                      src={`http://localhost:5000/${item.image4}`}
+                      src={`https://server.arcfbd.org/${item.image4}`}
                       alt=""
                       style={{ width: 370, height: 382 }}
                     />
@@ -217,7 +221,7 @@ const Gallery = () => {
               <>
                 {/* image */}
                 <img
-                  src={`http://localhost:5000/${images[index].image}`}
+                  src={`https://server.arcfbd.org/${images[index].image}`}
                   className="large-image"
                   alt={`img${index + 1}`}
                 />
@@ -235,7 +239,7 @@ const Gallery = () => {
               {images.map((image, i) => (
                 <div key={i} className="col-xl-3 mb-3">
                   <img
-                    src={`http://localhost:5000/${image.image}`}
+                    src={`https://server.arcfbd.org/${image.image}`}
                     alt={`img${i + 1}`}
                     className="image"
                     onClick={() => handleImageClick(i)}

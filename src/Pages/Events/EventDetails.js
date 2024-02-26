@@ -49,30 +49,30 @@ const NewsDetails = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               {/* Add more SwiperSlides if needed */}
@@ -110,7 +110,7 @@ const NewsDetails = () => {
                     <div className="donation-details__top">
                       <div className="donation-details__img">
                         <img
-                          src={`http://localhost:5000/${item.image4}`}
+                          src={`https://server.arcfbd.org/${item.image4}`}
                           alt=""
                         />
                       </div>
@@ -191,7 +191,7 @@ const NewsDetails = () => {
                           >
                             <div className="sidebar__post-image">
                               <img
-                                src={`http://localhost:5000/${item.image}`}
+                                src={`https://server.arcfbd.org/${item.image}`}
                                 alt=""
                               />
                             </div>

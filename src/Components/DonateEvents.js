@@ -21,6 +21,8 @@ const DonateEvents = () => {
     }
   }, [data, isLoading, isError, error]);
 
+  const filteredData = donation.filter((item) => !["Home"].includes(item.page));
+
   const [donationDescription, setDonationDescription] = useState([]);
 
   const {
@@ -64,30 +66,30 @@ const DonateEvents = () => {
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image1})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image1})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image1}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image1}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image2})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image2})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image2}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image2}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div
                   className="page-header-bg"
                   style={{
-                    backgroundImage: `url(http://localhost:5000/${item.image3})`,
+                    backgroundImage: `url(https://server.arcfbd.org/${item.image3})`,
                   }}
                 >
-                  {/* <img src={`http://localhost:5000/${item.image3}`} alt="" /> */}
+                  {/* <img src={`https://server.arcfbd.org/${item.image3}`} alt="" /> */}
                 </div>
               </SwiperSlide>
               {/* Add more SwiperSlides if needed */}
@@ -127,7 +129,7 @@ const DonateEvents = () => {
                   <div className="col-lg-6 col-xl-4">
                     <div className="product-details__img">
                       <img
-                        src={`http://localhost:5000/${item.image4}`}
+                        src={`https://server.arcfbd.org/${item.image4}`}
                         alt=""
                         style={{ width: 370, height: 382 }}
                       />
@@ -156,8 +158,8 @@ const DonateEvents = () => {
           <h3 className="causes-one__title mb-3">Latest Events</h3>
 
           <div className="row">
-            {donation.length ? (
-              donation.map((item) => (
+            {filteredData.length ? (
+              filteredData.map((item) => (
                 <div
                   className="col-xl-4 col-lg-4 wow fadeInUp"
                   data-wow-delay="100ms"
@@ -166,7 +168,7 @@ const DonateEvents = () => {
                     <div className="causes-one__img">
                       <Link to="/">
                         <img
-                          src={`http://localhost:5000/${item.image}`}
+                          src={`https://server.arcfbd.org/${item.image}`}
                           alt=""
                         />
                       </Link>
@@ -229,7 +231,7 @@ const DonateEvents = () => {
                                           <div className="donate-now__left">
                                             <div className="causes-one__img">
                                               <img
-                                                src={`http://localhost:5000/${item.image}`}
+                                                src={`https://server.arcfbd.org/${item.image}`}
                                                 alt=""
                                               />
                                             </div>

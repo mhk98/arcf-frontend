@@ -124,7 +124,9 @@ const Home = () => {
   const [gallery, setGallery] = useState([]);
 
   const getAllImage = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/imageGallery");
+    const res = await axios.get(
+      "https://server.arcfbd.org/api/v1/imageGallery"
+    );
     setGallery(res.data.data);
   };
 
@@ -261,7 +263,7 @@ const Home = () => {
                       <div
                         className="image-layer"
                         style={{
-                          backgroundImage: `url(http://localhost:5000/${slide?.image})`,
+                          backgroundImage: `url(https://server.arcfbd.org/${slide?.image})`,
                         }}
                       ></div>
 
@@ -683,7 +685,7 @@ const Home = () => {
                       <div className="causes-one__img">
                         <Link to="/health">
                           <img
-                            src={`http://localhost:5000/${project.image1}`}
+                            src={`https://server.arcfbd.org/${project.image1}`}
                             alt=""
                           />
                         </Link>
@@ -774,7 +776,7 @@ const Home = () => {
                     <div className="causes-one__single">
                       <div className="causes-one__img">
                         <img
-                          src={`http://localhost:5000/${item.image}`}
+                          src={`https://server.arcfbd.org/${item.image}`}
                           alt=""
                         />
 
@@ -836,7 +838,7 @@ const Home = () => {
                                             <div className="donate-now__left">
                                               <div className="causes-one__img">
                                                 <img
-                                                  src={`http://localhost:5000/${item.image}`}
+                                                  src={`https://server.arcfbd.org/${item.image}`}
                                                   alt=""
                                                 />
                                               </div>
@@ -1175,7 +1177,7 @@ const Home = () => {
                 <>
                   {/* image */}
                   <img
-                    src={`http://localhost:5000/${images[index].image}`}
+                    src={`https://server.arcfbd.org/${images[index].image}`}
                     className="large-image"
                     alt={`img${index + 1}`}
                   />
@@ -1193,7 +1195,7 @@ const Home = () => {
                 {images.map((image, i) => (
                   <div key={i} className="col-xl-3 mb-3">
                     <img
-                      src={`http://localhost:5000/${image.image}`}
+                      src={`https://server.arcfbd.org/${image.image}`}
                       alt={`img${i + 1}`}
                       className="image"
                       onClick={() => handleImageClick(i)}
@@ -1390,7 +1392,7 @@ const Home = () => {
                       <div className="news-one__single">
                         <div className="news-one__img">
                           <img
-                            src={`http://localhost:5000/${item.image}`}
+                            src={`https://server.arcfbd.org/${item.image}`}
                             alt=""
                           />
                         </div>
